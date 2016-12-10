@@ -20,7 +20,7 @@ public class Folder {
 
 	/**
 	 * Sets the path to a directory using a ServletContext.
-	 * @param context
+	 * @param context servlet context (path in the web server / container)
 	 */
 	public void setFolder (ServletContext context) {
 		appFolder = new File (context.getRealPath("/"));

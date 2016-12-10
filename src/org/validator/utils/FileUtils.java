@@ -27,7 +27,7 @@ public class FileUtils {
 
 	/**
 	 * Creates a stream reference of a file
-	 * @param file
+	 * @param file text file
 	 * @return InputSource
 	 */
 	public static InputSource getStream(File file) {
