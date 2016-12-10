@@ -1,12 +1,15 @@
 package org.validator.utils;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
+import java.util.ArrayList;
 import java.util.Vector;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -24,6 +27,26 @@ import org.xml.sax.InputSource;
 public class FileUtils {
 
 	private static final Logger logger = LogManager.getLogger(FileUtils.class.getName());
+
+	/**
+	 * Converts text files to ArrayLists
+	 * @param file full path of the text file
+	 */
+	public static ArrayList<String> file2array(String filename) {
+		ArrayList<String> list = new ArrayList<String>();
+		BufferedReader in = null;
+		String line = "";
+		try {
+			in = new BufferedReader(new FileReader(filename));
+			while ((line = in.readLine()) != null) {
+				list.add(line);
+			}
+			in.close();
+		} catch (Exception e) {
+			logger.error("Oops, error found while reading file: " + e.getMessage());
+		}
+		return list;
+	}
 
 	/**
 	 * Creates a stream reference of a file
@@ -100,6 +123,7 @@ public class FileUtils {
 			deleteAll(workDirectory);
 		}
 		workDirectory.mkdir();
+		logger.info("Setting up working directory {}", newFolder);
 		return workDirectory.exists();
 	}
 

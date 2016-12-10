@@ -60,7 +60,7 @@ public class Folder {
 			file = new SimpleFile (content.getName(), date.format(content.lastModified()));
 			contents.add(file);
 		}
-		
+
 		return contents;
 	}
 }

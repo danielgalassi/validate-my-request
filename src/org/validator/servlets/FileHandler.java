@@ -83,7 +83,7 @@ public class FileHandler extends HttpServlet {
 					}
 
 					if (!item.isFormField()) {
-						
+
 						logger.info("Processing file...");
 						String fileName = new File(item.getName()).getName();
 
@@ -110,6 +110,7 @@ public class FileHandler extends HttpServlet {
 			request.setAttribute("message", "There was an error: " + e.getMessage());
 		}
 		//redirects client to message page
-		getServletContext().getRequestDispatcher("/SubjectAreaSelector").forward(request, response);
+		//getServletContext().getRequestDispatcher("/SubjectAreaSelector").forward(request, response);
+		getServletContext().getRequestDispatcher("/ValidatorService").forward(request, response);
 	}
 }

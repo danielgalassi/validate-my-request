@@ -1,20 +1,12 @@
-/**
- * 
- */
 package org.validator.engine;
 
-import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Vector;
-
-import javax.servlet.ServletContext;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.validator.metadata.Repository;
-import org.validator.metadata.Test;
-import org.validator.metadata.XSLTest;
+import org.validator.metadata.RefreshRequest;
 import org.validator.utils.FileUtils;
 import org.validator.utils.XMLUtils;
 import org.w3c.dom.Document;
@@ -23,8 +15,8 @@ import org.w3c.dom.Element;
 
 /**
  * The validator engine orchestrates and controls the execution of the test suite.
- * A <code>ValidatorEngine</code> consists of two main components, the repository metadata and a collection of tests.
- * The metadata in the <code>Repository</code> will be validated using <code>Test</code> instances.
+ * A <code>ValidatorEngine</code> consists of two main components, the repository refresh request and a collection of tests.
+ * The refresh request in the <code>Repository</code> will be validated using <code>Test</code> instances.
  * Each time the engine runs, the execution of each test is timed.
  * @author danielgalassi@gmail.com
  *
@@ -33,96 +25,53 @@ public class ValidatorEngine {
 
 	private static final Logger logger = LogManager.getLogger(ValidatorEngine.class.getName());
 	/** The target directory where validation results will be saved. */
-	private String			 resultCatalogue = "";
-	/** An OBIEE metadata repository object. */
-	private Repository		      repository = null;
-	/** The test suite consists of one or more <code>Test</code> implementations. */
-	private Vector<Test>	       testSuite = new Vector<Test>();
-	/** The time in milliseconds when the <code>ValidatorService</code> was triggered. */
-	private long			serviceStartTime = 0;
+	private String resultCatalog = "";
+	/** An OBIEE refresh request repository object. */
+	private RefreshRequest nzRequest = null;
+	private ArrayList<String> tableList = null;
+	private ArrayList<String> viewList = null;
+	private ArrayList<String> procList = null;
+	private ArrayList<String> synonList = null;
 
 	/**
-	 * Validator Engine constructor. Repository, Test Suite and Session Directory are set using independent methods.
+	 * Validator Engine constructor.
+	 * Repository and Session Directory are set using independent methods.
 	 */
 	public ValidatorEngine() {
 		logger.info("Initialising Validator Engine");
 	}
 
-	/**
-	 * Sets the repository file to assess in this validator engine.
-	 * @param repository metadata repository object
-	 */
-	public void setRepository(Repository repository) {
-		this.repository = repository;
+	public void loadMasterLists() {
+		tableList	= FileUtils.file2array("/tmp/master_objects_list/tables");
+		viewList	= FileUtils.file2array("/tmp/master_objects_list/views");
+		procList	= FileUtils.file2array("/tmp/master_objects_list/procedures");
+		synonList	= FileUtils.file2array("/tmp/master_objects_list/synonyms");
 	}
 
 	/**
-	 * Sets the stopwatch to measure the time taken to validate the repository.
-	 * @param serviceStartTime start time of the validator service in milliseconds
+	 * Sets the request file to assess in this validator engine.
+	 * @param nzRequest refresh request repository object
 	 */
-	public void setStartTime(long serviceStartTime) {
-		this.serviceStartTime = serviceStartTime;
-	}
-
-	/**
-	 * Loads all tests creating a suite.
-	 * @param context the scope of the current session
-	 * @param testCatalog directory where all tests are stored
-	 */
-	public void setTestSuite(ServletContext context, String testCatalog) {
-		
-		logger.info("Creating Test Suite");
-
-		boolean testsFound = false;
-		try {
-			testsFound = !(context.getResourcePaths(testCatalog).isEmpty());
-		} catch (Exception e) {
-			//a NullPointerException is thrown if the directory is not found
-			logger.fatal(e.getMessage());
-		}
-
-		if (!testsFound) {
-			logger.error("Test suite cannot be set");
-			return;
-		}
-
-		for (String testCase : context.getResourcePaths(testCatalog)) {
-			addTest(context.getResourceAsStream(testCase));
-		}
+	public void setNzRequest(RefreshRequest nzRequest) {
+		this.nzRequest = nzRequest;
 	}
 
 	/**
 	 * Sets the internal directory all results will be saved to.
 	 * @param resultCatalogLocation path to the target directory
 	 */
-	public void setResultCatalogLocation(String resultCatalogLocation) {
-		this.resultCatalogue = resultCatalogLocation;
+	public void setResultsFolder(String resultCatalogLocation) {
+		this.resultCatalog = resultCatalogLocation;
 		FileUtils.setupWorkDirectory(resultCatalogLocation);		
 	}
 
 	/**
-	 * Method to verify tests have been loaded.
-	 * @return true when no tests are available for this engine
-	 */
-	public boolean isTestSuiteEmpty() {
-		return testSuite.isEmpty();
-	}
-
-	/**
-	 * Appends one test script to internal test suite
-	 * @param testStream a test case
-	 */
-	public void addTest(InputStream testStream) {
-		testSuite.add(new XSLTest(testStream));
-	}
-
-	/**
-	 * Executes the validation of the repository metadata using all test scripts loaded.
-	 * Upon completion, an index document (catalogue) is created. Each entry in this catalogue points to a result file.
+	 * Executes the validation of the refresh request.
+	 * Upon completion, an index document (catalog) is created. Each entry in this catalog
+	 * points to a result file.
 	 */
 	public void run() {
 		Map <String, Double>    resultRef = new HashMap<String, Double>();
-		long                   startTimer;
 
 		if (!ready()) {
 			logger.error("Engine is not ready");
@@ -131,12 +80,14 @@ public class ValidatorEngine {
 
 		//executes all scripts in test suite and times them
 		logger.info("Executing tests...");
+		/*
 		for (Test test : testSuite) {
 			startTimer = System.currentTimeMillis();
 			String result = resultCatalogue + test.getName() + ".xml";
 			test.assertMetadata(repository, result);
 			resultRef.put(result, (double) (System.currentTimeMillis() - startTimer) / 1000);
 		}
+		 */
 
 		createIndexDocument(resultRef);
 	}
@@ -146,14 +97,12 @@ public class ValidatorEngine {
 	 * @return true if all dependencies are met
 	 */
 	private boolean ready() {
-		boolean isTestSuiteSet	= !testSuite.isEmpty();
-		boolean isRepositorySet = (repository != null);
-		boolean isResultDirSet	= !resultCatalogue.equals("");
+		boolean isRepositorySet = (nzRequest != null);
+		boolean isResultDirSet	= !resultCatalog.equals("");
 
-		logger.info("isTestSuiteSet = {}", isTestSuiteSet);
 		logger.info("isRepositorySet = {}", isRepositorySet);
 		logger.info("isResultDirSet = {}", isResultDirSet);
-		return (isRepositorySet && isTestSuiteSet && isResultDirSet && serviceStartTime != 0);
+		return (isRepositorySet && isResultDirSet);
 	}
 
 	/**
@@ -168,12 +117,11 @@ public class ValidatorEngine {
 		for (Map.Entry <String, Double> ref : resultRefs.entrySet()) {
 			Element node = index.createElement("results");
 			node.setTextContent(ref.getKey());
-			node.setAttribute("elapsedTime", ref.getValue().toString());
+//			node.setAttribute("elapsedTime", ref.getValue().toString());
 			root.appendChild(node);
 		}
 
-		root.setAttribute("totalElapsedTime", ""+((double) (System.currentTimeMillis() - serviceStartTime) / 1000));
 		index.appendChild(root);
-		XMLUtils.saveDocument(index, resultCatalogue + "index.xml");
+		XMLUtils.saveDocument(index, resultCatalog + "index.xml");
 	}
 }

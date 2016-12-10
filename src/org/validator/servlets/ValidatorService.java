@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.validator.engine.ValidatorEngine;
-import org.validator.metadata.Repository;
+import org.validator.metadata.RefreshRequest;
 import org.validator.ui.ResultPublisher;
 
 
@@ -29,11 +29,9 @@ import org.validator.ui.ResultPublisher;
 public class ValidatorService extends HttpServlet {
 
 	private static final long	serialVersionUID = 1L;
-	
+
 	private static final Logger logger = LogManager.getLogger(ValidatorService.class.getName());
 
-	/** Application directory where all test cases reside. */
-//	private static final String	testCatalogue = "/WEB-INF/Tests/";
 	/** Application directory where UI-generating code for test results reside. */
 	private static final String	viewCatalogue = "/WEB-INF/Views/";
 
@@ -42,21 +40,17 @@ public class ValidatorService extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		long           startTime = System.currentTimeMillis();
-
-		String       subjectArea = request.getParameter("SubjectArea");
 		String         sessionId = request.getRequestedSessionId();
 		HttpSession      session = request.getSession();
 
 		String     workDirectory = (String) session.getAttribute("workDir");
-		String          metadata = (String) session.getAttribute("metadataFile");
-		boolean       errorsOnly = ((String) session.getAttribute("resultsFormat")).equals("ShowErrorsOnly");
-		String   resultCatalogue = workDirectory + "results" + File.separator;
+		String    refreshRequest = (String) session.getAttribute("metadataFile");
+		String     resultsFolder = workDirectory + "results" + File.separator;
 
 		//setting the repository (tags are discarded if not related to the selected subject area)
-		Repository    repository = new Repository(workDirectory, metadata, subjectArea);
+		RefreshRequest nzRequest = new RefreshRequest(workDirectory, refreshRequest);
 
-		if (!repository.available()) {
+		if (!nzRequest.available()) {
 			logger.error("Netezza request template missing!");
 			request.setAttribute("ErrorMessage", "Netezza request template not found.");
 			getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
@@ -65,28 +59,25 @@ public class ValidatorService extends HttpServlet {
 
 		//setting up the validator engine with a repository and tests
 		ValidatorEngine engine = new ValidatorEngine();
-		engine.setRepository(repository);
-		engine.setStartTime(startTime);
-		engine.setResultCatalogLocation(resultCatalogue);
-//		engine.setTestSuite(getServletContext(), testCatalogue);
+		engine.loadMasterLists();
+		engine.setNzRequest(nzRequest);
+		engine.setResultsFolder(resultsFolder);
 
 		//forwards to the error page if the test suite is empty 
-		if (engine.isTestSuiteEmpty()) {
+		/*		if (engine.isTestSuiteEmpty()) {
 			logger.fatal("Tests not found");
 			request.setAttribute("ErrorMessage", "Tests not found.");
 			getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
 			return;
 		}
-
+		 */
 		engine.run();
 
 		//publishes HTML pages featuring results to the session folder
 		ResultPublisher publisher = new ResultPublisher();
-		publisher.setCatalogs(resultCatalogue, viewCatalogue);
+		publisher.setCatalogs(resultsFolder, viewCatalogue);
 		publisher.setContext(getServletContext());
-		publisher.setParameters("SelectedSubjectArea", subjectArea);
 		publisher.setParameters("SessionFolder", sessionId);
-		publisher.setParameters("ShowErrorsOnly", errorsOnly + "");
 
 		publisher.run();
 
