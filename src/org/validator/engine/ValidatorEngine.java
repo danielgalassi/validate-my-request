@@ -2,10 +2,12 @@ package org.validator.engine;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.validator.metadata.DBObject;
 import org.validator.metadata.RefreshRequest;
 import org.validator.utils.FileUtils;
 import org.validator.utils.XMLUtils;
@@ -32,6 +34,7 @@ public class ValidatorEngine {
 	private ArrayList<String> viewList = null;
 	private ArrayList<String> procList = null;
 	private ArrayList<String> synonList = null;
+	private ArrayList<String> seqList = null;
 
 	/**
 	 * Validator Engine constructor.
@@ -46,6 +49,7 @@ public class ValidatorEngine {
 		viewList	= FileUtils.file2array("/tmp/master_objects_list/views");
 		procList	= FileUtils.file2array("/tmp/master_objects_list/procedures");
 		synonList	= FileUtils.file2array("/tmp/master_objects_list/synonyms");
+		seqList		= FileUtils.file2array("/tmp/master_objects_list/sequences");
 	}
 
 	/**
@@ -71,25 +75,32 @@ public class ValidatorEngine {
 	 * points to a result file.
 	 */
 	public void run() {
-		Map <String, Double>    resultRef = new HashMap<String, Double>();
-
+		Map <String, Double> resultRef = new HashMap<String, Double>();
+		DBObject		object_matched = null;
 		if (!ready()) {
 			logger.error("Engine is not ready");
+			if (nzRequest.getSize() == 0) {
+				logger.error("No objects to validate in this request");
+			}
 			return;
 		}
 
-		//executes all scripts in test suite and times them
 		logger.info("Executing tests...");
-		/*
-		for (Test test : testSuite) {
-			startTimer = System.currentTimeMillis();
-			String result = resultCatalogue + test.getName() + ".xml";
-			test.assertMetadata(repository, result);
-			resultRef.put(result, (double) (System.currentTimeMillis() - startTimer) / 1000);
-		}
-		 */
+		nzRequest.matchTables(tableList);
+		nzRequest.matchViews(viewList);
+		nzRequest.matchSynonym(synonList);
+		nzRequest.matchSequences(seqList);
+		nzRequest.matchProcedure(procList);
 
-		createIndexDocument(resultRef);
+		Iterator<DBObject> it = (nzRequest.getObjectList()).iterator();
+		while (it.hasNext()) {
+			object_matched = it.next();
+			resultRef.put(object_matched.toString(), 0.00);
+		}
+
+		nzRequest.toXML(resultCatalog);
+
+//		createIndexDocument(resultRef);
 	}
 
 	/**
@@ -97,19 +108,19 @@ public class ValidatorEngine {
 	 * @return true if all dependencies are met
 	 */
 	private boolean ready() {
-		boolean isRepositorySet = (nzRequest != null);
+		boolean isNZRequestSet = (nzRequest != null && nzRequest.getSize() > 0);
 		boolean isResultDirSet	= !resultCatalog.equals("");
 
-		logger.info("isRepositorySet = {}", isRepositorySet);
+		logger.info("isNZRequestSet = {}", isNZRequestSet);
 		logger.info("isResultDirSet = {}", isResultDirSet);
-		return (isRepositorySet && isResultDirSet);
+		return (isNZRequestSet && isResultDirSet);
 	}
 
 	/**
 	 * Generates a catalog file with a list of tests.
 	 * @param resultRefs a Map with a (result file, elapsed time) entry for each test executed
 	 */
-	private void createIndexDocument (Map <String, Double> resultRefs) {
+/*	private void createIndexDocument (Map <String, Double> resultRefs) {
 		Document index = XMLUtils.createDOMDocument();
 		Element   root = index.createElement("index");
 
@@ -122,5 +133,5 @@ public class ValidatorEngine {
 
 		index.appendChild(root);
 		XMLUtils.saveDocument(index, resultCatalog + "index.xml");
-	}
+	}*/
 }

@@ -7,14 +7,18 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.validator.utils.XMLUtils;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 /**
  * A basic class to model data refresh items.
@@ -27,7 +31,33 @@ public class RefreshRequest {
 	/** The refresh request file in XLSX format stored in the filesystem under the session directory. */
 	private File nzRequest = null;
 	/** The session directory where the refresh request is stored. */
-	HashMap<String, DBObject> objectsList = new HashMap<String, DBObject>();
+	private ArrayList<DBObject> objectsList = new ArrayList<DBObject>();
+	private int size = 0;
+
+	public void toXML(String directory) {
+		Document index = XMLUtils.createDOMDocument();
+		Element   root = index.createElement("test");
+
+		logger.trace("Generating results index...");
+		Iterator<DBObject> it = objectsList.iterator();
+		DBObject object = null;
+		while (it.hasNext()) {
+			object = it.next();
+			Element xmlDB = index.createElement("name");
+			xmlDB.setTextContent(object.toString());
+			xmlDB.setAttribute("type", object.getType());
+			xmlDB.setAttribute("isValid", object.exist()+"");
+			xmlDB.setAttribute("comment", object.getComment());
+			root.appendChild(xmlDB);
+		}
+
+		index.appendChild(root);
+		XMLUtils.saveDocument(index, directory + "index.xml");
+	}
+
+	public ArrayList<DBObject> getObjectList() {
+		return objectsList;
+	}
 
 	/**
 	 * Instantiates a refresh request file.
@@ -77,10 +107,15 @@ public class RefreshRequest {
 					objectType.equals("SEQUENCE") ||
 					objectType.equals("PROCEDURE")) {
 				objectName = objectSchema + "." + objectName;
-				objectsList.put(objectName, new DBObject(objectSchema, objectName, objectType));
+				objectsList.add(new DBObject(objectSchema, objectName, objectType));
 			}
 		}
+		size = objectsList.size();
 		logger.info("{} database objects loaded", objectsList.size());
+	}
+
+	public int getSize() {
+		return this.size;
 	}
 
 	/**
@@ -93,5 +128,101 @@ public class RefreshRequest {
 			isAvailable = (nzRequest.exists() && nzRequest.canRead());
 		}
 		return isAvailable;
+	}
+
+	public void matchTables(ArrayList<String> tableList) {
+		if (size == 0) {
+			logger.error("No objects found for validation");
+			return;
+		}
+
+		Iterator<DBObject> it = objectsList.iterator();
+		DBObject object_to_match = null;
+		int index = 0;
+		while (it.hasNext()) {
+			object_to_match = (it.next());
+			if (tableList.contains(object_to_match.toString()) &&
+					object_to_match.isTable()) {
+				object_to_match.tag();
+				objectsList.set(index, object_to_match);
+			}
+			index++;
+		}
+	}
+
+	public void matchViews(ArrayList<String> tableList) {
+		if (size == 0) {
+			logger.error("No objects found for validation");
+			return;
+		}
+		Iterator<DBObject> it = objectsList.iterator();
+		DBObject object_to_match = null;
+		int index = 0;
+		while (it.hasNext()) {
+			object_to_match = (it.next());
+			if (tableList.contains(object_to_match.toString()) &&
+					object_to_match.isView()) {
+				object_to_match.tag();
+				objectsList.set(index, object_to_match);
+			}
+			index++;
+		}
+	}
+
+	public void matchSynonym(ArrayList<String> tableList) {
+		if (size == 0) {
+			logger.error("No objects found for validation");
+			return;
+		}
+		Iterator<DBObject> it = objectsList.iterator();
+		DBObject object_to_match = null;
+		int index = 0;
+		while (it.hasNext()) {
+			object_to_match = (it.next());
+			if (tableList.contains(object_to_match.toString()) &&
+					object_to_match.isSynonym()) {
+				object_to_match.tag();
+				objectsList.set(index, object_to_match);
+			}
+			index++;
+		}
+	}
+
+	public void matchProcedure(ArrayList<String> tableList) {
+		if (size == 0) {
+			logger.error("No objects found for validation");
+			return;
+		}
+		Iterator<DBObject> it = objectsList.iterator();
+		DBObject object_to_match = null;
+		int index = 0;
+		while (it.hasNext()) {
+			object_to_match = (it.next());
+			if (tableList.contains(object_to_match.toString()) &&
+					object_to_match.isProcedure()) {
+				object_to_match.tag();
+				objectsList.set(index, object_to_match);
+			}
+			index++;
+		}
+	}
+
+	public void matchSequences(ArrayList<String> tableList) {
+		if (size == 0) {
+			logger.error("No objects found for validation");
+			return;
+		}
+		Iterator<DBObject> it = objectsList.iterator();
+		DBObject object_to_match = null;
+		int index = 0;
+		while (it.hasNext()) {
+			object_to_match = (it.next());
+			if (tableList.contains(object_to_match.toString()) &&
+					object_to_match.isSequence()) {
+				object_to_match.tag();
+				objectsList.set(index, object_to_match);
+			}
+			index++;
+		}
 	}
 }
