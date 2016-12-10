@@ -117,7 +117,6 @@ public class ValidatorEngine {
 		for (Map.Entry <String, Double> ref : resultRefs.entrySet()) {
 			Element node = index.createElement("results");
 			node.setTextContent(ref.getKey());
-//			node.setAttribute("elapsedTime", ref.getValue().toString());
 			root.appendChild(node);
 		}
 

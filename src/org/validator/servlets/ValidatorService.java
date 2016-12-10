@@ -57,20 +57,13 @@ public class ValidatorService extends HttpServlet {
 			return;
 		}
 
-		//setting up the validator engine with a repository and tests
+		//setting up the validator engine with the request file and master objects lists
 		ValidatorEngine engine = new ValidatorEngine();
 		engine.loadMasterLists();
 		engine.setNzRequest(nzRequest);
 		engine.setResultsFolder(resultsFolder);
 
-		//forwards to the error page if the test suite is empty 
-		/*		if (engine.isTestSuiteEmpty()) {
-			logger.fatal("Tests not found");
-			request.setAttribute("ErrorMessage", "Tests not found.");
-			getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
-			return;
-		}
-		 */
+		//executing verification
 		engine.run();
 
 		//publishes HTML pages featuring results to the session folder

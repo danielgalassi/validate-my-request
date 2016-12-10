@@ -4,9 +4,17 @@
 package org.validator.metadata;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Iterator;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
  * A basic class to model data refresh items.
@@ -19,18 +27,60 @@ public class RefreshRequest {
 	/** The refresh request file in XLSX format stored in the filesystem under the session directory. */
 	private File nzRequest = null;
 	/** The session directory where the refresh request is stored. */
-//	private File directory = null;
+	HashMap<String, DBObject> objectsList = new HashMap<String, DBObject>();
 
 	/**
 	 * Instantiates a refresh request file.
-	 * @param directory path to the repository refresh request file
-	 * @param repository name and extension of the refresh request repository file
-	 * @param selectedSubjectArea the name of the subject area selected from the combo box
+	 * @param directory path to the refresh request file
+	 * @param name and extension of the refresh request XLSX file
 	 */
-	public RefreshRequest(String directory, String repository) {
-		//this.directory  = new File(directory);
-		this.nzRequest = new File(directory + repository);
-		logger.info("Creating refresh request");
+	public RefreshRequest(String directory, String xslx) {
+		this.nzRequest = new File(directory + xslx);
+		logger.info("Reading refresh request");
+
+		//loading HashMap
+
+		String objectType = "";
+		String objectSchema = "";
+		String objectName = "";
+		FileInputStream fis = null;
+		try {
+			fis = new FileInputStream(nzRequest);
+		} catch (FileNotFoundException e) {
+			logger.error("XLSX template {} not found", xslx);
+		}
+
+		// Finds the workbook instance for XLSX file
+		XSSFWorkbook myWorkBook = null;
+		try {
+			myWorkBook = new XSSFWorkbook (fis);
+		} catch (IOException e) {
+			logger.error("Error found while opening XSLX workbook...");
+		}
+
+		// select the worksheet with the list of DB objects
+		XSSFSheet dataRefreshSheet = myWorkBook.getSheet("Data Refresh");
+
+		Iterator<Row> rowIterator = dataRefreshSheet.iterator();
+
+		// Traversing over each row of XLSX file
+		while (rowIterator.hasNext()) {
+			Row row = rowIterator.next();
+
+			objectSchema	= row.getCell(0).toString().toUpperCase();
+			objectName		= row.getCell(1).toString().toUpperCase();
+			objectType		= row.getCell(2).toString().toUpperCase();
+
+			if (objectType.equals("TABLE") || 
+					objectType.equals("VIEW") || 
+					objectType.equals("SYNONYM") ||
+					objectType.equals("SEQUENCE") ||
+					objectType.equals("PROCEDURE")) {
+				objectName = objectSchema + "." + objectName;
+				objectsList.put(objectName, new DBObject(objectSchema, objectName, objectType));
+			}
+		}
+		logger.info("{} database objects loaded", objectsList.size());
 	}
 
 	/**
@@ -43,13 +93,5 @@ public class RefreshRequest {
 			isAvailable = (nzRequest.exists() && nzRequest.canRead());
 		}
 		return isAvailable;
-	}
-
-	/**
-	 * Returns a file representing the repository.
-	 * @return a File reference to the repository file
-	 */
-	public File toFile() {
-		return nzRequest;
 	}
 }
