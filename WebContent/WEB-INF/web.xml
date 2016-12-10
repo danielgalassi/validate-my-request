@@ -17,23 +17,13 @@
 		<servlet-name>FileHandler</servlet-name>
 		<url-pattern>/upload</url-pattern>
 	</servlet-mapping>
-	<!--servlet>
-		<description></description>
-		<display-name>Cleanup previously validated requests</display-name>
-		<servlet-name>Cleanup</servlet-name>
-		<servlet-class>org.validator.servlets.Cleanup</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Cleanup</servlet-name>
-		<url-pattern>/Cleanup</url-pattern>
-	</servlet-mapping-->
 	<servlet>
 		<servlet-name>cleanup.jsp</servlet-name>
 		<jsp-file>/cleanup.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>cleanup.jsp</servlet-name>
-		<url-pattern>/cleanup/*</url-pattern>
+		<url-pattern>/cleanup</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>SubjectAreaSelector</servlet-name>

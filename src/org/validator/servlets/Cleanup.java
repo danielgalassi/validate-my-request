@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.validator.utils.FileUtils;
 
 /**
@@ -20,6 +22,8 @@ public class Cleanup extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
+	private static final Logger logger = LogManager.getLogger(FileHandler.class.getName());
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -30,9 +34,9 @@ public class Cleanup extends HttpServlet {
 		if (sessions != null) {
 			for (int i=0; i < sessions.length; i++) {
 				FileUtils.deleteAll(new File(uploadPath + sessions[i]));
+				logger.info("Session " + sessions[i] + " deleted.");
 			}
 		}
-
-		getServletContext().getRequestDispatcher("/cleanup.jsp").forward(request, response);
+		response.sendRedirect(request.getContextPath() + "/cleanup");
 	}
 }

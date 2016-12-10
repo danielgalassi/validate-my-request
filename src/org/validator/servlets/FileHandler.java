@@ -70,23 +70,16 @@ public class FileHandler extends HttpServlet {
 			//parses the request content to extract file data
 			List<FileItem> formItems = upload.parseRequest(request);
 
-			logger.info("Processing form fields");
+			logger.info("Processing upload request");
 			if (formItems != null && formItems.size() > 0) {
 
 				for (FileItem item : formItems) {
 					if (item.isFormField()) {
 						String name = item.getFieldName();
 						String value = item.getString();
-
 						logger.trace("Form selection: {}={}", name, value);
-
-						//if (name.equals("fileFormat")) {
-						//	isZipFormat = value.equals("zip");
-						//}
-						//else {
-							request.setAttribute(name, value);
-							session.setAttribute(name, value);
-						//}
+						request.setAttribute(name, value);
+						session.setAttribute(name, value);
 					}
 
 					if (!item.isFormField()) {
@@ -105,15 +98,7 @@ public class FileHandler extends HttpServlet {
 						File uploaded = new File(path);
 						//saves the file on disk
 						item.write(uploaded);
-
-						//unzip if appropriate
-						//if (isZipFormat && FileUtils.isZipFile(uploaded)) {
-						//	metadata = FileUtils.extract(uploaded.getAbsolutePath(), uploadPath);
-						//	uploaded.delete();
-						//}
-						//else {
-							metadata = uploaded;
-						//}
+						metadata = uploaded;
 
 						session.setAttribute("workDir", uploadPath);
 						session.setAttribute("metadataFile", metadata.getName());
