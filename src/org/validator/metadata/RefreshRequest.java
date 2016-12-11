@@ -20,7 +20,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 /**
- * A basic class to model data refresh items.
+ * A basic class to model data refresh items retrieved from the XSLX file.
  * @author danielgalassi@gmail.com
  *
  */
@@ -105,7 +105,7 @@ public class RefreshRequest {
 					objectType.equals("SYNONYM") ||
 					objectType.equals("SEQUENCE") ||
 					objectType.equals("PROCEDURE")) {
-				objectName = objectSchema + "." + objectName;
+				//objectName = objectSchema + "." + objectName;
 				objectsList.add(new DBObject(objectSchema, objectName, objectType));
 			}
 		}

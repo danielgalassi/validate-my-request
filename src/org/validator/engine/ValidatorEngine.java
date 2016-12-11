@@ -42,11 +42,11 @@ public class ValidatorEngine {
 	}
 
 	public void loadMasterLists() {
-		tableList	= FileUtils.file2array("/home/danno/tmp/master_objects_list/tables");
-		viewList	= FileUtils.file2array("/home/danno/tmp/master_objects_list/views");
-		procList	= FileUtils.file2array("/home/danno/tmp/master_objects_list/procedures");
-		synonList	= FileUtils.file2array("/home/danno/tmp/master_objects_list/synonyms");
-		seqList		= FileUtils.file2array("/home/danno/tmp/master_objects_list/sequences");
+		tableList	= FileUtils.file2array("/tmp/master_objects_list/tables");
+		viewList	= FileUtils.file2array("/tmp/master_objects_list/views");
+		procList	= FileUtils.file2array("/tmp/master_objects_list/procedures");
+		synonList	= FileUtils.file2array("/tmp/master_objects_list/synonyms");
+		seqList		= FileUtils.file2array("/tmp/master_objects_list/sequences");
 	}
 
 	/**
