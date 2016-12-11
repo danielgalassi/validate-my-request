@@ -85,9 +85,10 @@ public class ValidatorEngine {
 		logger.info("Executing tests...");
 		nzRequest.matchTables(tableList);
 		nzRequest.matchViews(viewList);
-		nzRequest.matchSynonym(synonList);
+		nzRequest.matchSynonyms(synonList);
 		nzRequest.matchSequences(seqList);
-		nzRequest.matchProcedure(procList);
+		nzRequest.matchProcedures(procList);
+		nzRequest.matchIncorrectType(tableList, viewList, synonList, seqList, procList);
 
 		Iterator<DBObject> it = (nzRequest.getObjectList()).iterator();
 		while (it.hasNext()) {

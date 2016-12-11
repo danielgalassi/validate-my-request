@@ -129,12 +129,48 @@ public class RefreshRequest {
 		return isAvailable;
 	}
 
+	public String matchIncorrectType(ArrayList<String>tableList, 
+			ArrayList<String> viewList, 
+			ArrayList<String> synonList, 
+			ArrayList<String> seqList, 
+			ArrayList<String> procList) {
+		String correctType = "";
+		Iterator<DBObject> it = objectsList.iterator();
+		DBObject object_to_match = null;
+
+		while (it.hasNext()) {
+			object_to_match = it.next();
+			if (!object_to_match.exist()) {
+				if (!object_to_match.getType().equals("TABLE")) {
+					if (tableList.contains(object_to_match.toString()))
+						object_to_match.setComment("This is a table");
+				}
+				if (!object_to_match.getType().equals("SYNONYM")) {
+					if (synonList.contains(object_to_match.toString()))
+						object_to_match.setComment("This is a synonym");
+				}
+				if (!object_to_match.getType().equals("SEQUENCE")) {
+					if (seqList.contains(object_to_match.toString()))
+						object_to_match.setComment("This is a sequence");
+				}
+				if (!object_to_match.getType().equals("VIEW")) {
+					if (viewList.contains(object_to_match.toString()))
+						object_to_match.setComment("This is a view");
+				}
+				if (!object_to_match.getType().equals("PROCEDURE")) {
+					if (procList.contains(object_to_match.toString()))
+						object_to_match.setComment("This is a stored procedure");
+				}
+			}
+		}
+		return correctType;
+	}
+
 	public void matchTables(ArrayList<String> tableList) {
 		if (size == 0) {
 			logger.error("No objects found for validation");
 			return;
 		}
-
 		Iterator<DBObject> it = objectsList.iterator();
 		DBObject object_to_match = null;
 		int index = 0;
@@ -168,7 +204,7 @@ public class RefreshRequest {
 		}
 	}
 
-	public void matchSynonym(ArrayList<String> tableList) {
+	public void matchSynonyms(ArrayList<String> tableList) {
 		if (size == 0) {
 			logger.error("No objects found for validation");
 			return;
@@ -187,7 +223,7 @@ public class RefreshRequest {
 		}
 	}
 
-	public void matchProcedure(ArrayList<String> tableList) {
+	public void matchProcedures(ArrayList<String> tableList) {
 		if (size == 0) {
 			logger.error("No objects found for validation");
 			return;
