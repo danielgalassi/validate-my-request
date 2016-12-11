@@ -9,7 +9,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -36,14 +35,14 @@ public class RefreshRequest {
 
 	public void toXML(String directory) {
 		Document index = XMLUtils.createDOMDocument();
-		Element   root = index.createElement("test");
+		Element   root = index.createElement("results");
 
 		logger.trace("Generating results index...");
 		Iterator<DBObject> it = objectsList.iterator();
 		DBObject object = null;
 		while (it.hasNext()) {
 			object = it.next();
-			Element xmlDB = index.createElement("name");
+			Element xmlDB = index.createElement("object");
 			xmlDB.setTextContent(object.toString());
 			xmlDB.setAttribute("type", object.getType());
 			xmlDB.setAttribute("isValid", object.exist()+"");

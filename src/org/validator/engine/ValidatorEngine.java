@@ -10,9 +10,6 @@ import org.apache.logging.log4j.Logger;
 import org.validator.metadata.DBObject;
 import org.validator.metadata.RefreshRequest;
 import org.validator.utils.FileUtils;
-import org.validator.utils.XMLUtils;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 
 
 /**
@@ -45,11 +42,11 @@ public class ValidatorEngine {
 	}
 
 	public void loadMasterLists() {
-		tableList	= FileUtils.file2array("/tmp/master_objects_list/tables");
-		viewList	= FileUtils.file2array("/tmp/master_objects_list/views");
-		procList	= FileUtils.file2array("/tmp/master_objects_list/procedures");
-		synonList	= FileUtils.file2array("/tmp/master_objects_list/synonyms");
-		seqList		= FileUtils.file2array("/tmp/master_objects_list/sequences");
+		tableList	= FileUtils.file2array("/home/danno/tmp/master_objects_list/tables");
+		viewList	= FileUtils.file2array("/home/danno/tmp/master_objects_list/views");
+		procList	= FileUtils.file2array("/home/danno/tmp/master_objects_list/procedures");
+		synonList	= FileUtils.file2array("/home/danno/tmp/master_objects_list/synonyms");
+		seqList		= FileUtils.file2array("/home/danno/tmp/master_objects_list/sequences");
 	}
 
 	/**
@@ -99,8 +96,6 @@ public class ValidatorEngine {
 		}
 
 		nzRequest.toXML(resultCatalog);
-
-//		createIndexDocument(resultRef);
 	}
 
 	/**
@@ -115,23 +110,4 @@ public class ValidatorEngine {
 		logger.info("isResultDirSet = {}", isResultDirSet);
 		return (isNZRequestSet && isResultDirSet);
 	}
-
-	/**
-	 * Generates a catalog file with a list of tests.
-	 * @param resultRefs a Map with a (result file, elapsed time) entry for each test executed
-	 */
-/*	private void createIndexDocument (Map <String, Double> resultRefs) {
-		Document index = XMLUtils.createDOMDocument();
-		Element   root = index.createElement("index");
-
-		logger.trace("Creating results index");
-		for (Map.Entry <String, Double> ref : resultRefs.entrySet()) {
-			Element node = index.createElement("results");
-			node.setTextContent(ref.getKey());
-			root.appendChild(node);
-		}
-
-		index.appendChild(root);
-		XMLUtils.saveDocument(index, resultCatalog + "index.xml");
-	}*/
 }

@@ -123,7 +123,7 @@ public class FileUtils {
 			deleteAll(workDirectory);
 		}
 		workDirectory.mkdir();
-		logger.info("Setting up working directory {}", newFolder);
+		logger.trace("Setting up working directory {}", newFolder);
 		return workDirectory.exists();
 	}
 

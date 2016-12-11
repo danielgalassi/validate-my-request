@@ -76,16 +76,15 @@ public class ResultPublisher {
 	 * Creates HTML pages.
 	 */
 	private void generatePages() {
-		pages.add("Summary");
-		pages.add("Compact");
-		pages.add("Details");
+		pages.add("Results");
 		for (String page : pages) {
 			logger.info("Generating {} page", page);
 			String stylesheet = viewCatalog + page + ".xsl";
 			InputStream xsl2html = context.getResourceAsStream(stylesheet);
-			XMLUtils.applyStylesheet(index, xsl2html, resultCatalog + page + ".html", params);
+			//XMLUtils.applyStylesheet(index, xsl2html, resultCatalog + page + ".html", params);
+			XMLUtils.applyStylesheet(index, xsl2html, resultCatalog + "Results.html", params);
 		}
-		pages.remove("Summary");
+		//pages.remove("Summary");
 	}
 
 	/**
@@ -124,7 +123,7 @@ public class ResultPublisher {
 	 * Publishes the location of the summary page.
 	 * @return the summary page location in the context of the servlet session
 	 */
-	public String getSummaryPage() {
-		return File.separator + params.get("SessionFolder") + File.separator + "results" + File.separator + "Summary.html";
+	public String getResultsPage() {
+		return File.separator + params.get("SessionFolder") + File.separator + "results" + File.separator + "Results.html";
 	}
 }
