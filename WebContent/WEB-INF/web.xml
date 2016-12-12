@@ -6,7 +6,6 @@
 	<display-name>validate-my-request</display-name>
 	<welcome-file-list>
 		<welcome-file>start.jsp</welcome-file>
-		<welcome-file>dragndrop.jsp</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<description></description>

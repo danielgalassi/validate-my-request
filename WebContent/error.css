@@ -23,7 +23,7 @@ body {
 
 .errorForm {
 	width: 475px;
-	float: left;
+	float: center;
 	background: #fff;
 	color: #777;
 	-webkit-box-shadow: 0px 0px 8px 2px #d1d1d1;
