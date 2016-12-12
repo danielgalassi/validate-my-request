@@ -9,7 +9,6 @@
 	href="${pageContext.request.contextPath}/style.css" type="text/css" />
 </head>
 <body>
-
 	<div class="wrapper">
 		<form class="form1" action="upload" method="post"
 			enctype="multipart/form-data">

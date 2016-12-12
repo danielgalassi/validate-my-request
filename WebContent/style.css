@@ -79,7 +79,8 @@ body {
 }
 
 .inputtext {
-	float: left; line-height : 28px;
+	float: left;
+	line-height : 28px;
 	he1ght: 38px;
 	font-size: 12px;
 	line-height: 28px; he1ght : 38px; font-size : 12px;
@@ -95,7 +96,7 @@ body {
 
 .inputcontent input {
 	padding: 5px;
-	align: right; height : 21px;
+	height : 21px;
 	w1dth: 208px;
 	line-height: 18px;
 	border: 1px solid #c7c7c7;
