@@ -83,13 +83,7 @@ public class ValidatorEngine {
 		}
 
 		logger.info("Executing tests...");
-		nzRequest.matchTables(tableList);
-		nzRequest.matchViews(viewList);
-		nzRequest.matchSynonyms(synonList);
-		nzRequest.matchSequences(seqList);
-		nzRequest.matchProcedures(procList);
-		nzRequest.matchIncorrectType(tableList, viewList, synonList, seqList, procList);
-		nzRequest.checkForSchemaMisplacement();
+		match();
 
 		Iterator<DBObject> it = (nzRequest.getObjectList()).iterator();
 		while (it.hasNext()) {
@@ -98,6 +92,62 @@ public class ValidatorEngine {
 		}
 
 		nzRequest.toXML(resultCatalog);
+	}
+
+	public void match() {
+		ArrayList<DBObject> objectsList = nzRequest.getObjectList();
+		Iterator<DBObject> it = objectsList.iterator();
+		DBObject object_to_match = null;
+		int index = 0;
+		while (it.hasNext()) {
+			object_to_match = (it.next());
+			if (tableList.contains(object_to_match.toString()) && object_to_match.isTable()) {
+				object_to_match.tag();
+			}
+			if (viewList.contains(object_to_match.toString()) && object_to_match.isView()) {
+				object_to_match.tag();
+			}
+			if (synonList.contains(object_to_match.toString()) && object_to_match.isSynonym()) {
+				object_to_match.tag();
+			}
+			if (seqList.contains(object_to_match.toString()) && object_to_match.isSequence()) {
+				object_to_match.tag();
+			}
+			if (procList.contains(object_to_match.toString()) && object_to_match.isProcedure()) {
+				object_to_match.tag();
+			}
+			//checks whether schema.object was entered in the object column
+			if (!object_to_match.exist() && object_to_match.getName().startsWith(object_to_match.getSchema()+".")) {
+				object_to_match.setComment("Maybe... you've included the schema name in the object column?");
+			}
+			//
+			if (!object_to_match.exist()) {
+				if (!object_to_match.getType().equals("TABLE")) {
+					if (tableList.contains(object_to_match.toString()))
+						object_to_match.setComment("This is a table, not a " + object_to_match.getType().toLowerCase());
+				}
+				if (!object_to_match.getType().equals("SYNONYM")) {
+					if (synonList.contains(object_to_match.toString()))
+						object_to_match.setComment("This is a synonym, not a " + object_to_match.getType().toLowerCase());
+				}
+				if (!object_to_match.getType().equals("SEQUENCE")) {
+					if (seqList.contains(object_to_match.toString()))
+						object_to_match.setComment("This is a sequence, not a " + object_to_match.getType().toLowerCase());
+				}
+				if (!object_to_match.getType().equals("VIEW")) {
+					if (viewList.contains(object_to_match.toString()))
+						object_to_match.setComment("This is a view, not a " + object_to_match.getType().toLowerCase());
+				}
+				if (!object_to_match.getType().equals("PROCEDURE")) {
+					if (procList.contains(object_to_match.toString()))
+						object_to_match.setComment("This is a stored procedure, not a " + object_to_match.getType().toLowerCase());
+				}
+			}
+
+			objectsList.set(index, object_to_match);
+			index++;
+		}
+		nzRequest.override(objectsList);
 	}
 
 	/**
