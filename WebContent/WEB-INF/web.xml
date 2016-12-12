@@ -6,6 +6,7 @@
 	<display-name>validate-my-request</display-name>
 	<welcome-file-list>
 		<welcome-file>start.jsp</welcome-file>
+		<welcome-file>dragndrop.jsp</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<description></description>
@@ -24,14 +25,6 @@
 	<servlet-mapping>
 		<servlet-name>cleanup.jsp</servlet-name>
 		<url-pattern>/cleanup</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>SubjectAreaSelector</servlet-name>
-		<jsp-file>/SubjectAreaSelector.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>SubjectAreaSelector</servlet-name>
-		<url-pattern>/SubjectAreaSelector</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<description></description>
