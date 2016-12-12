@@ -260,4 +260,20 @@ public class RefreshRequest {
 			index++;
 		}
 	}
+
+	public void checkForSchemaMisplacement() {
+		if (size == 0) {
+			logger.error("No objects found for validation");
+			return;
+		}
+		Iterator<DBObject> it = objectsList.iterator();
+		DBObject object_to_match = null;
+		while (it.hasNext()) {
+			object_to_match = (it.next());
+			if (!object_to_match.exist() && 
+					object_to_match.getName().startsWith(object_to_match.getSchema()+".")) {
+				object_to_match.setComment("Maybe... you've included the schema name in the object column?");
+			}
+		}
+	}
 }

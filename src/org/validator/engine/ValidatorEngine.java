@@ -89,6 +89,7 @@ public class ValidatorEngine {
 		nzRequest.matchSequences(seqList);
 		nzRequest.matchProcedures(procList);
 		nzRequest.matchIncorrectType(tableList, viewList, synonList, seqList, procList);
+		nzRequest.checkForSchemaMisplacement();
 
 		Iterator<DBObject> it = (nzRequest.getObjectList()).iterator();
 		while (it.hasNext()) {
