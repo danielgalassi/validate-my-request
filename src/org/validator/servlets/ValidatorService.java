@@ -33,7 +33,7 @@ public class ValidatorService extends HttpServlet {
 	private static final Logger logger = LogManager.getLogger(ValidatorService.class.getName());
 
 	/** Application directory where UI-generating code for test results reside. */
-	private static final String	viewCatalogue = "/WEB-INF/Views/";
+	private static final String	uiCatalog = "/WEB-INF/Views/";
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -68,7 +68,7 @@ public class ValidatorService extends HttpServlet {
 
 		//publishes HTML pages featuring results to the session folder
 		ResultPublisher publisher = new ResultPublisher();
-		publisher.setCatalogs(resultsFolder, viewCatalogue);
+		publisher.setCatalogs(resultsFolder, uiCatalog);
 		publisher.setContext(getServletContext());
 		publisher.setParameters("SessionFolder", sessionId);
 
@@ -76,7 +76,11 @@ public class ValidatorService extends HttpServlet {
 
 		//redirects to summary view
 		String results = publisher.getResultsPage();
-		RequestDispatcher rd = request.getRequestDispatcher(results);
-		rd.forward(request, response);
+//		RequestDispatcher rd = request.getRequestDispatcher(results);
+//		rd.forward(request, response);
+		response.setContentType("html");
+		response.setCharacterEncoding("UTF-8");
+		response.getWriter().write(results);
+		System.out.println(results);
 	}
 }
