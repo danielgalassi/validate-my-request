@@ -1,9 +1,7 @@
 package org.validator.engine;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -72,8 +70,6 @@ public class ValidatorEngine {
 	 * points to a result file.
 	 */
 	public void run() {
-		Map <String, Double> resultRef = new HashMap<String, Double>();
-		DBObject		object_matched = null;
 		if (!ready()) {
 			logger.error("Engine is not ready");
 			if (nzRequest.getSize() == 0) {
@@ -83,18 +79,7 @@ public class ValidatorEngine {
 		}
 
 		logger.info("Executing tests...");
-		match();
 
-		Iterator<DBObject> it = (nzRequest.getObjectList()).iterator();
-		while (it.hasNext()) {
-			object_matched = it.next();
-			resultRef.put(object_matched.toString(), 0.00);
-		}
-
-		nzRequest.toXML(resultCatalog);
-	}
-
-	public void match() {
 		ArrayList<DBObject> objectsList = nzRequest.getObjectList();
 		Iterator<DBObject> it = objectsList.iterator();
 		DBObject object_to_match = null;
@@ -120,7 +105,7 @@ public class ValidatorEngine {
 			if (!object_to_match.exist() && object_to_match.getName().startsWith(object_to_match.getSchema()+".")) {
 				object_to_match.setComment("Maybe... you've included the schema name in the object column?");
 			}
-			//
+			//validates whether a table is actually a view... etc
 			if (!object_to_match.exist()) {
 				if (!object_to_match.getType().equals("TABLE")) {
 					if (tableList.contains(object_to_match.toString()))
@@ -143,11 +128,14 @@ public class ValidatorEngine {
 						object_to_match.setComment("This is a stored procedure, not a " + object_to_match.getType().toLowerCase());
 				}
 			}
-
 			objectsList.set(index, object_to_match);
+			nzRequest.override(objectsList);
 			index++;
 		}
-		nzRequest.override(objectsList);
+
+		logger.info("All tests executed...");
+
+		nzRequest.toXML(resultCatalog);
 	}
 
 	/**
