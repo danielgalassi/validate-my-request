@@ -18,7 +18,7 @@
 			<div class="input nobottomborder">	
 				<div class="inputtext">Select refresh template</div>
 				<div class="inputcontent nobottomborder">
-					<input id="metadataFile" type="file" name="metadata" size="15" />
+					<input align="right" id="metadataFile" type="file" name="metadata" size="15" />
 				</div>
 			</div>
 

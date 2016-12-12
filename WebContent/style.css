@@ -9,7 +9,7 @@ body {
 .link {
 	text-align: center;
 	clear: both;
-	padding: 20px 0;
+	padding: 10px 0;
 }
 
 .link a {
@@ -17,12 +17,11 @@ body {
 }
 
 .wrapper {
-	width: 500px;
+	width: 450px;
 	margin: 50px auto;
 }
 
 .form1 {
-	width: 400px;
 	float: center;
 	background: #fff;
 	color: #777;
@@ -47,12 +46,11 @@ body {
 .formtitle {
 	padding: 10px;
 	line-height: 16px;
-	font-size: 13px;
+	font-size: 15px;
 	text-shadow: -1px -1px #e87c19;
 	color: #fff;
 	font-weight: bold;
 	border-bottom: 1px solid #eb8d19;
-	width: 400px;
 	background: #ffbd27; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%, #ff9d19
 		100%); /* FF3.6+ */
@@ -72,37 +70,40 @@ body {
 }
 
 .input {
-	width: 360px;
+	w1dth: 400px;
 	border-bottom: 1px solid #ddd;
-	margin-bottom: 10px;
+	marg1n-bottom: 10px;
 	margin: 20px;
+	align: right;
 	overflow: hidden;
 }
 
 .inputtext {
-	float: left;
-	line-height: 28px;
-	height: 35px;
+	float: left; line-height : 28px;
+	he1ght: 38px;
 	font-size: 12px;
-	width: 140px;
+	line-height: 28px; he1ght : 38px; font-size : 12px;
+	width: 165px;
 }
 
 .inputcontent {
 	float: left;
-	width: 220px;
-	height: 50px;
+	align: right;
+	w1dth: 260px;
+	he1ght: 50px;
 }
 
 .inputcontent input {
 	padding: 5px;
-	height: 21px;
-	width: 208px;
+	align: right; height : 21px;
+	w1dth: 208px;
 	line-height: 18px;
 	border: 1px solid #c7c7c7;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
 	color: #777;
+	height: 21px;
 }
 
 .inputcontent a {
