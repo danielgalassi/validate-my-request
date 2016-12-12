@@ -118,7 +118,7 @@ input[type=radio] {
 }
 
 div+p {
-	     color: red;
+	color: red;
 }
 
 input[type=radio] {width =80px;

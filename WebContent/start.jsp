@@ -15,26 +15,6 @@
 			enctype="multipart/form-data">
 			<div class="formtitle">Start the validation process</div>
 
-			<!--div class="input">
-				<div class="inputtext">File format</div>
-				<div class="inputcontent">
-					<input type="radio" id="zip" name="fileFormat" value="zip" checked>
-					<label for="zip">ZIP</label>
-					<input type="radio" id="xudml" name="fileFormat" value="xudml">
-					<label for="xudml">XUDML</label>
-				</div>
-			</div-->
-
-			<!--div class="input">
-				<div class="inputtext">Generate results</div>
-					<div class="inputcontent">
-					<input type="radio" id="Verbose" name="resultsFormat" value="Verbose" checked>
-					<label for="Verbose">Verbose</label>
-					<input type="radio" id="ShowErrorsOnly" name="resultsFormat" value="ShowErrorsOnly">
-					<label for="ShowErrorsOnly">Errors Only</label>
-				</div>
-			</div-->
-
 			<div class="input nobottomborder">	
 				<div class="inputtext">Select refresh template</div>
 				<div class="inputcontent nobottomborder">
