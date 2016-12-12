@@ -5,10 +5,9 @@
 	id="WebApp_ID" version="3.0">
 	<display-name>validate-my-request</display-name>
 	<welcome-file-list>
-		<welcome-file>start.jsp</welcome-file>
 		<welcome-file>dragndrop.jsp</welcome-file>
 	</welcome-file-list>
-	<servlet>
+	<!--servlet>
 		<description></description>
 		<display-name>FileHandler</display-name>
 		<servlet-name>FileHandler</servlet-name>
@@ -17,7 +16,7 @@
 	<servlet-mapping>
 		<servlet-name>FileHandler</servlet-name>
 		<url-pattern>/upload</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping-->
 	<servlet>
 		<servlet-name>cleanup.jsp</servlet-name>
 		<jsp-file>/cleanup.jsp</jsp-file>

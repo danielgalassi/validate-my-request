@@ -30,22 +30,9 @@
 		formData.append("file", file);
 
 		var xhr = new XMLHttpRequest();
-		xhr.open("POST", "upload", false);
+		xhr.open("POST", "ValidatorService", false);
 		xhr.send(formData);
 	}
-</script>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script>
-	$(document).ready(function() {
-		$('#submit').click(function(event) {
-			var filename = $('#filename').val();
-			$.get('ValidatorService', {
-				metadata : metadata
-			}, function(responseText) {
-				$('#results').text(responseText);
-			});
-		});
-	});
 </script>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/style.css" type="text/css" />
@@ -61,9 +48,6 @@
 					files here</div>
 			</div>
 
-			<!--div class="buttons">
-				<input class="orangebutton" type="submit" value="Upload" />
-			</div-->
 		</form>
 	</div>
 	<div id="results"></div>

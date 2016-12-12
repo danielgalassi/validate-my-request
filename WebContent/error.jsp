@@ -13,7 +13,7 @@
 <body>
 
 	<div class="wrapper">
-		<form class="errorForm" action="start.jsp">
+		<form class="errorForm" action="dragndrop.jsp">
 			<div class="formtitle">ERROR</div>
 			<div class="input nobottomborder">
 				<c:if test="${not empty ErrorMessage}">
