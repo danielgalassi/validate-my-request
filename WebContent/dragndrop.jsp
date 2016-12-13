@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Validate Netezza Refresh</title>
-<script>
+<!--script>
 	window.onload = function() {
 		var dropbox = document.getElementById("dropbox");
 		dropbox.addEventListener("dragenter", noop, false);
@@ -28,29 +28,29 @@
 	function upload(file) {
 		var formData = new FormData();
 		formData.append("file", file);
-
-		var xhr = new XMLHttpRequest();
-		xhr.open("POST", "ValidatorService", false);
-		xhr.send(formData);
+//		var xhr = new XMLHttpRequest();
+//		xhr.open("POST", "ValidatorService", false);
+//		xhr.send(formData);
 	}
-</script>
+</script-->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/style.css" type="text/css" />
 </head>
 <body>
 	<h1 style="color: #e68a00" align="center">Validate-My-Request</h1>
 	<div class="wrapper" align="center">
-		<form class="form1" method="post" enctype="multipart/form-data">
+		<form class="form1" method="post" action="ValidatorService"
+			enctype="multipart/form-data">
 			<div class="formtitle">Start the validation process</div>
-
 			<div class="input nobottomborder">
-				<div class="upload-drop-zone" id="dropbox">Just drag and drop
+				<div class="upload-drop-zone" id="metadata">Just drag and drop
 					files here</div>
 			</div>
-
+			<div class="buttons">
+				<input class="orangebutton" type="submit" value="Upload" />
+			</div>
 		</form>
 	</div>
-	<div id="results"></div>
 
 </body>
 </html>
