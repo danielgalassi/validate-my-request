@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -85,6 +84,8 @@ public class ValidatorService extends HttpServlet {
 
 				for (FileItem item : formItems) {
 
+					System.out.println(item.toString());
+
 					if (!item.isFormField()) {
 
 						logger.info("Processing file...");
@@ -120,7 +121,7 @@ public class ValidatorService extends HttpServlet {
 		//String    refreshRequest = (String) session.getAttribute("metadataFile");
 		String refreshRequest = metadata.getName();
 		String  resultsFolder = uploadPath + "results" + File.separator;
-
+System.out.println("XYZ");
 		//setting the repository (tags are discarded if not related to the selected subject area)
 		RefreshRequest nzRequest = new RefreshRequest(uploadPath, refreshRequest);
 
