@@ -1,18 +1,19 @@
 * {
-	margin: 0;
 	padding: 0;
+	margin: 0;
 }
 
 body {
+	margin: 0;
+	padding: 0;
 	background: #f4f4f4;
-	font: 14px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .link {
 	text-align: center;
 	clear: both;
-	padding: 10px 0;
+	padding: 20px 0;
 }
 
 .link a {
@@ -20,9 +21,8 @@ body {
 }
 
 .wrapper {
-	width: 40%;
-	height: 80%;
-	margin: 5% auto;
+	width: 33%;
+	margin: 2% auto;
 }
 
 .form1 {
@@ -49,12 +49,11 @@ body {
 
 .formtitle {
 	padding: 2%;
-	line-height: 140%;
-	font-size: 16px;
-	font-weight: 600;
+	line-height: 175%;
+	font-size: 110%;
 	text-shadow: -1px -1px #e87c19;
 	color: #fff;
-	fo1nt-weight: bold;
+	font-weight: 600;
 	border-bottom: 1px solid #eb8d19;
 	background: #ffbd27; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%, #ff9d19
@@ -75,60 +74,47 @@ body {
 }
 
 .input {
-	margin: 0;
-	padding: 2%;
 	border-bottom: 1px solid #ddd;
-	align: right;
-	overflow: hidden;
+	margin: 1%;
 }
 
 .inputtext {
-	padding: 1%;
 	float: left;
-	line-height : 250%;
-	font-size: 14px;
-	font-weight: 100;
-	width: 45%;
+	line-height: 28px;
+	font-size: 12px;
 }
 
 .inputcontent {
-	padding: 1%;
 	float: left;
-	width: 45%;
 }
 
 .inputcontent input {
-	padding: 1%;
-	line-height: 400%;
+	padding: 5px;
+	line-he1ght: 18px;
 	border: 1px solid #c7c7c7;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
 	color: #777;
-	float: hidden;
 }
 
 .inputcontent a {
 	color: #0084ff;
 	font-size: 12px;
 	text-decoration: none;
-	line-height: 12px;
-}
-
-div+p {
-	color: red;
+	line-height: 125%;
 }
 
 .nobottomborder {
 	border-bottom: 0px;
-	display: block;
+	padding: 1%;
 }
 
 .buttons {
 	background: #f1f1f1;
 	border-top: 1px solid #ddd;
-	padding: 15px;
-	height: 34px;
+	padding: 2%;
+	line-height: 65%;
 }
 
 .orangebutton {
@@ -147,16 +133,17 @@ div+p {
 		endColorstr='#ff9b19', GradientType=0); /* IE6-9 */
 	background: linear-gradient(top, #ffc339 0%, #ff9b19 100%); /* W3C */
 	border: 1px solid #ff9b19;
-	-webkit-border-radius: 7px;
+	-webkit-border-radius:7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
-	line-height: 20px;
-	font-size: 16px;
-	padding: 1%;
+	line-height: 10px;
+	font-size: 100%;
+	font-weight: 300;
+	padding: 5%;
 	color: #fff;
 	text-shadow: -1px -1px #ff9b19;
-	float: right;
-	margin-left: 0;
+	float: center;
+	width: 98%;
 	cursor: pointer;
 }
 
@@ -175,4 +162,13 @@ div+p {
 	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#ff9b19',
 		endColorstr='#ffc339', GradientType=0); /* IE6-9 */
 	background: linear-gradient(top, #ff9b19 0%, #ffc339 100%); /* W3C */
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #666699;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 1000%;
+  text-align: center
 }

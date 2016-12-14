@@ -25,20 +25,20 @@ import org.validator.utils.FileUtils;
  * @author danielgalassi@gmail.com
  *
  */
-@WebServlet(description = "This controller handles file-based requests", urlPatterns = { "/FileHandler" })
+//@WebServlet(description = "This controller handles file-based requests", urlPatterns = { "/FileHandler" })
+@WebServlet(description = "processes file-upload requests", urlPatterns = {"/FileHandler"})
 public class FileHandler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private static final Logger logger = LogManager.getLogger(FileHandler.class.getName());
 
-	private static final int   MEMORY_THRESHOLD = 1024 * 1024 * 10;  // 10MB
-	/** Maximum file size. Default value: 200MB. */
-	private static final int      MAX_FILE_SIZE = 1024 * 1024 * 200; // 200MB
-	private static final int   MAX_REQUEST_SIZE = 1024 * 1024 * 200; // 200MB
+	private static final int   MEMORY_THRESHOLD = 1024 * 1024 * 2;  // 2MB
+	/** Maximum file size. Default value: 5MB. */
+	private static final int      MAX_FILE_SIZE = 1024 * 1024 * 5; // 5MB
+	private static final int   MAX_REQUEST_SIZE = 1024 * 1024 * 5; // 5MB
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		//boolean     isZipFormat = true;
 		File           metadata = null;
 		HttpSession     session = request.getSession(true);
 
@@ -83,17 +83,14 @@ public class FileHandler extends HttpServlet {
 					}
 
 					if (!item.isFormField()) {
-
 						logger.info("Processing file...");
 						String fileName = new File(item.getName()).getName();
-
 						if (fileName.equals("")) {
 							logger.error("No template file selected.");
 							request.setAttribute("ErrorMessage", "A template file must be selected before submitting a validation request.");
 							getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
 							return;
 						}
-
 						String path = uploadPath + fileName;
 						File uploaded = new File(path);
 						//saves the file on disk
@@ -111,6 +108,6 @@ public class FileHandler extends HttpServlet {
 		}
 		//redirects client to message page
 		//getServletContext().getRequestDispatcher("/SubjectAreaSelector").forward(request, response);
-		getServletContext().getRequestDispatcher("/ValidatorService").forward(request, response);
+		//		getServletContext().getRequestDispatcher("/ValidatorService").forward(request, response);
 	}
 }
