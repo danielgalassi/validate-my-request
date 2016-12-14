@@ -8,23 +8,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Validate Netezza Request - ERROR</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/error.css" type="text/css" />
+	href="${pageContext.request.contextPath}/style.css" type="text/css" />
 </head>
 <body>
 
 	<div class="wrapper">
-		<form class="errorForm" action="start.jsp">
+		<form class="form1" action="/validate-my-request/">
 			<div class="formtitle">ERROR</div>
 			<div class="input nobottomborder">
 				<c:if test="${not empty ErrorMessage}">
-					<div class="inputtext">${ErrorMessage}</div>
+					<div class="inputtext2">${ErrorMessage}</div>
 				</c:if>
 				<c:if test="${emptyErrorMessage}">
-					<div class="inputtext">${ErrorMessage}</div>
+					<div class="inputtext2">${ErrorMessage}</div>
 				</c:if>
 				<c:if test="<%=response.getStatus() >= 400%>">
-					<div class="inputtext">Sorry mate!</div>
-					<div class="inputtext">
+					<div class="inputtext2">Sorry mate!</div>
+					<div class="inputtext2">
 						HTTP
 						<%=response.getStatus()%>
 						error. Something is not right...

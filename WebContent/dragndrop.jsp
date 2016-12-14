@@ -33,7 +33,7 @@
 		formData.append("file", file);
 
 		var xhr = new XMLHttpRequest();
-		xhr.open("POST", "upload", false); // If async=false, then you'll miss progress bar support.
+		xhr.open("POST", "upload", false);
 		xhr.send(formData);
 	}
 </script>
@@ -41,7 +41,7 @@
 	href="${pageContext.request.contextPath}/style.css" type="text/css" />
 </head>
 <body>
-	<div class="wrapper" align="center">
+	<div class="wrapper">
 		<form class="form1" method="post" action="ValidatorService"
 			enctype="multipart/form-data">
 			<div class="formtitle">Start the validation process</div>
@@ -50,7 +50,7 @@
 					template here</div>
 			</div>
 			<div class="buttons">
-				<input class="orangebutton" type="submit" value="Validate" />
+				<input id="submit" class="orangebutton" type="submit" value="Validate"/>
 			</div>
 		</form>
 	</div>
