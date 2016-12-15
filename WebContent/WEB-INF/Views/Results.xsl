@@ -12,20 +12,22 @@
 		h4 {font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 12pt; color: #888888;}
 		li {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 10pt; color: #474747;}
 		a  {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 10pt; color: #444444;}
-		*  {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:  8pt; color: #333333;}
+		*  {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 10pt; color: #333333;}
 		p  {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 10pt; color: rgb(128, 128, 128);}
-		tr {height:30; font-size: 8.5pt;}
+		tr {height:30; font-size: 10pt;}
 		tr:hover {background: rgb(248,248,248);}
+		tbody td:hover {background: rgb(248,248,248);}
 		table {
+			width: 100%;
 			border-spacing: 0 0;
-			margin: 1px;
+			margin: 2px;
 			border-right: 1px solid #DEDEDE;
 			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 8.5pt;
 			}
 		th	{
 			font-family: Helvetica, sans-serif;
-			font-size: 9pt;
-			font-weight: bold;
+			font-size: 11pt;
+			font-weight: 600;
 			text-align:center;
 			background: #ECECEC;
 			color: #555555;
@@ -35,14 +37,14 @@
 			}
 		tbody td {
 				font-family: Helvetica, sans-serif;
-				font-size: 8pt;
-        		font-weight: bold;
-        		text-align:left;
+				font-size: 10pt;
+				font-weight: 300;
+        		text-align: left;
         		color: #444444;
 				border-bottom: 1px solid #DEDEDE;
 				border-left: 1px solid #DEDEDE;
-				padding-left:6px;
-				padding-right:6px;
+				padding-left: 3px;
+				padding-right: 3px;
 				}
 				</style>
 				
@@ -67,10 +69,10 @@
 				<table>
 					<tbody>
 						<tr>
-							<th width="250px" height="28px">Object</th>
-							<th width="350px" height="28px">Type</th>
-							<th width="250px" height="28px">Result</th>
-							<th width="450px" height="28px">Comment</th>
+							<th width="35%" height="28px">Object</th>
+							<th width="15%" height="28px">Type</th>
+							<th width="15%" height="28px">Result</th>
+							<th width="35%" height="28px">Comment</th>
 						</tr>
 						
 						<xsl:for-each select="//object">

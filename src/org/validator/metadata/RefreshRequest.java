@@ -67,8 +67,6 @@ public class RefreshRequest {
 		this.nzRequest = new File(directory + xslx);
 		logger.info("Reading refresh request");
 
-		//loading HashMap
-
 		String objectType = "";
 		String objectSchema = "";
 		String objectName = "";

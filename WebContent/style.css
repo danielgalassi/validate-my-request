@@ -238,14 +238,6 @@ body {
 	/* W3C */
 }
 
-.upload-drop-zone {
-	color: #666699;
-	border-style: dashed;
-	border-color: #ccc;
-	line-height: 1000%;
-	text-align: center
-}
-
 .buttons {
 	background: #f1f1f1;
 	border-top: 1px solid #ddd;
