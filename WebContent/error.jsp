@@ -12,10 +12,10 @@
 </head>
 <body>
 
-	<div class="wrapper">
+	<div class="wrapper" style="width: 25%;">
 		<form class="form1" action="/validate-my-request/">
 			<div class="formtitle">ERROR</div>
-			<div class="input nobottomborder">
+			<div class="input nobottomborder2">
 				<c:if test="${not empty ErrorMessage}">
 					<div class="inputtext2">${ErrorMessage}</div>
 				</c:if>
@@ -31,10 +31,9 @@
 					</div>
 				</c:if>
 			</div>
-
 			<div class="buttons">
 				<input class="orangebutton" type="submit"
-					value="Take me to the Start Page" />
+					value="Back" />
 			</div>
 		</form>
 	</div>

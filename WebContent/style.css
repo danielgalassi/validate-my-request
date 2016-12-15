@@ -119,6 +119,12 @@ body {
 	padding: 1%;
 }
 
+.nobottomborder2 {
+	border-bottom: 0px;
+	padding: 2%;
+	height: 150px;
+}
+
 .buttons {
 	background: #f1f1f1;
 	border-top: 1px solid #ddd;
@@ -152,7 +158,7 @@ body {
 	color: #fff;
 	text-shadow: -1px -1px #ff9b19;
 	float: center;
-	width: 98%;
+	width: 100%;
 	cursor: pointer;
 }
 
@@ -182,7 +188,7 @@ body {
 }
 
 @media
-(max-width: 900px) {
+(max-width: 750px) {
 
 .form1 {
 	float: center;
@@ -208,6 +214,7 @@ body {
 
 	.formtitle {
 		padding: 2%;
+		padding-left: 6%;
 		line-height: 150%;
 		font-size: 90%;
 		text-shadow: -1px -1px #e87c19;
@@ -235,8 +242,15 @@ body {
 	color: #666699;
 	border-style: dashed;
 	border-color: #ccc;
-	line-height: 600%;
+	line-height: 1000%;
 	text-align: center
+}
+
+.buttons {
+	background: #f1f1f1;
+	border-top: 1px solid #ddd;
+	padding: 6%;
+	line-height: 65%;
 }
 
 .orangebutton {
@@ -255,17 +269,23 @@ body {
 		endColorstr='#ff9b19', GradientType=0); /* IE6-9 */
 	background: linear-gradient(top, #ffc339 0%, #ff9b19 100%); /* W3C */
 	border: 1px solid #ff9b19;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
-	border-radius: 7px;
-	line-height: 110%;
-	font-size: 90%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 80%;
+	font-size: 100%;
 	font-weight: 600;
 	padding: 5%;
 	color: #fff;
 	text-shadow: -1px -1px #ff9b19;
 	float: center;
-	width: 98%;
+	width: 100%;
 	cursor: pointer;
+}
+
+.nobottomborder2 {
+	border-bottom: 0px;
+	padding: 2%;
+	height: 200px;
 }
 }
