@@ -90,6 +90,13 @@ public class RefreshRequest {
 
 		Iterator<Row> rowIterator = dataRefreshSheet.iterator();
 
+		//skips the header details of the request
+		while (rowIterator.hasNext()) {
+			Row row = rowIterator.next();
+			if (row.getCell(0).toString().toUpperCase().equals("SCHEMA")) {
+				break;
+			}
+		}
 		// Traversing over each row of XLSX file
 		while (rowIterator.hasNext()) {
 			Row row = rowIterator.next();
@@ -103,7 +110,6 @@ public class RefreshRequest {
 					objectType.equals("SYNONYM") ||
 					objectType.equals("SEQUENCE") ||
 					objectType.equals("PROCEDURE")) {
-				//objectName = objectSchema + "." + objectName;
 				objectsList.add(new DBObject(objectSchema, objectName, objectType));
 			}
 		}
