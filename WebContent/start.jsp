@@ -14,7 +14,7 @@
 			enctype="multipart/form-data">
 			<div class="formtitle">Start the validation process</div>
 
-			<div class="input nobottomborder">	
+			<div class="input nobottomborder2">	
 				<div class="inputtext">Select refresh template</div>
 				<div class="inputcontent nobottomborder">
 					<input align="right" id="metadataFile" type="file" name="metadata" size="15" />

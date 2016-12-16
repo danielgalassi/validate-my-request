@@ -88,11 +88,11 @@
 					style="padding-top: 0px; padding-bottom: 50px; padding-left: 30px; padding-right: 30px">
 					<h3 style="font-size: 30px; color: green; float: left;">
 						OK:
-						<xsl:value-of select="count(//object[@isValid='true'])" />
+						<xsl:value-of select="count(//object[@valid='true'])" />
 					</h3>
 					<h3 style="font-size: 30px; color: red; float: right;">
 						ERR:
-						<xsl:value-of select="count(//object[@isValid='false'])" />
+						<xsl:value-of select="count(//object[@valid='false'])" />
 					</h3>
 				</div>
 				<h2 />
@@ -111,21 +111,21 @@
 							<!-- Results (table) Section -->
 							<tr>
 								<td height="28px">
-									<xsl:value-of select="normalize-space(.)" />
+									<xsl:value-of select="normalize-space(@fullObject)" />
 								</td>
 								<td height="28px">
 									<xsl:value-of select="@type" />
 								</td>
 
 								<!-- Test Results Section -->
-								<xsl:if test="(@isValid='true')">
+								<xsl:if test="(@valid='true')">
 									<!-- Green cells = Pass -->
 									<td style="background: #CCFF99; color: green; text-align:center;">OK</td>
 									<td style="background: #CCFF99; color: green;">
 										<xsl:value-of select="@comment" />
 									</td>
 								</xsl:if>
-								<xsl:if test="(@isValid='false')">
+								<xsl:if test="(@valid='false')">
 									<!-- Red cells = Fail -->
 									<td style="background: #FFF1BF; color: red; text-align:center;">Object Not Found</td>
 									<td style="background: #FFF1BF; color: red;">

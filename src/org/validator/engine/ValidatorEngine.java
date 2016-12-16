@@ -1,7 +1,11 @@
 package org.validator.engine;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -135,7 +139,24 @@ public class ValidatorEngine {
 
 		logger.info("All tests executed...");
 
-		nzRequest.toXML(resultCatalog);
+		serialiseResults();
+	}
+
+	private void serialiseResults() {
+		try {
+			JAXBContext jaxbContext = JAXBContext.newInstance(RefreshRequest.class);
+			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+
+			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+			//Marshal the employees list in console
+			jaxbMarshaller.marshal(nzRequest, System.out);
+
+			//Marshal the employees list in file
+			jaxbMarshaller.marshal(nzRequest, new File(resultCatalog + "index.xml"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
