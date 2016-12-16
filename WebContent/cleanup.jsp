@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Validate Netezza Refresh</title>
+<title>Validate Netezza Request - ADMIN</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/cleanup.css" type="text/css" />
 </head>

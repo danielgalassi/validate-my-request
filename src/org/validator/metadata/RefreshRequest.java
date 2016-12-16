@@ -104,6 +104,9 @@ public class RefreshRequest {
 			objectSchema	= row.getCell(0).toString().toUpperCase();
 			objectName		= row.getCell(1).toString().toUpperCase();
 			objectType		= row.getCell(2).toString().toUpperCase();
+			if (objectType.contains("STOR") || objectType.contains("PROC")) {
+				objectType = "PROCEDURE";
+			}
 
 			if (objectType.equals("TABLE") || 
 					objectType.equals("VIEW") || 
