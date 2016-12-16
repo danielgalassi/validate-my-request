@@ -46,7 +46,7 @@ public class RefreshRequest {
 	/**
 	 * Instantiates a refresh request file.
 	 * @param directory path to the refresh request file
-	 * @param name and extension of the refresh request XLSX file
+	 * @param xslx Excel (template) file
 	 */
 	public RefreshRequest(String directory, String xslx) {
 		this.nzRequest = new File(directory + xslx);

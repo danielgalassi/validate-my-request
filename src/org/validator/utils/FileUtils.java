@@ -30,7 +30,8 @@ public class FileUtils {
 
 	/**
 	 * Converts text files to ArrayLists
-	 * @param file full path of the text file
+	 * @param filename flat file
+	 * @return a collection with each line in the flat files
 	 */
 	public static ArrayList<String> file2array(String filename) {
 		ArrayList<String> list = new ArrayList<String>();
