@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Validate Netezza Refresh</title>
+<title>Validate Netezza Request</title>
 <script>
 	window.onload = function() {
 		var dropbox = document.getElementById("dropbox");

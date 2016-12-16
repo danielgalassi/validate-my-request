@@ -1,0 +1,2255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<test size="563">
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XXNBN_UDS_JOUR_FILE_CREATION" type="TABLE" valid="false">
+        <name>EBS_XXNBN_UDS_JOUR_FILE_CREATION</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XXNBN_PO_INCOMPLT_REASONS_V" type="TABLE" valid="false">
+        <name>EBS_XXNBN_PO_INCOMPLT_REASONS_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XXNBN_PNIDTL_AST_ERR_STG" type="TABLE" valid="false">
+        <name>EBS_XXNBN_PNIDTL_AST_ERR_STG</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XXNBN_PA_PHASE_TRANSIT" type="TABLE" valid="false">
+        <name>EBS_XXNBN_PA_PHASE_TRANSIT</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XXNBN_PA_CATG_TAG" type="TABLE" valid="false">
+        <name>EBS_XXNBN_PA_CATG_TAG</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XTR_JOURNALS" type="TABLE" valid="true">
+        <name>EBS_XTR_JOURNALS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XTR_COST_OF_FUNDS" type="TABLE" valid="false">
+        <name>EBS_XTR_COST_OF_FUNDS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XTR_BANK_BALANCES" type="TABLE" valid="false">
+        <name>EBS_XTR_BANK_BALANCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XTR_BANK_ACCOUNTS" type="TABLE" valid="false">
+        <name>EBS_XTR_BANK_ACCOUNTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XLE_REGISTRATIONS" type="TABLE" valid="false">
+        <name>EBS_XLE_REGISTRATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XLE_ENTITY_PROFILES" type="TABLE" valid="false">
+        <name>EBS_XLE_ENTITY_PROFILES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XLA_TRANSACTION_ENTITIES" type="TABLE" valid="false">
+        <name>EBS_XLA_TRANSACTION_ENTITIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XLA_EVENTS" type="TABLE" valid="false">
+        <name>EBS_XLA_EVENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XLA_DISTRIBUTION_LINKS" type="TABLE" valid="false">
+        <name>EBS_XLA_DISTRIBUTION_LINKS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XLA_AE_LINES" type="TABLE" valid="true">
+        <name>EBS_XLA_AE_LINES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XLA_AE_HEADERS" type="TABLE" valid="false">
+        <name>EBS_XLA_AE_HEADERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_XLA_ACCTG_METHODS_TL" type="TABLE" valid="false">
+        <name>EBS_XLA_ACCTG_METHODS_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_WSH_NEW_DELIVERIES" type="TABLE" valid="false">
+        <name>EBS_WSH_NEW_DELIVERIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_WSH_DELIVERY_DETAILS" type="TABLE" valid="false">
+        <name>EBS_WSH_DELIVERY_DETAILS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_WSH_DELIVERY_ASSIGNMENTS" type="TABLE" valid="false">
+        <name>EBS_WSH_DELIVERY_ASSIGNMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_WIP_PERIOD_BALANCES" type="TABLE" valid="false">
+        <name>EBS_WIP_PERIOD_BALANCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_WIP_ENTITIES" type="TABLE" valid="false">
+        <name>EBS_WIP_ENTITIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RG_REPORT_CALCULATIONS" type="TABLE" valid="false">
+        <name>EBS_RG_REPORT_CALCULATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RG_REPORT_AXIS_SETS" type="TABLE" valid="false">
+        <name>EBS_RG_REPORT_AXIS_SETS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RG_REPORT_AXIS_CONTENTS" type="TABLE" valid="false">
+        <name>EBS_RG_REPORT_AXIS_CONTENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RG_REPORT_AXES" type="TABLE" valid="false">
+        <name>EBS_RG_REPORT_AXES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RCV_TRANSACTIONS" type="TABLE" valid="false">
+        <name>EBS_RCV_TRANSACTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RCV_SHIPMENT_LINES" type="TABLE" valid="false">
+        <name>EBS_RCV_SHIPMENT_LINES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RCV_SHIPMENT_HEADERS" type="TABLE" valid="false">
+        <name>EBS_RCV_SHIPMENT_HEADERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RCV_ACCOUNTING_EVENTS" type="TABLE" valid="false">
+        <name>EBS_RCV_ACCOUNTING_EVENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RA_TERRITORIES" type="TABLE" valid="false">
+        <name>EBS_RA_TERRITORIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="This is a view, not a table" fullObject="BIA_SA_EBS_HIST.EBS_RA_TERMS" type="TABLE" valid="false">
+        <name>EBS_RA_TERMS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="This is a view, not a table" fullObject="BIA_SA_EBS_HIST.EBS_RA_TERMS_LINES" type="TABLE" valid="false">
+        <name>EBS_RA_TERMS_LINES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RA_SALESREPS_ALL" type="TABLE" valid="false">
+        <name>EBS_RA_SALESREPS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RA_CUSTOMER_TRX_LINES_ALL" type="TABLE" valid="false">
+        <name>EBS_RA_CUSTOMER_TRX_LINES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RA_CUSTOMER_TRX_ALL" type="TABLE" valid="false">
+        <name>EBS_RA_CUSTOMER_TRX_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RA_CUST_TRX_TYPES_ALL" type="TABLE" valid="false">
+        <name>EBS_RA_CUST_TRX_TYPES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RA_CUST_TRX_LINE_GL_DIST_ALL" type="TABLE" valid="false">
+        <name>EBS_RA_CUST_TRX_LINE_GL_DIST_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_RA_BATCH_SOURCES_ALL" type="TABLE" valid="false">
+        <name>EBS_RA_BATCH_SOURCES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_QA_SKIPLOT_LOG" type="TABLE" valid="false">
+        <name>EBS_QA_SKIPLOT_LOG</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_QA_SAMPLING_STD_RULES" type="TABLE" valid="false">
+        <name>EBS_QA_SAMPLING_STD_RULES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_QA_RESULTS" type="TABLE" valid="false">
+        <name>EBS_QA_RESULTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_QA_PLAN_CHARS" type="TABLE" valid="false">
+        <name>EBS_QA_PLAN_CHARS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_QA_PLAN_CHAR_VALUE_LOOKUPS" type="TABLE" valid="false">
+        <name>EBS_QA_PLAN_CHAR_VALUE_LOOKUPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_QA_PLAN_CHAR_ACTION_OUTPUTS" type="TABLE" valid="false">
+        <name>EBS_QA_PLAN_CHAR_ACTION_OUTPUTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_QA_PC_RESULTS_RELATIONSHIP" type="TABLE" valid="false">
+        <name>EBS_QA_PC_RESULTS_RELATIONSHIP</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_QA_PC_ELEMENT_RELATIONSHIP" type="TABLE" valid="false">
+        <name>EBS_QA_PC_ELEMENT_RELATIONSHIP</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_Q_RMA_HEADER_V" type="TABLE" valid="false">
+        <name>EBS_Q_RMA_HEADER_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_Q_RETURNS_MANAGEMENT_DASHBOA_V" type="TABLE" valid="false">
+        <name>EBS_Q_RETURNS_MANAGEMENT_DASHBOA_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_Q_POTENTIAL_WARRANTY_CONCERN_V" type="TABLE" valid="false">
+        <name>EBS_Q_POTENTIAL_WARRANTY_CONCERN_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_Q_INTERNAL_RETURN_V" type="TABLE" valid="false">
+        <name>EBS_Q_INTERNAL_RETURN_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_Q_EXTERNAL_RETURN_V" type="TABLE" valid="false">
+        <name>EBS_Q_EXTERNAL_RETURN_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_THREADS" type="TABLE" valid="false">
+        <name>EBS_PON_THREADS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_THREAD_ENTRIES" type="TABLE" valid="false">
+        <name>EBS_PON_THREAD_ENTRIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_TEAM_MEMBER_BID_SCORES" type="TABLE" valid="false">
+        <name>EBS_PON_TEAM_MEMBER_BID_SCORES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_TEAM_MEMBER_ATTR_SCORES" type="TABLE" valid="false">
+        <name>EBS_PON_TEAM_MEMBER_ATTR_SCORES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_TE_VIEW_AUDIT" type="TABLE" valid="false">
+        <name>EBS_PON_TE_VIEW_AUDIT</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_TE_RECIPIENTS" type="TABLE" valid="false">
+        <name>EBS_PON_TE_RECIPIENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_SUPPLIER_ACTIVITIES" type="TABLE" valid="false">
+        <name>EBS_PON_SUPPLIER_ACTIVITIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_SCORING_TEAMS" type="TABLE" valid="false">
+        <name>EBS_PON_SCORING_TEAMS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_SCORING_TEAM_SECTIONS" type="TABLE" valid="false">
+        <name>EBS_PON_SCORING_TEAM_SECTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_SCORING_TEAM_MEMBERS" type="TABLE" valid="false">
+        <name>EBS_PON_SCORING_TEAM_MEMBERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_PRICE_ELEMENT_TYPES" type="TABLE" valid="false">
+        <name>EBS_PON_PRICE_ELEMENT_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_PRICE_ELEMENT_TYPES_TL" type="TABLE" valid="false">
+        <name>EBS_PON_PRICE_ELEMENT_TYPES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_PARTY_PREFERENCES" type="TABLE" valid="false">
+        <name>EBS_PON_PARTY_PREFERENCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_OPTIMIZE_SCENARIOS" type="TABLE" valid="false">
+        <name>EBS_PON_OPTIMIZE_SCENARIOS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_OPTIMIZE_RESULTS" type="TABLE" valid="false">
+        <name>EBS_PON_OPTIMIZE_RESULTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_NOTIF_SUBSCRIPTION_GROUPS" type="TABLE" valid="false">
+        <name>EBS_PON_NOTIF_SUBSCRIPTION_GROUPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_NOTIF_GROUP_MEMBERS" type="TABLE" valid="false">
+        <name>EBS_PON_NOTIF_GROUP_MEMBERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_NEGOTIATION_STYLES" type="TABLE" valid="false">
+        <name>EBS_PON_NEGOTIATION_STYLES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_NEGOTIATION_STYLES_TL" type="TABLE" valid="false">
+        <name>EBS_PON_NEGOTIATION_STYLES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_NEG_TEAM_MEMBERS" type="TABLE" valid="false">
+        <name>EBS_PON_NEG_TEAM_MEMBERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_INTERFACE_ERRORS" type="TABLE" valid="false">
+        <name>EBS_PON_INTERFACE_ERRORS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_FORMS_SECTIONS" type="TABLE" valid="false">
+        <name>EBS_PON_FORMS_SECTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_FORMS_SECTIONS_TL" type="TABLE" valid="false">
+        <name>EBS_PON_FORMS_SECTIONS_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_FORM_SECTION_FIELDS" type="TABLE" valid="false">
+        <name>EBS_PON_FORM_SECTION_FIELDS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_FIELDS" type="TABLE" valid="false">
+        <name>EBS_PON_FIELDS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_FIELDS_TL" type="TABLE" valid="false">
+        <name>EBS_PON_FIELDS_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_EMD_PAYMENT_TYPES_TL" type="TABLE" valid="false">
+        <name>EBS_PON_EMD_PAYMENT_TYPES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_EMD_PAYMENT_TYPES_ALL" type="TABLE" valid="false">
+        <name>EBS_PON_EMD_PAYMENT_TYPES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_DOCTYPE_STYLES" type="TABLE" valid="false">
+        <name>EBS_PON_DOCTYPE_STYLES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_DISCUSSIONS" type="TABLE" valid="false">
+        <name>EBS_PON_DISCUSSIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_COLORS" type="TABLE" valid="false">
+        <name>EBS_PON_COLORS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_BIDDING_PARTIES" type="TABLE" valid="false">
+        <name>EBS_PON_BIDDING_PARTIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_BID_PAYMENTS_SHIPMENTS" type="TABLE" valid="false">
+        <name>EBS_PON_BID_PAYMENTS_SHIPMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_BID_ITEM_PRICES" type="TABLE" valid="false">
+        <name>EBS_PON_BID_ITEM_PRICES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_BID_HEADERS" type="TABLE" valid="false">
+        <name>EBS_PON_BID_HEADERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_BID_ATTRIBUTE_VALUES" type="TABLE" valid="false">
+        <name>EBS_PON_BID_ATTRIBUTE_VALUES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUCTION_SECTIONS" type="TABLE" valid="false">
+        <name>EBS_PON_AUCTION_SECTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUCTION_ITEM_PRICES_ALL" type="TABLE" valid="false">
+        <name>EBS_PON_AUCTION_ITEM_PRICES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUCTION_HEADERS_ALL" type="TABLE" valid="false">
+        <name>EBS_PON_AUCTION_HEADERS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUCTION_EVENTS" type="TABLE" valid="false">
+        <name>EBS_PON_AUCTION_EVENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUCTION_ATTRIBUTES" type="TABLE" valid="false">
+        <name>EBS_PON_AUCTION_ATTRIBUTES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUC_PAYMENTS_SHIPMENTS" type="TABLE" valid="false">
+        <name>EBS_PON_AUC_PAYMENTS_SHIPMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUC_DOCTYPES" type="TABLE" valid="false">
+        <name>EBS_PON_AUC_DOCTYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUC_DOCTYPES_TL" type="TABLE" valid="false">
+        <name>EBS_PON_AUC_DOCTYPES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUC_DOCTYPE_RULES" type="TABLE" valid="false">
+        <name>EBS_PON_AUC_DOCTYPE_RULES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUC_BIZRULES" type="TABLE" valid="false">
+        <name>EBS_PON_AUC_BIZRULES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_AUC_BIZRULE_VALUES" type="TABLE" valid="false">
+        <name>EBS_PON_AUC_BIZRULE_VALUES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_ATTRIBUTE_SCORES" type="TABLE" valid="false">
+        <name>EBS_PON_ATTRIBUTE_SCORES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_ATTRIBUTE_LISTS" type="TABLE" valid="false">
+        <name>EBS_PON_ATTRIBUTE_LISTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_ACTION_HISTORY" type="TABLE" valid="false">
+        <name>EBS_PON_ACTION_HISTORY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_ACKNOWLEDGEMENTS" type="TABLE" valid="false">
+        <name>EBS_PON_ACKNOWLEDGEMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PON_ACCEPTANCES" type="TABLE" valid="false">
+        <name>EBS_PON_ACCEPTANCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_VENDORS" type="TABLE" valid="false">
+        <name>EBS_PO_VENDORS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_VENDOR_SITES_ALL" type="TABLE" valid="false">
+        <name>EBS_PO_VENDOR_SITES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_VENDOR_CONTACTS" type="TABLE" valid="false">
+        <name>EBS_PO_VENDOR_CONTACTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_REQUISITION_LINES_ALL" type="TABLE" valid="false">
+        <name>EBS_PO_REQUISITION_LINES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_REQUISITION_HEADERS_ALL" type="TABLE" valid="false">
+        <name>EBS_PO_REQUISITION_HEADERS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_REQ_DISTRIBUTIONS_ALL" type="TABLE" valid="false">
+        <name>EBS_PO_REQ_DISTRIBUTIONS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_RELEASES_ALL" type="TABLE" valid="false">
+        <name>EBS_PO_RELEASES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_LOOKUP_CODES" type="TABLE" valid="false">
+        <name>EBS_PO_LOOKUP_CODES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_LINES_ALL" type="TABLE" valid="false">
+        <name>EBS_PO_LINES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_LINE_TYPES_V" type="TABLE" valid="false">
+        <name>EBS_PO_LINE_TYPES_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_LINE_LOCATIONS_ALL" type="TABLE" valid="false">
+        <name>EBS_PO_LINE_LOCATIONS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_HEADERS_ALL" type="TABLE" valid="false">
+        <name>EBS_PO_HEADERS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_HAZARD_CLASSES" type="TABLE" valid="false">
+        <name>EBS_PO_HAZARD_CLASSES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_DOCUMENT_TYPES_ALL_TL" type="TABLE" valid="false">
+        <name>EBS_PO_DOCUMENT_TYPES_ALL_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_DOC_STYLE_LINES_VL" type="TABLE" valid="false">
+        <name>EBS_PO_DOC_STYLE_LINES_VL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_DOC_STYLE_HEADERS" type="TABLE" valid="false">
+        <name>EBS_PO_DOC_STYLE_HEADERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_DISTRIBUTIONS_ALL" type="TABLE" valid="false">
+        <name>EBS_PO_DISTRIBUTIONS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_APPROVED_SUPPLIER_LIST" type="TABLE" valid="false">
+        <name>EBS_PO_APPROVED_SUPPLIER_LIST</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_AGENTS_V" type="TABLE" valid="false">
+        <name>EBS_PO_AGENTS_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PO_ACTION_HISTORY" type="TABLE" valid="false">
+        <name>EBS_PO_ACTION_HISTORY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_TIME_PERIODS" type="TABLE" valid="false">
+        <name>EBS_PER_TIME_PERIODS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_QUALIFICATIONS" type="TABLE" valid="false">
+        <name>EBS_PER_QUALIFICATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_QUALIFICATION_TYPES" type="TABLE" valid="false">
+        <name>EBS_PER_QUALIFICATION_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_POSITION_DEFINITIONS" type="TABLE" valid="false">
+        <name>EBS_PER_POSITION_DEFINITIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_PHONES" type="TABLE" valid="false">
+        <name>EBS_PER_PHONES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_PERSON_TYPES" type="TABLE" valid="false">
+        <name>EBS_PER_PERSON_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_PERIODS_OF_SERVICE" type="TABLE" valid="false">
+        <name>EBS_PER_PERIODS_OF_SERVICE</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_PERFORMANCE_REVIEWS" type="TABLE" valid="false">
+        <name>EBS_PER_PERFORMANCE_REVIEWS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_PAY_PROPOSALS" type="TABLE" valid="false">
+        <name>EBS_PER_PAY_PROPOSALS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_PAY_BASES" type="TABLE" valid="false">
+        <name>EBS_PER_PAY_BASES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_ORGANIZATION_STRUCTURES" type="TABLE" valid="false">
+        <name>EBS_PER_ORGANIZATION_STRUCTURES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_ORG_STRUCTURE_VERSIONS" type="TABLE" valid="false">
+        <name>EBS_PER_ORG_STRUCTURE_VERSIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_ORG_STRUCTURE_ELEMENTS" type="TABLE" valid="false">
+        <name>EBS_PER_ORG_STRUCTURE_ELEMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_JOBS" type="TABLE" valid="false">
+        <name>EBS_PER_JOBS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_JOB_DEFINITIONS" type="TABLE" valid="false">
+        <name>EBS_PER_JOB_DEFINITIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_GRADES" type="TABLE" valid="false">
+        <name>EBS_PER_GRADES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_GRADE_DEFINITIONS" type="TABLE" valid="false">
+        <name>EBS_PER_GRADE_DEFINITIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_CONTRACTS_F" type="TABLE" valid="false">
+        <name>EBS_PER_CONTRACTS_F</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_ASSIGNMENT_STATUS_TYPES" type="TABLE" valid="false">
+        <name>EBS_PER_ASSIGNMENT_STATUS_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_ALL_PEOPLE_F" type="TABLE" valid="false">
+        <name>EBS_PER_ALL_PEOPLE_F</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_ALL_ASSIGNMENTS_F" type="TABLE" valid="false">
+        <name>EBS_PER_ALL_ASSIGNMENTS_F</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_ADDRESSES" type="TABLE" valid="false">
+        <name>EBS_PER_ADDRESSES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_ABSENCE_ATTENDANCES" type="TABLE" valid="false">
+        <name>EBS_PER_ABSENCE_ATTENDANCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_ABSENCE_ATTENDANCE_TYPES" type="TABLE" valid="false">
+        <name>EBS_PER_ABSENCE_ATTENDANCE_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PER_ABS_ATTENDANCE_REASONS" type="TABLE" valid="false">
+        <name>EBS_PER_ABS_ATTENDANCE_REASONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_US_STATES" type="TABLE" valid="false">
+        <name>EBS_PAY_US_STATES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_US_CITY_NAMES" type="TABLE" valid="false">
+        <name>EBS_PAY_US_CITY_NAMES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_RUN_RESULTS" type="TABLE" valid="false">
+        <name>EBS_PAY_RUN_RESULTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_RUN_RESULT_VALUES" type="TABLE" valid="false">
+        <name>EBS_PAY_RUN_RESULT_VALUES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_PAYROLL_ACTIONS" type="TABLE" valid="false">
+        <name>EBS_PAY_PAYROLL_ACTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_ORG_PAYMENT_METHODS_F" type="TABLE" valid="false">
+        <name>EBS_PAY_ORG_PAYMENT_METHODS_F</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_INPUT_VALUES_F" type="TABLE" valid="false">
+        <name>EBS_PAY_INPUT_VALUES_F</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_GRADE_RULES_F" type="TABLE" valid="false">
+        <name>EBS_PAY_GRADE_RULES_F</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_ELEMENT_TYPES_F" type="TABLE" valid="false">
+        <name>EBS_PAY_ELEMENT_TYPES_F</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_ELEMENT_CLASSIFICATIONS" type="TABLE" valid="false">
+        <name>EBS_PAY_ELEMENT_CLASSIFICATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_CA_PROVINCES_V" type="TABLE" valid="false">
+        <name>EBS_PAY_CA_PROVINCES_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_CA_CITIES_V" type="TABLE" valid="false">
+        <name>EBS_PAY_CA_CITIES_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_ASSIGNMENT_ACTIONS" type="TABLE" valid="false">
+        <name>EBS_PAY_ASSIGNMENT_ACTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PAY_ACTION_INFORMATION" type="TABLE" valid="false">
+        <name>EBS_PAY_ACTION_INFORMATION</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_WORK_TYPES_TL" type="TABLE" valid="false">
+        <name>EBS_PA_WORK_TYPES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_WORK_TYPES_B" type="TABLE" valid="false">
+        <name>EBS_PA_WORK_TYPES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_UTIL_CATEGORIES_TL" type="TABLE" valid="false">
+        <name>EBS_PA_UTIL_CATEGORIES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_TRANSACTION_SOURCES" type="TABLE" valid="false">
+        <name>EBS_PA_TRANSACTION_SOURCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_TASKS" type="TABLE" valid="false">
+        <name>EBS_PA_TASKS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_TASK_TYPES" type="TABLE" valid="false">
+        <name>EBS_PA_TASK_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_SYSTEM_LINKAGES" type="TABLE" valid="false">
+        <name>EBS_PA_SYSTEM_LINKAGES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_SUMMARY_PROJECT_RETN" type="TABLE" valid="false">
+        <name>EBS_PA_SUMMARY_PROJECT_RETN</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_SUMMARY_PROJECT_FUNDINGS" type="TABLE" valid="false">
+        <name>EBS_PA_SUMMARY_PROJECT_FUNDINGS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_RESOURCE_LIST_MEMBERS" type="TABLE" valid="false">
+        <name>EBS_PA_RESOURCE_LIST_MEMBERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_RESOURCE_CLASSES_TL" type="TABLE" valid="false">
+        <name>EBS_PA_RESOURCE_CLASSES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_RESOURCE_CLASSES_B" type="TABLE" valid="false">
+        <name>EBS_PA_RESOURCE_CLASSES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_RESOURCE_ASSIGNMENTS" type="TABLE" valid="false">
+        <name>EBS_PA_RESOURCE_ASSIGNMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECTS_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECTS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECT_TYPES_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECT_TYPES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECT_STATUSES" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECT_STATUSES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECT_ROLE_TYPES_TL" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECT_ROLE_TYPES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECT_ROLE_TYPES_B" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECT_ROLE_TYPES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECT_PARTIES" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECT_PARTIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECT_FUNDINGS" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECT_FUNDINGS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECT_CUSTOMERS" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECT_CUSTOMERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECT_CLASSES" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECT_CLASSES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECT_ASSIGNMENTS" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECT_ASSIGNMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJECT_ASSETS_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_PROJECT_ASSETS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJ_FP_OPTIONS" type="TABLE" valid="false">
+        <name>EBS_PA_PROJ_FP_OPTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJ_ELEMENTS" type="TABLE" valid="false">
+        <name>EBS_PA_PROJ_ELEMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJ_ELEMENT_VERSIONS" type="TABLE" valid="false">
+        <name>EBS_PA_PROJ_ELEMENT_VERSIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJ_ELEM_VER_STRUCTURE" type="TABLE" valid="false">
+        <name>EBS_PA_PROJ_ELEM_VER_STRUCTURE</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_PROJ_ELEM_VER_SCHEDULE" type="TABLE" valid="false">
+        <name>EBS_PA_PROJ_ELEM_VER_SCHEDULE</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_OBJECT_RELATIONSHIPS" type="TABLE" valid="false">
+        <name>EBS_PA_OBJECT_RELATIONSHIPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_NON_LABOR_RESOURCES" type="TABLE" valid="false">
+        <name>EBS_PA_NON_LABOR_RESOURCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_LOOKUPS" type="TABLE" valid="false">
+        <name>EBS_PA_LOOKUPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_IND_COST_CODES" type="TABLE" valid="false">
+        <name>EBS_PA_IND_COST_CODES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_FIN_PLAN_TYPES_TL" type="TABLE" valid="false">
+        <name>EBS_PA_FIN_PLAN_TYPES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_FIN_PLAN_TYPES_B" type="TABLE" valid="false">
+        <name>EBS_PA_FIN_PLAN_TYPES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_EXPENDITURES_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_EXPENDITURES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_EXPENDITURE_TYPES" type="TABLE" valid="false">
+        <name>EBS_PA_EXPENDITURE_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_EXPENDITURE_ITEMS_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_EXPENDITURE_ITEMS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_EXPENDITURE_COMMENTS" type="TABLE" valid="false">
+        <name>EBS_PA_EXPENDITURE_COMMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_EXPENDITURE_CATEGORIES" type="TABLE" valid="false">
+        <name>EBS_PA_EXPENDITURE_CATEGORIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_EVENTS" type="TABLE" valid="false">
+        <name>EBS_PA_EVENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_EVENT_TYPES" type="TABLE" valid="false">
+        <name>EBS_PA_EVENT_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_DRAFT_REVENUES_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_DRAFT_REVENUES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_DRAFT_INVOICES_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_DRAFT_INVOICES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_DRAFT_INVOICE_ITEMS" type="TABLE" valid="false">
+        <name>EBS_PA_DRAFT_INVOICE_ITEMS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_CUST_REV_DIST_LINES_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_CUST_REV_DIST_LINES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_CUST_EVENT_RDL_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_CUST_EVENT_RDL_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_COST_PLUS_STRUCTURES" type="TABLE" valid="false">
+        <name>EBS_PA_COST_PLUS_STRUCTURES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_COST_DISTRIBUTION_LINES_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_COST_DISTRIBUTION_LINES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_COMMITMENT_TXNS" type="TABLE" valid="false">
+        <name>EBS_PA_COMMITMENT_TXNS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_CLASS_CODES" type="TABLE" valid="false">
+        <name>EBS_PA_CLASS_CODES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_CLASS_CATEGORIES" type="TABLE" valid="false">
+        <name>EBS_PA_CLASS_CATEGORIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_BUDGET_VERSIONS" type="TABLE" valid="false">
+        <name>EBS_PA_BUDGET_VERSIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_BUDGET_TYPES" type="TABLE" valid="false">
+        <name>EBS_PA_BUDGET_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_BUDGET_LINES" type="TABLE" valid="false">
+        <name>EBS_PA_BUDGET_LINES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_BUDGET_ENTRY_METHODS" type="TABLE" valid="false">
+        <name>EBS_PA_BUDGET_ENTRY_METHODS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_AGREEMENTS_ALL" type="TABLE" valid="false">
+        <name>EBS_PA_AGREEMENTS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_PA_AGREEMENT_TYPES" type="TABLE" valid="false">
+        <name>EBS_PA_AGREEMENT_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_ORG_ORGANIZATION_DEFINITIONS" type="TABLE" valid="false">
+        <name>EBS_ORG_ORGANIZATION_DEFINITIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_ORG_FREIGHT" type="TABLE" valid="false">
+        <name>EBS_ORG_FREIGHT</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_ORG_ACCT_PERIODS" type="TABLE" valid="false">
+        <name>EBS_ORG_ACCT_PERIODS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_OPI_OBIA_W_BOM_HEADER_DS" type="TABLE" valid="false">
+        <name>EBS_OPI_OBIA_W_BOM_HEADER_DS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_OE_TRANSACTION_TYPES_TL" type="TABLE" valid="false">
+        <name>EBS_OE_TRANSACTION_TYPES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_OE_ORDER_SOURCES" type="TABLE" valid="false">
+        <name>EBS_OE_ORDER_SOURCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_OE_ORDER_LINES_ALL" type="TABLE" valid="false">
+        <name>EBS_OE_ORDER_LINES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_OE_ORDER_HOLDS_ALL" type="TABLE" valid="false">
+        <name>EBS_OE_ORDER_HOLDS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_OE_ORDER_HEADERS_ALL" type="TABLE" valid="false">
+        <name>EBS_OE_ORDER_HEADERS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_OE_LOOKUPS" type="TABLE" valid="false">
+        <name>EBS_OE_LOOKUPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_OE_HOLD_RELEASES" type="TABLE" valid="false">
+        <name>EBS_OE_HOLD_RELEASES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_OE_HOLD_DEFINITIONS" type="TABLE" valid="false">
+        <name>EBS_OE_HOLD_DEFINITIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_OE_AGREEMENTS_B" type="TABLE" valid="false">
+        <name>EBS_OE_AGREEMENTS_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_UOM_CONVERSIONS" type="TABLE" valid="false">
+        <name>EBS_MTL_UOM_CONVERSIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_UOM_CLASS_CONVERSIONS" type="TABLE" valid="false">
+        <name>EBS_MTL_UOM_CLASS_CONVERSIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_UNITS_OF_MEASURE" type="TABLE" valid="false">
+        <name>EBS_MTL_UNITS_OF_MEASURE</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_UNITS_OF_MEASURE_TL" type="TABLE" valid="false">
+        <name>EBS_MTL_UNITS_OF_MEASURE_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_TXN_SOURCE_TYPES" type="TABLE" valid="false">
+        <name>EBS_MTL_TXN_SOURCE_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_TRANSACTION_TYPES" type="TABLE" valid="false">
+        <name>EBS_MTL_TRANSACTION_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_TRANSACTION_REASONS" type="TABLE" valid="false">
+        <name>EBS_MTL_TRANSACTION_REASONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_TRANSACTION_ACCOUNTS" type="TABLE" valid="false">
+        <name>EBS_MTL_TRANSACTION_ACCOUNTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_SYSTEM_ITEMS" type="TABLE" valid="false">
+        <name>EBS_MTL_SYSTEM_ITEMS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_SYSTEM_ITEMS_B" type="TABLE" valid="false">
+        <name>EBS_MTL_SYSTEM_ITEMS_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_SUPPLY" type="TABLE" valid="false">
+        <name>EBS_MTL_SUPPLY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_SECONDARY_INVENTORIES" type="TABLE" valid="false">
+        <name>EBS_MTL_SECONDARY_INVENTORIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_SAFETY_STOCKS" type="TABLE" valid="false">
+        <name>EBS_MTL_SAFETY_STOCKS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_RESERVATIONS" type="TABLE" valid="false">
+        <name>EBS_MTL_RESERVATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_PROCURING_TXN_FLOW_HDRS_V" type="TABLE" valid="false">
+        <name>EBS_MTL_PROCURING_TXN_FLOW_HDRS_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_PLANNERS" type="TABLE" valid="false">
+        <name>EBS_MTL_PLANNERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_PARAMETERS" type="TABLE" valid="false">
+        <name>EBS_MTL_PARAMETERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_ONHAND_QUANTITIES_DETAIL" type="TABLE" valid="false">
+        <name>EBS_MTL_ONHAND_QUANTITIES_DETAIL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_MATERIAL_TRANSACTIONS" type="TABLE" valid="false">
+        <name>EBS_MTL_MATERIAL_TRANSACTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_ITEM_STATUS" type="TABLE" valid="false">
+        <name>EBS_MTL_ITEM_STATUS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_ITEM_LOCATIONS" type="TABLE" valid="false">
+        <name>EBS_MTL_ITEM_LOCATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_ITEM_CATEGORIES" type="TABLE" valid="false">
+        <name>EBS_MTL_ITEM_CATEGORIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_CST_ACTUAL_COST_DETAILS" type="TABLE" valid="false">
+        <name>EBS_MTL_CST_ACTUAL_COST_DETAILS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_CATEGORY_SETS_B" type="TABLE" valid="false">
+        <name>EBS_MTL_CATEGORY_SETS_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MTL_CATEGORIES_B" type="TABLE" valid="false">
+        <name>EBS_MTL_CATEGORIES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MSC_PLAN_RUNS" type="TABLE" valid="false">
+        <name>EBS_MSC_PLAN_RUNS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MSC_PHUB_DATES_MV" type="TABLE" valid="false">
+        <name>EBS_MSC_PHUB_DATES_MV</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MSC_ITEM_ORDERS_F" type="TABLE" valid="false">
+        <name>EBS_MSC_ITEM_ORDERS_F</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_MSC_APCC_ITEM_D" type="TABLE" valid="false">
+        <name>EBS_MSC_APCC_ITEM_D</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_JTF_TASKS_VL" type="TABLE" valid="false">
+        <name>EBS_JTF_TASKS_VL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_JTF_TASKS_TL" type="TABLE" valid="false">
+        <name>EBS_JTF_TASKS_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_JTF_TASKS_B" type="TABLE" valid="false">
+        <name>EBS_JTF_TASKS_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_JTF_TASK_TYPES_TL" type="TABLE" valid="false">
+        <name>EBS_JTF_TASK_TYPES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_JTF_TASK_STATUSES_TL" type="TABLE" valid="false">
+        <name>EBS_JTF_TASK_STATUSES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_JTF_TASK_PRIORITIES_TL" type="TABLE" valid="false">
+        <name>EBS_JTF_TASK_PRIORITIES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_JTF_RS_RESOURCE_EXTNS" type="TABLE" valid="false">
+        <name>EBS_JTF_RS_RESOURCE_EXTNS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_JTF_RS_RESOURCE_EXTNS_TL" type="TABLE" valid="false">
+        <name>EBS_JTF_RS_RESOURCE_EXTNS_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_INV_ORGANIZATION_NAME_V" type="TABLE" valid="false">
+        <name>EBS_INV_ORGANIZATION_NAME_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_IEX_XML_REQUEST_HISTORIES" type="TABLE" valid="false">
+        <name>EBS_IEX_XML_REQUEST_HISTORIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_IEX_XML_QUERIES" type="TABLE" valid="false">
+        <name>EBS_IEX_XML_QUERIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_IEX_PROMISE_DETAILS" type="TABLE" valid="false">
+        <name>EBS_IEX_PROMISE_DETAILS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_IEX_DUNNINGS" type="TABLE" valid="false">
+        <name>EBS_IEX_DUNNINGS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_IEX_DUNNING_TRANSACTIONS" type="TABLE" valid="false">
+        <name>EBS_IEX_DUNNING_TRANSACTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_IEX_DELINQUENCIES_ALL" type="TABLE" valid="false">
+        <name>EBS_IEX_DELINQUENCIES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_PERSON_PROFILES" type="TABLE" valid="false">
+        <name>EBS_HZ_PERSON_PROFILES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_PARTY_SITES" type="TABLE" valid="false">
+        <name>EBS_HZ_PARTY_SITES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_PARTY_RELATIONSHIPS" type="TABLE" valid="false">
+        <name>EBS_HZ_PARTY_RELATIONSHIPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_PARTIES" type="TABLE" valid="false">
+        <name>EBS_HZ_PARTIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_ORG_CONTACTS" type="TABLE" valid="false">
+        <name>EBS_HZ_ORG_CONTACTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_LOCATIONS" type="TABLE" valid="false">
+        <name>EBS_HZ_LOCATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_CUSTOMER_PROFILES" type="TABLE" valid="false">
+        <name>EBS_HZ_CUSTOMER_PROFILES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_CUST_SITE_USES_ALL" type="TABLE" valid="false">
+        <name>EBS_HZ_CUST_SITE_USES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_CUST_PROFILE_CLASSES" type="TABLE" valid="false">
+        <name>EBS_HZ_CUST_PROFILE_CLASSES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_CUST_PROF_CLASS_AMTS" type="TABLE" valid="false">
+        <name>EBS_HZ_CUST_PROF_CLASS_AMTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_CUST_ACCT_SITES_ALL" type="TABLE" valid="false">
+        <name>EBS_HZ_CUST_ACCT_SITES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_CUST_ACCOUNTS" type="TABLE" valid="false">
+        <name>EBS_HZ_CUST_ACCOUNTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_CUST_ACCOUNT_ROLES" type="TABLE" valid="false">
+        <name>EBS_HZ_CUST_ACCOUNT_ROLES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HZ_CONTACT_POINTS" type="TABLE" valid="false">
+        <name>EBS_HZ_CONTACT_POINTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TRANSACTIONS" type="TABLE" valid="false">
+        <name>EBS_HXC_TRANSACTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TRANSACTION_DETAILS" type="TABLE" valid="false">
+        <name>EBS_HXC_TRANSACTION_DETAILS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TIMECARD_SUMMARY" type="TABLE" valid="false">
+        <name>EBS_HXC_TIMECARD_SUMMARY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TIME_SOURCES" type="TABLE" valid="false">
+        <name>EBS_HXC_TIME_SOURCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TIME_RECIPIENTS" type="TABLE" valid="false">
+        <name>EBS_HXC_TIME_RECIPIENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TIME_ENTRY_RULES" type="TABLE" valid="false">
+        <name>EBS_HXC_TIME_ENTRY_RULES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TIME_CATEGORY_COMPS" type="TABLE" valid="false">
+        <name>EBS_HXC_TIME_CATEGORY_COMPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TIME_CATEGORIES" type="TABLE" valid="false">
+        <name>EBS_HXC_TIME_CATEGORIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TIME_BUILDING_BLOCKS" type="TABLE" valid="false">
+        <name>EBS_HXC_TIME_BUILDING_BLOCKS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TIME_ATTRIBUTES" type="TABLE" valid="false">
+        <name>EBS_HXC_TIME_ATTRIBUTES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_TIME_ATTRIBUTE_USAGES" type="TABLE" valid="false">
+        <name>EBS_HXC_TIME_ATTRIBUTE_USAGES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_RPT_LAYOUT_COMP_QUERIES" type="TABLE" valid="false">
+        <name>EBS_HXC_RPT_LAYOUT_COMP_QUERIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_RETRIEVAL_RULES" type="TABLE" valid="false">
+        <name>EBS_HXC_RETRIEVAL_RULES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_RETRIEVAL_RULE_COMPS" type="TABLE" valid="false">
+        <name>EBS_HXC_RETRIEVAL_RULE_COMPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_RETRIEVAL_RANGES" type="TABLE" valid="false">
+        <name>EBS_HXC_RETRIEVAL_RANGES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_RETRIEVAL_RANGE_RESOURCES" type="TABLE" valid="false">
+        <name>EBS_HXC_RETRIEVAL_RANGE_RESOURCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_RETRIEVAL_RANGE_BLKS" type="TABLE" valid="false">
+        <name>EBS_HXC_RETRIEVAL_RANGE_BLKS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_RETRIEVAL_PROCESSES" type="TABLE" valid="false">
+        <name>EBS_HXC_RETRIEVAL_PROCESSES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_RESOURCE_RULES" type="TABLE" valid="false">
+        <name>EBS_HXC_RESOURCE_RULES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_RECURRING_PERIODS" type="TABLE" valid="false">
+        <name>EBS_HXC_RECURRING_PERIODS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_PREF_HIERARCHIES" type="TABLE" valid="false">
+        <name>EBS_HXC_PREF_HIERARCHIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_PREF_DEFINITIONS" type="TABLE" valid="false">
+        <name>EBS_HXC_PREF_DEFINITIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_MAPPINGS" type="TABLE" valid="false">
+        <name>EBS_HXC_MAPPINGS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_MAPPING_COMPONENTS" type="TABLE" valid="false">
+        <name>EBS_HXC_MAPPING_COMPONENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_MAPPING_COMP_USAGES" type="TABLE" valid="false">
+        <name>EBS_HXC_MAPPING_COMP_USAGES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_LAYOUTS" type="TABLE" valid="false">
+        <name>EBS_HXC_LAYOUTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_LAYOUT_COMPONENTS" type="TABLE" valid="false">
+        <name>EBS_HXC_LAYOUT_COMPONENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_LAYOUT_COMP_QUALIFIERS" type="TABLE" valid="false">
+        <name>EBS_HXC_LAYOUT_COMP_QUALIFIERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_LAYOUT_COMP_QUAL_RULES" type="TABLE" valid="false">
+        <name>EBS_HXC_LAYOUT_COMP_QUAL_RULES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_LAYOUT_COMP_PROMPTS" type="TABLE" valid="false">
+        <name>EBS_HXC_LAYOUT_COMP_PROMPTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_LAYOUT_COMP_DEFINITIONS" type="TABLE" valid="false">
+        <name>EBS_HXC_LAYOUT_COMP_DEFINITIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_LATEST_DETAILS" type="TABLE" valid="false">
+        <name>EBS_HXC_LATEST_DETAILS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_ERRORS" type="TABLE" valid="false">
+        <name>EBS_HXC_ERRORS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_ENTITY_GROUPS" type="TABLE" valid="false">
+        <name>EBS_HXC_ENTITY_GROUPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_ENTITY_GROUP_COMPS" type="TABLE" valid="false">
+        <name>EBS_HXC_ENTITY_GROUP_COMPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_DEPOSIT_PROCESSES" type="TABLE" valid="false">
+        <name>EBS_HXC_DEPOSIT_PROCESSES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_DATA_SETS" type="TABLE" valid="false">
+        <name>EBS_HXC_DATA_SETS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_DATA_SET_DETAILS" type="TABLE" valid="false">
+        <name>EBS_HXC_DATA_SET_DETAILS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_DATA_APP_RULE_USAGES" type="TABLE" valid="false">
+        <name>EBS_HXC_DATA_APP_RULE_USAGES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_BLD_BLK_INFO_TYPES" type="TABLE" valid="false">
+        <name>EBS_HXC_BLD_BLK_INFO_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_BLD_BLK_INFO_TYPE_USAGES" type="TABLE" valid="false">
+        <name>EBS_HXC_BLD_BLK_INFO_TYPE_USAGES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_BEE_PREF_ADJ_LINES" type="TABLE" valid="false">
+        <name>EBS_HXC_BEE_PREF_ADJ_LINES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_APPROVAL_STYLES" type="TABLE" valid="false">
+        <name>EBS_HXC_APPROVAL_STYLES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_APPROVAL_PERIOD_SETS" type="TABLE" valid="false">
+        <name>EBS_HXC_APPROVAL_PERIOD_SETS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_APPROVAL_PERIOD_COMPS" type="TABLE" valid="false">
+        <name>EBS_HXC_APPROVAL_PERIOD_COMPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_APPROVAL_COMPS" type="TABLE" valid="false">
+        <name>EBS_HXC_APPROVAL_COMPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_APP_PERIOD_SUMMARY" type="TABLE" valid="false">
+        <name>EBS_HXC_APP_PERIOD_SUMMARY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_APP_COMP_NOTIFICATIONS" type="TABLE" valid="false">
+        <name>EBS_HXC_APP_COMP_NOTIFICATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_APP_COMP_NOTIF_USAGES" type="TABLE" valid="false">
+        <name>EBS_HXC_APP_COMP_NOTIF_USAGES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_ALIAS_VALUES" type="TABLE" valid="false">
+        <name>EBS_HXC_ALIAS_VALUES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_ALIAS_TYPES" type="TABLE" valid="false">
+        <name>EBS_HXC_ALIAS_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_ALIAS_TYPE_COMPONENTS" type="TABLE" valid="false">
+        <name>EBS_HXC_ALIAS_TYPE_COMPONENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HXC_ALIAS_DEFINITIONS" type="TABLE" valid="false">
+        <name>EBS_HXC_ALIAS_DEFINITIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HR_ORGANIZATION_INFORMATION" type="TABLE" valid="false">
+        <name>EBS_HR_ORGANIZATION_INFORMATION</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HR_OPERATING_UNITS" type="TABLE" valid="false">
+        <name>EBS_HR_OPERATING_UNITS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HR_LOOKUPS" type="TABLE" valid="false">
+        <name>EBS_HR_LOOKUPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HR_LOCATIONS_ALL" type="TABLE" valid="false">
+        <name>EBS_HR_LOCATIONS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HR_ALL_POSITIONS_F" type="TABLE" valid="false">
+        <name>EBS_HR_ALL_POSITIONS_F</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HR_ALL_ORGANIZATION_UNITS" type="TABLE" valid="false">
+        <name>EBS_HR_ALL_ORGANIZATION_UNITS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_HR_ALL_ORGANIZATION_UNITS_TL" type="TABLE" valid="false">
+        <name>EBS_HR_ALL_ORGANIZATION_UNITS_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_SETS_OF_BOOKS" type="TABLE" valid="false">
+        <name>EBS_GL_SETS_OF_BOOKS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_RECON_REFERENCE_MASTER" type="TABLE" valid="false">
+        <name>EBS_GL_RECON_REFERENCE_MASTER</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_PERIODS" type="TABLE" valid="false">
+        <name>EBS_GL_PERIODS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_PERIOD_TYPES" type="TABLE" valid="false">
+        <name>EBS_GL_PERIOD_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_PERIOD_STATUSES" type="TABLE" valid="false">
+        <name>EBS_GL_PERIOD_STATUSES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_LOOKUPS" type="TABLE" valid="false">
+        <name>EBS_GL_LOOKUPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_LEGAL_ENTITIES_BSVS" type="TABLE" valid="false">
+        <name>EBS_GL_LEGAL_ENTITIES_BSVS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_LEDGERS" type="TABLE" valid="false">
+        <name>EBS_GL_LEDGERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_LEDGER_CONFIG_DETAILS" type="TABLE" valid="false">
+        <name>EBS_GL_LEDGER_CONFIG_DETAILS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_JE_SOURCES_TL" type="TABLE" valid="false">
+        <name>EBS_GL_JE_SOURCES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_JE_LINES" type="TABLE" valid="false">
+        <name>EBS_GL_JE_LINES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_JE_LINES_OLD" type="TABLE" valid="false">
+        <name>EBS_GL_JE_LINES_OLD</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_JE_HEADERS" type="TABLE" valid="false">
+        <name>EBS_GL_JE_HEADERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_JE_CATEGORIES_TL" type="TABLE" valid="false">
+        <name>EBS_GL_JE_CATEGORIES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_JE_BATCHES" type="TABLE" valid="false">
+        <name>EBS_GL_JE_BATCHES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_IMPORT_REFERENCES" type="TABLE" valid="false">
+        <name>EBS_GL_IMPORT_REFERENCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_DAILY_RATES" type="TABLE" valid="false">
+        <name>EBS_GL_DAILY_RATES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_DAILY_CONVERSION_TYPES" type="TABLE" valid="false">
+        <name>EBS_GL_DAILY_CONVERSION_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_CODE_COMBINATIONS" type="TABLE" valid="false">
+        <name>EBS_GL_CODE_COMBINATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_BUDGETS" type="TABLE" valid="false">
+        <name>EBS_GL_BUDGETS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_BUDGET_VERSIONS" type="TABLE" valid="false">
+        <name>EBS_GL_BUDGET_VERSIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_GL_BALANCES" type="TABLE" valid="false">
+        <name>EBS_GL_BALANCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FV_TREASURY_SYMBOLS" type="TABLE" valid="false">
+        <name>EBS_FV_TREASURY_SYMBOLS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FV_FUND_PARAMETERS" type="TABLE" valid="false">
+        <name>EBS_FV_FUND_PARAMETERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FV_FACTS_FEDERAL_ACCOUNTS" type="TABLE" valid="false">
+        <name>EBS_FV_FACTS_FEDERAL_ACCOUNTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FV_BE_TRANSACTION_TYPES" type="TABLE" valid="false">
+        <name>EBS_FV_BE_TRANSACTION_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_USER" type="TABLE" valid="false">
+        <name>EBS_FND_USER</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_TERRITORIES_TL" type="TABLE" valid="false">
+        <name>EBS_FND_TERRITORIES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_SEGMENT_ATTRIBUTE_VALUES" type="TABLE" valid="false">
+        <name>EBS_FND_SEGMENT_ATTRIBUTE_VALUES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_LOOKUP_VALUES" type="TABLE" valid="false">
+        <name>EBS_FND_LOOKUP_VALUES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_LANGUAGES" type="TABLE" valid="false">
+        <name>EBS_FND_LANGUAGES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_ID_FLEX_STRUCTURES" type="TABLE" valid="false">
+        <name>EBS_FND_ID_FLEX_STRUCTURES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_ID_FLEX_STRUCTURES_TL" type="TABLE" valid="false">
+        <name>EBS_FND_ID_FLEX_STRUCTURES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_ID_FLEX_SEGMENTS" type="TABLE" valid="false">
+        <name>EBS_FND_ID_FLEX_SEGMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_FLEX_VALUES_VL" type="TABLE" valid="false">
+        <name>EBS_FND_FLEX_VALUES_VL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_FLEX_VALUES" type="TABLE" valid="false">
+        <name>EBS_FND_FLEX_VALUES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_FLEX_VALUES_TL" type="TABLE" valid="false">
+        <name>EBS_FND_FLEX_VALUES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_FLEX_VALUE_SETS" type="TABLE" valid="false">
+        <name>EBS_FND_FLEX_VALUE_SETS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_FLEX_VALUE_NORM_HIERARCHY" type="TABLE" valid="false">
+        <name>EBS_FND_FLEX_VALUE_NORM_HIERARCHY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_CURRENCIES_TL" type="TABLE" valid="false">
+        <name>EBS_FND_CURRENCIES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FND_CONCURRENT_REQUESTS" type="TABLE" valid="false">
+        <name>EBS_FND_CONCURRENT_REQUESTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FINANCIALS_SYSTEM_PARAMS_ALL" type="TABLE" valid="false">
+        <name>EBS_FINANCIALS_SYSTEM_PARAMS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FDM_DS_PARAMETERS" type="TABLE" valid="false">
+        <name>EBS_FDM_DS_PARAMETERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_WORKER_JOBS" type="TABLE" valid="false">
+        <name>EBS_FA_WORKER_JOBS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_TRANSFER_DETAILS" type="TABLE" valid="false">
+        <name>EBS_FA_TRANSFER_DETAILS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_TRANSACTION_HEADERS" type="TABLE" valid="false">
+        <name>EBS_FA_TRANSACTION_HEADERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_SYSTEM_CONTROLS" type="TABLE" valid="false">
+        <name>EBS_FA_SYSTEM_CONTROLS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RX_SUMMARY_TL" type="TABLE" valid="false">
+        <name>EBS_FA_RX_SUMMARY_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RX_REPORTS" type="TABLE" valid="false">
+        <name>EBS_FA_RX_REPORTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RX_REP_PARAMETERS" type="TABLE" valid="false">
+        <name>EBS_FA_RX_REP_PARAMETERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RX_REP_COLUMNS_TL" type="TABLE" valid="false">
+        <name>EBS_FA_RX_REP_COLUMNS_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RX_REP_COLUMNS_B" type="TABLE" valid="false">
+        <name>EBS_FA_RX_REP_COLUMNS_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RX_LOV" type="TABLE" valid="false">
+        <name>EBS_FA_RX_LOV</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RX_DYNAMIC_COLUMNS" type="TABLE" valid="false">
+        <name>EBS_FA_RX_DYNAMIC_COLUMNS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RX_ATTRSETS_TL" type="TABLE" valid="false">
+        <name>EBS_FA_RX_ATTRSETS_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RX_ATTRSETS_B" type="TABLE" valid="false">
+        <name>EBS_FA_RX_ATTRSETS_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RETIREMENTS" type="TABLE" valid="false">
+        <name>EBS_FA_RETIREMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_RATES" type="TABLE" valid="false">
+        <name>EBS_FA_RATES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_PERIOD_MAPS" type="TABLE" valid="false">
+        <name>EBS_FA_PERIOD_MAPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_METHODS" type="TABLE" valid="false">
+        <name>EBS_FA_METHODS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_MASSADD_DISTRIBUTIONS" type="TABLE" valid="false">
+        <name>EBS_FA_MASSADD_DISTRIBUTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_MASS_TRANSFERS" type="TABLE" valid="false">
+        <name>EBS_FA_MASS_TRANSFERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_MASS_RECLASS" type="TABLE" valid="false">
+        <name>EBS_FA_MASS_RECLASS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_MASS_RECLASS_ITF" type="TABLE" valid="false">
+        <name>EBS_FA_MASS_RECLASS_ITF</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_MASS_EXT_RETIREMENTS" type="TABLE" valid="false">
+        <name>EBS_FA_MASS_EXT_RETIREMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_MASS_ADDITIONS" type="TABLE" valid="false">
+        <name>EBS_FA_MASS_ADDITIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_LOOKUPS" type="TABLE" valid="false">
+        <name>EBS_FA_LOOKUPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_LOOKUPS_TL" type="TABLE" valid="false">
+        <name>EBS_FA_LOOKUPS_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_LOOKUPS_B" type="TABLE" valid="false">
+        <name>EBS_FA_LOOKUPS_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_LOOKUP_TYPES_TL" type="TABLE" valid="false">
+        <name>EBS_FA_LOOKUP_TYPES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_LOOKUP_TYPES_B" type="TABLE" valid="false">
+        <name>EBS_FA_LOOKUP_TYPES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_LOCATIONS" type="TABLE" valid="false">
+        <name>EBS_FA_LOCATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ITC_RECAPTURE_RATES" type="TABLE" valid="false">
+        <name>EBS_FA_ITC_RECAPTURE_RATES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ITC_RATES" type="TABLE" valid="false">
+        <name>EBS_FA_ITC_RATES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_INVOICE_TRANSACTIONS" type="TABLE" valid="false">
+        <name>EBS_FA_INVOICE_TRANSACTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_FORMULAS" type="TABLE" valid="false">
+        <name>EBS_FA_FORMULAS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_FLAT_RATES" type="TABLE" valid="false">
+        <name>EBS_FA_FLAT_RATES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_FISCAL_YEAR" type="TABLE" valid="false">
+        <name>EBS_FA_FISCAL_YEAR</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DISTRIBUTION_SETS" type="TABLE" valid="false">
+        <name>EBS_FA_DISTRIBUTION_SETS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DISTRIBUTION_HISTORY" type="TABLE" valid="false">
+        <name>EBS_FA_DISTRIBUTION_HISTORY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DISTRIBUTION_DEFAULTS" type="TABLE" valid="false">
+        <name>EBS_FA_DISTRIBUTION_DEFAULTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DEPRN_SUMMARY" type="TABLE" valid="false">
+        <name>EBS_FA_DEPRN_SUMMARY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DEPRN_SUMMARY_H" type="TABLE" valid="false">
+        <name>EBS_FA_DEPRN_SUMMARY_H</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DEPRN_RULE_DETAILS" type="TABLE" valid="false">
+        <name>EBS_FA_DEPRN_RULE_DETAILS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DEPRN_REP_ITF" type="TABLE" valid="false">
+        <name>EBS_FA_DEPRN_REP_ITF</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DEPRN_PERIODS" type="TABLE" valid="false">
+        <name>EBS_FA_DEPRN_PERIODS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DEPRN_EVENTS" type="TABLE" valid="false">
+        <name>EBS_FA_DEPRN_EVENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DEPRN_DETAIL" type="TABLE" valid="false">
+        <name>EBS_FA_DEPRN_DETAIL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DEPRN_DETAIL_H" type="TABLE" valid="false">
+        <name>EBS_FA_DEPRN_DETAIL_H</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_DEPRN_BASIS_RULES" type="TABLE" valid="false">
+        <name>EBS_FA_DEPRN_BASIS_RULES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CONVENTIONS" type="TABLE" valid="false">
+        <name>EBS_FA_CONVENTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CONVENTION_TYPES" type="TABLE" valid="false">
+        <name>EBS_FA_CONVENTION_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CEILINGS" type="TABLE" valid="false">
+        <name>EBS_FA_CEILINGS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CEILING_TYPES" type="TABLE" valid="false">
+        <name>EBS_FA_CEILING_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CATEGORY_BOOKS" type="TABLE" valid="false">
+        <name>EBS_FA_CATEGORY_BOOKS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CATEGORY_BOOK_DEFAULTS" type="TABLE" valid="false">
+        <name>EBS_FA_CATEGORY_BOOK_DEFAULTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CATEGORIES_VL" type="TABLE" valid="false">
+        <name>EBS_FA_CATEGORIES_VL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CATEGORIES_TL" type="TABLE" valid="false">
+        <name>EBS_FA_CATEGORIES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CATEGORIES_B" type="TABLE" valid="false">
+        <name>EBS_FA_CATEGORIES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CALENDAR_TYPES" type="TABLE" valid="false">
+        <name>EBS_FA_CALENDAR_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_CALENDAR_PERIODS" type="TABLE" valid="false">
+        <name>EBS_FA_CALENDAR_PERIODS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_BOOKS_V" type="TABLE" valid="false">
+        <name>EBS_FA_BOOKS_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_BOOKS" type="TABLE" valid="false">
+        <name>EBS_FA_BOOKS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_BOOKS_SUMMARY" type="TABLE" valid="false">
+        <name>EBS_FA_BOOKS_SUMMARY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_BOOK_CONTROLS" type="TABLE" valid="false">
+        <name>EBS_FA_BOOK_CONTROLS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_BOOK_CONTROLS_HISTORY" type="TABLE" valid="false">
+        <name>EBS_FA_BOOK_CONTROLS_HISTORY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_BALANCES_REP_ITF" type="TABLE" valid="false">
+        <name>EBS_FA_BALANCES_REP_ITF</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ASSET_KEYWORDS" type="TABLE" valid="false">
+        <name>EBS_FA_ASSET_KEYWORDS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ASSET_INVOICES" type="TABLE" valid="false">
+        <name>EBS_FA_ASSET_INVOICES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ASSET_HISTORY" type="TABLE" valid="false">
+        <name>EBS_FA_ASSET_HISTORY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ADJUSTMENTS" type="TABLE" valid="false">
+        <name>EBS_FA_ADJUSTMENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ADJUST_REP_ITF" type="TABLE" valid="false">
+        <name>EBS_FA_ADJUST_REP_ITF</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ADDITIONS_VL" type="TABLE" valid="false">
+        <name>EBS_FA_ADDITIONS_VL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ADDITIONS_TL" type="TABLE" valid="false">
+        <name>EBS_FA_ADDITIONS_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ADDITIONS_B" type="TABLE" valid="false">
+        <name>EBS_FA_ADDITIONS_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_FA_ADDITION_REP_ITF" type="TABLE" valid="false">
+        <name>EBS_FA_ADDITION_REP_ITF</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_VS_VALUES_DISP_ORDER" type="TABLE" valid="false">
+        <name>EBS_EGO_VS_VALUES_DISP_ORDER</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_PAGES_B" type="TABLE" valid="false">
+        <name>EBS_EGO_PAGES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_PAGE_ENTRIES_B" type="TABLE" valid="false">
+        <name>EBS_EGO_PAGE_ENTRIES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_OBJTYPE_ATTACH_CATS" type="TABLE" valid="false">
+        <name>EBS_EGO_OBJTYPE_ATTACH_CATS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_OBJECT_ROLES" type="TABLE" valid="false">
+        <name>EBS_EGO_OBJECT_ROLES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_OBJECT_EXT_TABLES_B" type="TABLE" valid="false">
+        <name>EBS_EGO_OBJECT_EXT_TABLES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_OBJ_AG_ASSOCS_B" type="TABLE" valid="false">
+        <name>EBS_EGO_OBJ_AG_ASSOCS_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_LANGUAGE_SETTINGS" type="TABLE" valid="false">
+        <name>EBS_EGO_LANGUAGE_SETTINGS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_ITEM_CAT_DENORM_HIER" type="TABLE" valid="false">
+        <name>EBS_EGO_ITEM_CAT_DENORM_HIER</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_IMAGES" type="TABLE" valid="false">
+        <name>EBS_EGO_IMAGES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_FND_OBJECTS_EXT" type="TABLE" valid="false">
+        <name>EBS_EGO_FND_OBJECTS_EXT</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_FND_FLX_VAL_STS_EXT" type="TABLE" valid="false">
+        <name>EBS_EGO_FND_FLX_VAL_STS_EXT</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_FND_DSC_FLX_CTX_EXT" type="TABLE" valid="false">
+        <name>EBS_EGO_FND_DSC_FLX_CTX_EXT</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_FND_DF_COL_USGS_EXT" type="TABLE" valid="false">
+        <name>EBS_EGO_FND_DF_COL_USGS_EXT</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_FND_DESC_FLEXS_EXT" type="TABLE" valid="false">
+        <name>EBS_EGO_FND_DESC_FLEXS_EXT</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_DEFAULT_OPTIONS" type="TABLE" valid="false">
+        <name>EBS_EGO_DEFAULT_OPTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_DATA_LEVEL_B" type="TABLE" valid="false">
+        <name>EBS_EGO_DATA_LEVEL_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_CUSTOMIZATION_EXT" type="TABLE" valid="false">
+        <name>EBS_EGO_CUSTOMIZATION_EXT</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_CRITERIA_EXT" type="TABLE" valid="false">
+        <name>EBS_EGO_CRITERIA_EXT</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_EGO_ATTR_GROUP_DL" type="TABLE" valid="false">
+        <name>EBS_EGO_ATTR_GROUP_DL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_DS_PARAMETERS21" type="TABLE" valid="false">
+        <name>EBS_DS_PARAMETERS21</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_DS_PARAMETERS" type="TABLE" valid="false">
+        <name>EBS_DS_PARAMETERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CST_ITEM_COSTS" type="TABLE" valid="false">
+        <name>EBS_CST_ITEM_COSTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CST_COST_TYPES" type="TABLE" valid="false">
+        <name>EBS_CST_COST_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_TXN_TYPES" type="TABLE" valid="false">
+        <name>EBS_CSI_TXN_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_TXN_ERRORS" type="TABLE" valid="false">
+        <name>EBS_CSI_TXN_ERRORS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_TRANSACTIONS" type="TABLE" valid="false">
+        <name>EBS_CSI_TRANSACTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_SOURCE_IB_TYPES" type="TABLE" valid="false">
+        <name>EBS_CSI_SOURCE_IB_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_OBJECT_DICTIONARY" type="TABLE" valid="false">
+        <name>EBS_CSI_OBJECT_DICTIONARY</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_ITEM_INSTANCES" type="TABLE" valid="false">
+        <name>EBS_CSI_ITEM_INSTANCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_ITEM_INSTANCES_H" type="TABLE" valid="false">
+        <name>EBS_CSI_ITEM_INSTANCES_H</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_IPA_RELATION_TYPES" type="TABLE" valid="false">
+        <name>EBS_CSI_IPA_RELATION_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_INSTANCE_STATUSES" type="TABLE" valid="false">
+        <name>EBS_CSI_INSTANCE_STATUSES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_INSTALL_PARAMETERS" type="TABLE" valid="false">
+        <name>EBS_CSI_INSTALL_PARAMETERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_II_RELATIONSHIPS" type="TABLE" valid="false">
+        <name>EBS_CSI_II_RELATIONSHIPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_II_RELATIONSHIPS_H" type="TABLE" valid="false">
+        <name>EBS_CSI_II_RELATIONSHIPS_H</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_II_RELATION_TYPES" type="TABLE" valid="false">
+        <name>EBS_CSI_II_RELATION_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_IB_TXN_TYPES" type="TABLE" valid="false">
+        <name>EBS_CSI_IB_TXN_TYPES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_I_VERSION_LABELS" type="TABLE" valid="false">
+        <name>EBS_CSI_I_VERSION_LABELS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_I_VERSION_LABELS_H" type="TABLE" valid="false">
+        <name>EBS_CSI_I_VERSION_LABELS_H</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_I_PARTIES" type="TABLE" valid="false">
+        <name>EBS_CSI_I_PARTIES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_I_PARTIES_H" type="TABLE" valid="false">
+        <name>EBS_CSI_I_PARTIES_H</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_I_ASSETS" type="TABLE" valid="false">
+        <name>EBS_CSI_I_ASSETS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_I_ASSETS_H" type="TABLE" valid="false">
+        <name>EBS_CSI_I_ASSETS_H</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_FA_TRANSACTIONS" type="TABLE" valid="false">
+        <name>EBS_CSI_FA_TRANSACTIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_FA_HEADERS" type="TABLE" valid="false">
+        <name>EBS_CSI_FA_HEADERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_DIAGNOSTICS_TEMP" type="TABLE" valid="false">
+        <name>EBS_CSI_DIAGNOSTICS_TEMP</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CSI_A_LOCATIONS" type="TABLE" valid="false">
+        <name>EBS_CSI_A_LOCATIONS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CS_INCIDENT_STATUSES_TL" type="TABLE" valid="false">
+        <name>EBS_CS_INCIDENT_STATUSES_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CS_INCIDENT_STATUSES_B" type="TABLE" valid="false">
+        <name>EBS_CS_INCIDENT_STATUSES_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CE_STATEMENT_RECONCILS_ALL" type="TABLE" valid="false">
+        <name>EBS_CE_STATEMENT_RECONCILS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CE_STATEMENT_LINES" type="TABLE" valid="false">
+        <name>EBS_CE_STATEMENT_LINES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CE_FORECAST_OPENING_BAL" type="TABLE" valid="false">
+        <name>EBS_CE_FORECAST_OPENING_BAL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_CE_FORECAST_HEADERS" type="TABLE" valid="false">
+        <name>EBS_CE_FORECAST_HEADERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_BOM_RESOURCES" type="TABLE" valid="false">
+        <name>EBS_BOM_RESOURCES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_BOM_INVENTORY_COMPONENTS" type="TABLE" valid="false">
+        <name>EBS_BOM_INVENTORY_COMPONENTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_BOM_EXPLOSION_TEMP" type="TABLE" valid="false">
+        <name>EBS_BOM_EXPLOSION_TEMP</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_BOM_CST_WRITE_OFFS" type="TABLE" valid="false">
+        <name>EBS_BOM_CST_WRITE_OFFS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_BOM_BILL_OF_MATERIALS" type="TABLE" valid="false">
+        <name>EBS_BOM_BILL_OF_MATERIALS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AST_TASKS_MAIN_V" type="TABLE" valid="false">
+        <name>EBS_AST_TASKS_MAIN_V</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_RECEIVABLE_APPLICATIONS_ALL" type="TABLE" valid="false">
+        <name>EBS_AR_RECEIVABLE_APPLICATIONS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_RECEIPT_METHODS" type="TABLE" valid="false">
+        <name>EBS_AR_RECEIPT_METHODS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_PAYMENT_SCHEDULES_ALL" type="TABLE" valid="false">
+        <name>EBS_AR_PAYMENT_SCHEDULES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_MEMO_LINES_ALL_TL" type="TABLE" valid="false">
+        <name>EBS_AR_MEMO_LINES_ALL_TL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_MEMO_LINES_ALL_B" type="TABLE" valid="false">
+        <name>EBS_AR_MEMO_LINES_ALL_B</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_LOOKUPS" type="TABLE" valid="false">
+        <name>EBS_AR_LOOKUPS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_LOCATION_VALUES" type="TABLE" valid="false">
+        <name>EBS_AR_LOCATION_VALUES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_DISTRIBUTIONS_ALL" type="TABLE" valid="false">
+        <name>EBS_AR_DISTRIBUTIONS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_COLLECTORS" type="TABLE" valid="false">
+        <name>EBS_AR_COLLECTORS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_CASH_RECEIPTS_ALL" type="TABLE" valid="false">
+        <name>EBS_AR_CASH_RECEIPTS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_CASH_RECEIPT_HISTORY_ALL" type="TABLE" valid="false">
+        <name>EBS_AR_CASH_RECEIPT_HISTORY_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AR_ADJUSTMENTS_ALL" type="TABLE" valid="false">
+        <name>EBS_AR_ADJUSTMENTS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_TERMS" type="TABLE" valid="false">
+        <name>EBS_AP_TERMS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_TERMS_LINES" type="TABLE" valid="false">
+        <name>EBS_AP_TERMS_LINES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_SUPPLIERS" type="TABLE" valid="false">
+        <name>EBS_AP_SUPPLIERS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_SUPPLIER_SITES_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_SUPPLIER_SITES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_PREPAY_APP_DISTS" type="TABLE" valid="false">
+        <name>EBS_AP_PREPAY_APP_DISTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_PAYMENT_SCHEDULES_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_PAYMENT_SCHEDULES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_PAYMENT_HIST_DISTS" type="TABLE" valid="false">
+        <name>EBS_AP_PAYMENT_HIST_DISTS</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_NOTES" type="TABLE" valid="false">
+        <name>EBS_AP_NOTES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_LOOKUP_CODES" type="TABLE" valid="false">
+        <name>EBS_AP_LOOKUP_CODES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_INVOICES_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_INVOICES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_INVOICE_PAYMENTS_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_INVOICE_PAYMENTS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_INVOICE_LINES_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_INVOICE_LINES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_INVOICE_DISTRIBUTIONS_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_INVOICE_DISTRIBUTIONS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_EXPENSE_REPORTS_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_EXPENSE_REPORTS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_EXPENSE_REPORT_PARAMS_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_EXPENSE_REPORT_PARAMS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_EXPENSE_REPORT_LINES_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_EXPENSE_REPORT_LINES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_EXPENSE_REPORT_HEADERS_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_EXPENSE_REPORT_HEADERS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_EXP_REPORT_DISTS_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_EXP_REPORT_DISTS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_CHECKS_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_CHECKS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_BANK_BRANCHES" type="TABLE" valid="false">
+        <name>EBS_AP_BANK_BRANCHES</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_BANK_ACCOUNTS_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_BANK_ACCOUNTS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_AE_LINES_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_AE_LINES_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+    <object comment="" fullObject="BIA_SA_EBS_HIST.EBS_AP_AE_HEADERS_ALL" type="TABLE" valid="false">
+        <name>EBS_AP_AE_HEADERS_ALL</name>
+        <schema>BIA_SA_EBS_HIST</schema>
+    </object>
+</test>
