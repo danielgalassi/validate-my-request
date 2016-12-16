@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<div class="wrapper" style="width: 25%;">
+	<div class="wrapper-error">
 		<form class="form1" action="/validate-my-request/">
 			<div class="formtitle">ERROR</div>
 			<div class="input nobottomborder2">

@@ -25,6 +25,11 @@ body {
 	margin: 2% auto;
 }
 
+.wrapper-error {
+	width: 25%;
+	margin: 2% auto;
+}
+
 .form1 {
 	float: center;
 	background: #fff;
@@ -195,6 +200,11 @@ body {
 	margin: 2% auto;
 }
 	
+.wrapper-error {
+	width: 50%;
+	margin: 2% auto;
+}
+
 .form1 {
 	float: center;
 	background: #fff;
@@ -289,6 +299,11 @@ body {
 
 @media
 (max-width: 500px) {
+
+.wrapper-error {
+	width: 80%;
+	margin: 2% auto;
+}
 
 .wrapper {
 	width: 90%;
