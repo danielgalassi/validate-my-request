@@ -76,7 +76,7 @@ public class ValidatorService extends HttpServlet {
 
 		//redirects to summary view
 		String results = publisher.getResultsPage();
-		RequestDispatcher rd = request.getRequestDispatcher(results);
-		rd.forward(request, response);
+		RequestDispatcher view = request.getRequestDispatcher(results);
+		view.forward(request, response);
 	}
 }

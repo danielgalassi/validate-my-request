@@ -138,7 +138,7 @@
 				</table>
 				<br />
 				<br />
-				<hr style="height: 1px; border: 0; background-color: #AAAAAA; width: 70%;" />
+				<hr style="height: 1px; border: 0; background-color: #AAAAAA; align: center; width: 70%;" />
 
 				<div style="padding-top: 20px;">
 					<p style="color: rgb(128, 128, 128); float: left;">Mozilla Firefox or Google Chrome are strongly
