@@ -23,6 +23,12 @@ public class DBObject {
 	public DBObject () {
 	}
 
+	/**
+	 * Constructor
+	 * @param schema an objects schema
+	 * @param name a DB objects name
+	 * @param type keyword describing the object type (table, view, procedure, sequence or synonym)
+	 */
 	public DBObject (String schema, String name, String type) {
 		this.name = name.toUpperCase().trim();
 		this.schema = schema.toUpperCase().trim();
@@ -31,6 +37,10 @@ public class DBObject {
 	}
 
 	@XmlAttribute
+	/**
+	 * Method created to facilitate the serialisation
+	 * @return a concatenated schema.object_name
+	 */
 	public String getFullObject() {
 		return full_object;
 	}
@@ -53,6 +63,10 @@ public class DBObject {
 	}
 
 	@XmlAttribute
+	/**
+	 * 
+	 * @return true, as a String, if this object was a match when compared to the master objects lists
+	 */
 	public String isValid() {
 		return isValid+"";
 	}

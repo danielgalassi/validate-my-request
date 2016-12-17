@@ -15,10 +15,8 @@ import org.validator.utils.FileUtils;
 
 
 /**
- * The validator engine orchestrates and controls the execution of the test suite.
- * A <code>ValidatorEngine</code> consists of two main components, the repository refresh request and a collection of tests.
- * The refresh request in the <code>Repository</code> will be validated using <code>Test</code> instances.
- * Each time the engine runs, the execution of each test is timed.
+ * The <code>ValidatorEngine</code> orchestrates and controls the execution of the tests.
+ * Each <code>DBObject</code> in the <code>RefreshRequest</code> is validated using by this orchestration.
  * @author danielgalassi@gmail.com
  *
  */
@@ -27,7 +25,7 @@ public class ValidatorEngine {
 	private static final Logger logger = LogManager.getLogger(ValidatorEngine.class.getName());
 	/** The target directory where validation results will be saved. */
 	private String resultCatalog = "";
-	/** An OBIEE refresh request repository object. */
+	/** An refresh request repository object. */
 	private RefreshRequest nzRequest = null;
 	private ArrayList<String> tableList = null;
 	private ArrayList<String> viewList = null;
@@ -162,6 +160,9 @@ public class ValidatorEngine {
 		serialiseResults();
 	}
 
+	/**
+	 * JAXB serialisation of the validation results
+	 */
 	private void serialiseResults() {
 		try {
 			JAXBContext jaxbContext = JAXBContext.newInstance(RefreshRequest.class);
@@ -180,7 +181,7 @@ public class ValidatorEngine {
 	}
 
 	/**
-	 * Validates the repository and test suite have been setup and are available.
+	 * Validates the engine has been fully setup.
 	 * @return true if all dependencies are met
 	 */
 	private boolean ready() {
