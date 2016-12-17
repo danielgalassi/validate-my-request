@@ -21,9 +21,7 @@ import org.validator.utils.FileUtils;
 
 /**
  * Servlet to handle the first step of the validation process.
- * Work directory and ZIP extraction are managed by this servlet.
  * @author danielgalassi@gmail.com
- *
  */
 @WebServlet(description = "processes file-upload requests", urlPatterns = {"/FileHandler"})
 public class FileHandler extends HttpServlet {
