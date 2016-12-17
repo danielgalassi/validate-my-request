@@ -28,11 +28,11 @@ function setAjaxOutput() {
 
 function handleServerResponse() {
 	if (xmlhttpObject.readyState == 4) {
-//		if (xmlhttpObject.status == 200) {
+		if (xmlhttpObject.status == 200) {
 			setAjaxOutput();
-//		} else {
-//			alert("Error during AJAX call. Please try again");
-//		}
+		} else {
+			alert("Error during AJAX call. Please try again");
+		}
 	}
 }
 

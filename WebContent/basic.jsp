@@ -36,8 +36,8 @@
 		var xhr = new XMLHttpRequest();
 		xhr.open("POST", "upload", false);
 		xhr.send(formData);
-		//		document.getElementById("submit").disabled = false;
-		doAjaxCall();
+		document.getElementById("submit").disabled = false;
+		//		doAjaxCall();
 	}
 </script>
 <link rel="stylesheet"
@@ -49,18 +49,18 @@
 			enctype="multipart/form-data">
 			<div class="formtitle">Start the validation process</div>
 			<div class="input nobottomborder">
-				<div class="upload-drop-zone" id="dropbox">Just drag and drop
-					your template here</div>
+				<div class="upload-drop-zone" id="dropbox">Drag and drop your
+					template here</div>
 			</div>
-			<!--div class="buttons">
-				<input id="submit" class="orangebutton" type="submit" value="Validate" disabled="disabled"/>
-			</div-->
+			<div class="buttons">
+				<input id="submit" class="orangebutton" type="submit"
+					value="Validate" disabled="disabled" />
+			</div>
 		</form>
 	</div>
 
-	<hr
-		style="height: 1px; border: 0; background-color: #AAAAAA; width: 100%;" />
-	<br />
-	<div id="ajaxResponse"></div>
+	<!-- hr style="height: 1px; border: 0; background-color: #AAAAAA; width: 100%;" />
+	<br/>
+	<div id="ajaxResponse"></div-->
 </body>
 </html>
