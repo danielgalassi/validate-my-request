@@ -25,7 +25,6 @@ import org.validator.utils.FileUtils;
  * @author danielgalassi@gmail.com
  *
  */
-//@WebServlet(description = "This controller handles file-based requests", urlPatterns = { "/FileHandler" })
 @WebServlet(description = "processes file-upload requests", urlPatterns = {"/FileHandler"})
 public class FileHandler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -107,7 +106,6 @@ public class FileHandler extends HttpServlet {
 			request.setAttribute("message", "There was an error: " + e.getMessage());
 		}
 		//redirects client to message page
-		//getServletContext().getRequestDispatcher("/SubjectAreaSelector").forward(request, response);
-		//		getServletContext().getRequestDispatcher("/ValidatorService").forward(request, response);
+		//getServletContext().getRequestDispatcher("/ValidatorService").forward(request, response);
 	}
 }
