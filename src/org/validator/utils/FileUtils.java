@@ -40,7 +40,7 @@ public class FileUtils {
 		try {
 			in = new BufferedReader(new FileReader(filename));
 			while ((line = in.readLine()) != null) {
-				list.add(line);
+				list.add(line.toUpperCase().trim());
 			}
 			in.close();
 		} catch (Exception e) {

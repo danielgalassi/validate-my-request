@@ -109,6 +109,26 @@ public class ValidatorEngine {
 			if (!object_to_match.exist() && object_to_match.getName().startsWith(object_to_match.getSchema()+".")) {
 				object_to_match.setComment("Maybe... you've included the schema name in the object column?");
 			}
+
+			//validates whether the object has extra chars in the request (such as quotes)
+			if (!object_to_match.exist()) {
+				if (tableList.contains(object_to_match.toString().replaceAll("\"", "")) && object_to_match.isTable()) {
+					object_to_match.setComment("Please remove quotes from the request");
+				}
+				if (viewList.contains(object_to_match.toString().replaceAll("\"", "")) && object_to_match.isView()) {
+					object_to_match.setComment("Please remove quotes from the request");
+				}
+				if (synonList.contains(object_to_match.toString().replaceAll("\"", "")) && object_to_match.isSynonym()) {
+					object_to_match.setComment("Please remove quotes from the request");
+				}
+				if (seqList.contains(object_to_match.toString().replaceAll("\"", "")) && object_to_match.isSequence()) {
+					object_to_match.setComment("Please remove quotes from the request");
+				}
+				if (procList.contains(object_to_match.toString().replaceAll("\"", "")) && object_to_match.isProcedure()) {
+					object_to_match.setComment("Please remove quotes from the request");
+				}
+			}
+
 			//validates whether a table is actually a view... etc
 			if (!object_to_match.exist()) {
 				if (!object_to_match.getType().equals("TABLE")) {
@@ -150,7 +170,7 @@ public class ValidatorEngine {
 			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
 			//Marshal the employees list in console
-			jaxbMarshaller.marshal(nzRequest, System.out);
+			//jaxbMarshaller.marshal(nzRequest, System.out);
 
 			//Marshal the employees list in file
 			jaxbMarshaller.marshal(nzRequest, new File(resultCatalog + "index.xml"));
