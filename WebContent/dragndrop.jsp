@@ -35,6 +35,7 @@
 		var xhr = new XMLHttpRequest();
 		xhr.open("POST", "upload", false);
 		xhr.send(formData);
+		document.getElementById("submit").disabled = false;
 	}
 </script>
 <link rel="stylesheet"
@@ -50,7 +51,7 @@
 					template here</div>
 			</div>
 			<div class="buttons">
-				<input id="submit" class="orangebutton" type="submit" value="Validate"/>
+				<input id="submit" class="orangebutton" type="submit" value="Validate" disabled="disabled"/>
 			</div>
 		</form>
 	</div>
