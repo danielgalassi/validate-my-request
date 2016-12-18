@@ -15,22 +15,27 @@ import org.validator.utils.FileUtils;
 
 
 /**
- * The <code>ValidatorEngine</code> orchestrates and controls the execution of the tests.
+ * The <code>ValidatorEngine</code> orchestrates the test process.
  * Each <code>DBObject</code> in the <code>RefreshRequest</code> is validated using by this orchestration.
  * @author danielgalassi@gmail.com
- *
  */
 public class ValidatorEngine {
 
+	/** Log4j2 central interface*/
 	private static final Logger logger = LogManager.getLogger(ValidatorEngine.class.getName());
 	/** The target directory where validation results will be saved. */
 	private String resultCatalog = "";
 	/** An refresh request repository object. */
 	private RefreshRequest nzRequest = null;
+	/** List of Netezza tables */
 	private ArrayList<String> tableList = null;
+	/** List of Netezza views */
 	private ArrayList<String> viewList = null;
+	/** List of Netezza stored procedures */
 	private ArrayList<String> procList = null;
+	/** List of Netezza synonyms */
 	private ArrayList<String> synonList = null;
+	/** List of Netezza sequences */
 	private ArrayList<String> seqList = null;
 
 	/**
@@ -41,6 +46,9 @@ public class ValidatorEngine {
 		logger.info("Initialising Validator Engine");
 	}
 
+	/**
+	 * Loads all reference data used in the validation process
+	 */
 	public void loadMasterLists() {
 		tableList	= FileUtils.file2array("/tmp/master_objects_list/tables");
 		viewList	= FileUtils.file2array("/tmp/master_objects_list/views");
@@ -50,7 +58,7 @@ public class ValidatorEngine {
 	}
 
 	/**
-	 * Sets the request file to assess in this validator engine.
+	 * Sets the refresh request for the validation process
 	 * @param nzRequest refresh request repository object
 	 */
 	public void setNzRequest(RefreshRequest nzRequest) {
@@ -68,8 +76,13 @@ public class ValidatorEngine {
 
 	/**
 	 * Executes the validation of the refresh request.
-	 * Upon completion, an index document (catalog) is created. Each entry in this catalog
-	 * points to a result file.
+	 * The validation process consists of the following steps:
+	 * 1. matching of each <code>DBObject</code> against the master list of reference data
+	 * 2. identifies whether the schema was included in the object column (common mistake)
+	 * 3. identifies whether the object name was entered with quotation marks (common mistake)
+	 * 4. identifies incorrect object types (table instead of a view, etc.)
+	 * Upon completion, an index document (catalog) is created.
+	 * Each entry in this catalog points to a result file.
 	 */
 	public void run() {
 		if (!ready()) {
@@ -181,7 +194,7 @@ public class ValidatorEngine {
 	}
 
 	/**
-	 * Validates the engine has been fully setup.
+	 * Validates the engine has been fully setup to avoid triggering a process without a loaded request or without a target directory for the results
 	 * @return true if all dependencies are met
 	 */
 	private boolean ready() {

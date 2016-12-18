@@ -28,23 +28,32 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 @XmlRootElement(name = "test")
 public class RefreshRequest {
 
+	/** Log4j2 main interface */
 	private static final Logger logger = LogManager.getLogger(RefreshRequest.class.getName()); 
 	/** The refresh request file in XLSX format stored in the filesystem under the session directory. */
 	private File nzRequest = null;
-	/** The session directory where the refresh request is stored. */
 	@XmlElement(name = "object")
+	/** Collection of database objects. */
 	private ArrayList<DBObject> objectsList = new ArrayList<DBObject>();
+	/** number of database objects in the refresh request */
 	private int size = 0;
 
+	/**
+	 * Constructor to facilitate the serialisation process
+	 */
 	public RefreshRequest () {
 	}
 
+	/**
+	 * Getter method for the requests' collection of objects
+	 * @return collection of database objects
+	 */
 	public ArrayList<DBObject> getObjectList() {
 		return objectsList;
 	}
 
 	/**
-	 * Instantiates a refresh request file.
+	 * Loads all database objects from the Excel (XLSX) file using the Apache POI package
 	 * @param directory path to the refresh request file
 	 * @param xslx Excel (template) file
 	 */
@@ -111,7 +120,7 @@ public class RefreshRequest {
 	}
 
 	/**
-	 * Evaluates the status of the file.
+	 * Evaluates whether the file can be found and opened
 	 * @return true if the file is found and can be read
 	 */
 	public boolean available() {
@@ -122,6 +131,10 @@ public class RefreshRequest {
 		return isAvailable;
 	}
 
+	/**
+	 * Replaces the original list of objects with a new collection
+	 * @param objectsList new objects' list
+	 */
 	public void override(ArrayList<DBObject> objectsList) {
 		this.objectsList = objectsList;
 	}

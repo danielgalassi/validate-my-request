@@ -20,7 +20,7 @@ import org.validator.utils.FileUtils;
 
 
 /**
- * Servlet to handle the first step of the validation process.
+ * Servlet to handle the first step of the validation process, the loading of the XLSX file
  * @author danielgalassi@gmail.com
  */
 @WebServlet(description = "processes file-upload requests", urlPatterns = {"/FileHandler"})

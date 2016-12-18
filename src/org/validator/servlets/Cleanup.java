@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 import org.validator.utils.FileUtils;
 
 /**
- * Servlet to cleanup stale entries from the result catalogue.
+ * Servlet to cleanup stale entries from the results catalog.
  * @author danielgalassi@gmail.com
  */
 @WebServlet(description = "This servlet can be used to cleanup old results", urlPatterns = { "/Cleanup" })

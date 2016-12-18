@@ -7,19 +7,28 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
+ * Abstraction for a table, view, stored procedure, synonym or sequence
  * @author danielgalassi@gmail.com
- *
  */
 @XmlRootElement(name = "object")
 public class DBObject {
 
+	/** Object name */
 	private String name;
+	/** Object schema */
 	private String schema;
+	/** Object type */
 	private String type;
+	/** Object comment */
 	private String comment = "";
+	/** Object schema and name*/
 	private String full_object;
+	/** found / not found flag */
 	private boolean isValid = false;
 
+	/**
+	 * Default constructor (for JAXB API)
+	 */
 	public DBObject () {
 	}
 
@@ -45,32 +54,51 @@ public class DBObject {
 		return full_object;
 	}
 
+	/**
+	 * Getter for the object's  name
+	 * @return the name of the object
+	 */
 	public String getName() {
 		return name;
 	}
 
 	@XmlAttribute
+	/**
+	 * Getter for the object's type
+	 * @return the type of the object
+	 */
 	public String getType() {
 		return type;
 	}
 
+	/**
+	 * Getter for the schema field
+	 * @return the schema of the object
+	 */
 	public String getSchema() {
 		return schema;
 	}
 
+	/**
+	 * Getter for the validation flag
+	 * @return true if the object exists in the master object's list
+	 */
 	public boolean exist() {
 		return isValid;
 	}
 
 	@XmlAttribute
 	/**
-	 * 
+	 * Getter for the validation flag, method created to facilitate the serialisation process
 	 * @return true, as a String, if this object was a match when compared to the master objects lists
 	 */
 	public String isValid() {
 		return isValid+"";
 	}
 
+	/**
+	 * Flags the fact that this object has been matched against the master object's list (and found in it)
+	 */
 	public void tag() {
 		this.isValid = true;
 	}
@@ -87,6 +115,7 @@ public class DBObject {
 		this.type = type;
 	}
 
+	@Override
 	public String toString() {
 		return schema + "." + name;
 	}
