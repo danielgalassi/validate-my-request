@@ -23,7 +23,10 @@ function getXMLHTTPObject() {
 
 // Change the value of the outputText field
 function setAjaxOutput() {
-	document.getElementById('ajaxResponse').innerHTML = xmlhttpObject.responseText;
+//	document.getElementById('ajaxResponse').innerHTML = xmlhttpObject.responseText;
+	document.open();
+	document.write(xmlhttpObject.responseText);
+	document.close();
 }
 
 function handleServerResponse() {
@@ -44,6 +47,7 @@ function doAjaxCall() {
 		var URL = "ValidatorService";
 		xmlhttpObject.open("POST", URL, true);
 		xmlhttpObject.send(null);
+		document.getElementById('ajaxResponse').innerHTML = "<a color=\"#676767\">Processing...</a>";
 		xmlhttpObject.onreadystatechange = handleServerResponse;
 	}
 }
