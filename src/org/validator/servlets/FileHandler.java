@@ -66,7 +66,6 @@ public class FileHandler extends HttpServlet {
 		try {
 			//parses the request content to extract file data
 			List<FileItem> formItems = upload.parseRequest(request);
-
 			logger.info("Processing upload request");
 			if (formItems != null && formItems.size() > 0) {
 
@@ -74,7 +73,7 @@ public class FileHandler extends HttpServlet {
 					if (item.isFormField()) {
 						String name = item.getFieldName();
 						String value = item.getString();
-						logger.trace("Form selection: {}={}", name, value);
+						logger.trace("Form fields: {}={}", name, value);
 						request.setAttribute(name, value);
 						session.setAttribute(name, value);
 					}
@@ -103,7 +102,10 @@ public class FileHandler extends HttpServlet {
 			logger.error("Exception: {}", e.getMessage());
 			request.setAttribute("message", "There was an error: " + e.getMessage());
 		}
-		//redirects client to message page
-		//getServletContext().getRequestDispatcher("/ValidatorService").forward(request, response);
+		//redirects client to message page if the request was invoked from the IE-specific JSP
+		if (session.getAttribute("from").toString().contains("start.jsp") ||
+				session.getAttribute("from").toString().contains("ie")) {
+			getServletContext().getRequestDispatcher("/ValidatorService").forward(request, response);
+		}
 	}
 }

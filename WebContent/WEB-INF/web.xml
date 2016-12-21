@@ -26,6 +26,22 @@
 		<url-pattern>/cleanup</url-pattern>
 	</servlet-mapping>
 	<servlet>
+		<servlet-name>basic.jsp</servlet-name>
+		<jsp-file>/basic.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>basic.jsp</servlet-name>
+		<url-pattern>/basic</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>standard.jsp</servlet-name>
+		<jsp-file>/standard.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>standard.jsp</servlet-name>
+		<url-pattern>/ie</url-pattern>
+	</servlet-mapping>
+	<servlet>
 		<description></description>
 		<display-name>ValidatorService</display-name>
 		<servlet-name>ValidatorService</servlet-name>

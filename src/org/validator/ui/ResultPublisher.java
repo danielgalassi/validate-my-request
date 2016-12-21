@@ -13,7 +13,6 @@ import javax.servlet.ServletContext;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.validator.utils.FileUtils;
 import org.validator.utils.XMLUtils;
 
 /**
@@ -90,10 +89,10 @@ public class ResultPublisher {
 	/**
 	 * Creates a compressed file with a summary and detail pages.
 	 */
-	private void generateZip() {
+/*	private void generateZip() {
 		FileUtils.archive(resultCatalog,  pages, "Results.zip");
 	}
-
+*/
 	/**
 	 * Creates all HTML pages used for browsing and downloading.
 	 */
@@ -104,7 +103,7 @@ public class ResultPublisher {
 		}
 		logger.trace("Publishing results...");
 		generatePages();
-		generateZip();
+//		generateZip();
 	}
 
 	/**

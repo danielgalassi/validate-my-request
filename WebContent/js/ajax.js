@@ -43,7 +43,6 @@ function handleServerResponse() {
 function doAjaxCall() {
 	xmlhttpObject = getXMLHTTPObject();
 	if (xmlhttpObject != null) {
-//		var URL = "AjaxAction?userName=" + document.getElementById('userName').value;
 		var URL = "ValidatorService";
 		xmlhttpObject.open("POST", URL, true);
 		xmlhttpObject.send(null);

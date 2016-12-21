@@ -36,7 +36,8 @@
 		var xhr = new XMLHttpRequest();
 		xhr.open("POST", "upload", false);
 		xhr.send(formData);
-		//		document.getElementById("submit").disabled = false;
+//		document.getElementById("submit").disabled = false;
+//		document.getElementById("submit").style = "opacity: 1.0";
 		doAjaxCall();
 	}
 </script>
@@ -53,14 +54,13 @@
 					your template here</div>
 			</div>
 			<!--div class="buttons">
-				<input id="submit" class="orangebutton" type="submit" value="Validate" disabled="disabled"/>
+				<input id="submit" class="orangebutton" type="submit" style="opacity: 0.25;"
+					value="Validate" disabled="disabled" />
 			</div-->
+			<input type="hidden" name="from" value="${pageContext.request.requestURI}"/>
 		</form>
 	</div>
 
-	<hr
-		style="height: 1px; border: 0; background-color: #AAAAAA; width: 100%;" />
-	<br />
 	<div id="ajaxResponse"></div>
 </body>
 </html>

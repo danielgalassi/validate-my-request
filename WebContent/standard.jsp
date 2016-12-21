@@ -20,12 +20,12 @@
 					<input align="right" id="metadataFile" type="file" name="metadata" size="15" />
 				</div>
 			</div>
-
 			<div class="buttons">
-				<input class="orangebutton" type="submit" value="Upload" />
+				<input id="submit" class="orangebutton" type="submit" style="opacity: 0.25;"
+					value="Validate" />
 			</div>
+			<input type="hidden" name="from" value="${pageContext.request.requestURI}"/>
 		</form>
 	</div>
-
 </body>
 </html>
