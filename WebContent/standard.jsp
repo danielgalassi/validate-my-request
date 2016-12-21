@@ -14,17 +14,19 @@
 			enctype="multipart/form-data">
 			<div class="formtitle">Start the validation process</div>
 
-			<div class="input nobottomborder2">	
-				<div class="inputtext">Select refresh template</div>
-				<div class="inputcontent nobottomborder">
-					<input align="right" id="metadataFile" type="file" name="metadata" size="15" />
+			<div class="input nobottomborder2">
+				<div style="line-height: 150%;" class="inputtext" align="center">Select refresh template
+				<div class="input nobottomborder">
+				<input id="metadataFile" type="file" name="metadata" style="padding: 5%; border: 1px solid #ddd;"/>
+				</div>
 				</div>
 			</div>
 			<div class="buttons">
-				<input id="submit" class="orangebutton" type="submit" style="opacity: 0.25;"
+				<input id="submit" class="orangebutton" type="submit"
 					value="Validate" />
 			</div>
-			<input type="hidden" name="from" value="${pageContext.request.requestURI}"/>
+			<input type="hidden" name="from"
+				value="${pageContext.request.requestURI}" />
 		</form>
 	</div>
 </body>

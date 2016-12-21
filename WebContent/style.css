@@ -85,9 +85,10 @@ body {
 }
 
 .inputtext {
-	float: left;
+	f1oat: left;
 	line-height: 28px;
-	font-size: 12px;
+	font-size: 200%;
+	
 }
 
 .inputtext2 {
