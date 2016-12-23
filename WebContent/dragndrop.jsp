@@ -10,7 +10,7 @@
 	window.onload = function() {
 		var dropbox = document.getElementById("dropbox");
 		dropbox.addEventListener("dragenter", noop, false);
-		dropbox.addEventListener("dragexit", noop, false);
+		dropbox.addEventListener("dragexit", noopexit, false);
 		dropbox.addEventListener("dragover", noop, false);
 		dropbox.addEventListener("drop", dropUpload, false);
 	}
@@ -18,6 +18,16 @@
 	function noop(event) {
 		event.stopPropagation();
 		event.preventDefault();
+		document.getElementById("dropbox").style.borderColor = "#0066ff";
+		document.getElementById("dropbox").style.color = "#0066ff";
+		
+	}
+
+	function noopexit(event) {
+		event.stopPropagation();
+		event.preventDefault();
+		document.getElementById("dropbox").style.borderColor = "#aaaaaa";
+		document.getElementById("dropbox").style.color = "#969696";
 	}
 
 	function dropUpload(event) {
