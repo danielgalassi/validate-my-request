@@ -21,12 +21,12 @@
 				</div>
 				</div>
 			</div>
+			<input type="hidden" name="from"
+				value="internetexplorer" />
 			<div class="buttons">
 				<input id="submit" class="orangebutton" type="submit"
 					value="Validate" />
 			</div>
-			<input type="hidden" name="from"
-				value="${pageContext.request.requestURI}" />
 		</form>
 	</div>
 </body>

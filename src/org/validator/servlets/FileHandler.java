@@ -103,8 +103,7 @@ public class FileHandler extends HttpServlet {
 			request.setAttribute("message", "There was an error: " + e.getMessage());
 		}
 		//redirects client to message page if the request was invoked from the IE-specific JSP
-		if (session.getAttribute("from").toString().contains("start.jsp") ||
-				session.getAttribute("from").toString().contains("ie")) {
+		if (session.getAttribute("from") != null) {
 			getServletContext().getRequestDispatcher("/ValidatorService").forward(request, response);
 		}
 	}
