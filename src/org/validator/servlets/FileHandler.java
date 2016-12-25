@@ -20,7 +20,8 @@ import org.validator.utils.FileUtils;
 
 
 /**
- * Servlet to handle the first step of the validation process, the loading of the XLSX file
+ * Servlet to handle the first step of the validation process, the loading of the XLSX file.
+ * The implementation uses the <a href="https://commons.apache.org/proper/commons-fileupload/">Apache Commons FileUpload</a> package.
  * @author danielgalassi@gmail.com
  */
 @WebServlet(description = "processes file-upload requests", urlPatterns = {"/FileHandler"})

@@ -17,6 +17,7 @@ import org.validator.utils.FileUtils;
 /**
  * The <code>ValidatorEngine</code> orchestrates the test process.
  * Each <code>DBObject</code> in the <code>RefreshRequest</code> is validated using by this orchestration.
+ * The results are serialised using <a href="https://docs.oracle.com/javase/8/docs/api/javax/xml/bind/JAXB.html">Java Architecture for XML Binding</a>.
  * @author danielgalassi@gmail.com
  */
 public class ValidatorEngine {

@@ -80,10 +80,8 @@ public class ResultPublisher {
 			logger.info("Generating {} page", page);
 			String stylesheet = viewCatalog + page + ".xsl";
 			InputStream xsl2html = context.getResourceAsStream(stylesheet);
-			//XMLUtils.applyStylesheet(index, xsl2html, resultCatalog + page + ".html", params);
 			XMLUtils.applyStylesheet(index, xsl2html, resultCatalog + "Results.html", params);
 		}
-		//pages.remove("Summary");
 	}
 
 	/**
