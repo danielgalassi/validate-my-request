@@ -95,19 +95,22 @@ public class RefreshRequest {
 		while (rowIterator.hasNext()) {
 			Row row = rowIterator.next();
 
-			objectSchema	= row.getCell(0).toString().toUpperCase();
-			objectName		= row.getCell(1).toString().toUpperCase();
-			objectType		= row.getCell(2).toString().toUpperCase();
-			if (objectType.contains("STOR") || objectType.contains("PROC")) {
-				objectType = "PROCEDURE";
-			}
+			//skips blank rows
+			if (row.getCell(0).toString().length() > 0) {
+				objectSchema	= row.getCell(0).toString().toUpperCase();
+				objectName		= row.getCell(1).toString().toUpperCase();
+				objectType		= row.getCell(2).toString().toUpperCase();
+				if (objectType.contains("STOR") || objectType.contains("PROC")) {
+					objectType = "PROCEDURE";
+				}
 
-			if (objectType.equals("TABLE") || 
-					objectType.equals("VIEW") || 
-					objectType.equals("SYNONYM") ||
-					objectType.equals("SEQUENCE") ||
-					objectType.equals("PROCEDURE")) {
-				objectsList.add(new DBObject(objectSchema, objectName, objectType));
+				if (objectType.equals("TABLE") || 
+						objectType.equals("VIEW") || 
+						objectType.equals("SYNONYM") ||
+						objectType.equals("SEQUENCE") ||
+						objectType.equals("PROCEDURE")) {
+					objectsList.add(new DBObject(objectSchema, objectName, objectType));
+				}
 			}
 		}
 		size = objectsList.size();
