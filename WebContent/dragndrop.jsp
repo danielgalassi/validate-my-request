@@ -58,6 +58,8 @@
 				<div class="upload-drop-zone" id="dropbox">Just drag and drop
 					your template here</div>
 			</div>
+			<input type="hidden" name="from"
+				value="dragndrop" />
 			<!--div class="buttons">
 				<input id="submit" class="orangebutton" type="submit" style="opacity: 0.25;"
 					value="Validate" disabled="disabled" />

@@ -119,7 +119,7 @@ public class ValidatorEngine {
 				object_to_match.tag();
 			}
 
-			//validates whether the schema was incorrect
+			//validates whether the schema in the request is incorrect
 			if (!object_to_match.exist()) {
 				Iterator <String> dbList = null;
 				String type = object_to_match.getType();

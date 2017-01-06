@@ -53,6 +53,8 @@
 				<div class="upload-drop-zone" id="dropbox">Drag and drop your
 					template here</div>
 			</div>
+			<input type="hidden" name="from"
+				value="dragonly" />
 			<div class="buttons">
 				<input id="submit" class="orangebutton" type="submit"
 					style="opacity: 0.25;" value="Validate" disabled="disabled" />
