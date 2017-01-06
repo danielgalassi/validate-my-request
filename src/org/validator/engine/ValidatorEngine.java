@@ -82,6 +82,7 @@ public class ValidatorEngine {
 	 * 2. identifies whether the schema was included in the object column (common mistake)
 	 * 3. identifies whether the object name was entered with quotation marks (common mistake)
 	 * 4. identifies incorrect object types (table instead of a view, etc.)
+	 * 5. identifies incorrect schemas (table found in a different schema than that in the request)
 	 * Upon completion, an index document (catalog) is created.
 	 * Each entry in this catalog points to a result file.
 	 */
@@ -117,27 +118,54 @@ public class ValidatorEngine {
 			if (procList.contains(object_to_match.toString()) && object_to_match.isProcedure()) {
 				object_to_match.tag();
 			}
+
+			//validates whether the schema was incorrect
+			if (!object_to_match.exist()) {
+				Iterator <String> dbList = null;
+				String type = object_to_match.getType();
+				switch (type) {
+				case "VIEW" : dbList = viewList.iterator();
+				break;
+				case "TABLE" : dbList = tableList.iterator();
+				break;
+				case "SYNONYM" : dbList = synonList.iterator();
+				break;
+				case "SEQUENCE" : dbList = seqList.iterator();
+				break;
+				case "PROCEDURE" : dbList = procList.iterator();
+				break;
+				}
+				String[] object;
+				while (dbList.hasNext()) {
+					object = dbList.next().split("\\.");
+					if (object[1].equals(object_to_match.getName())) {
+						object_to_match.setComment("You may find this object in " + object[0] + " instead...");
+						break;
+					}
+				}
+			}
+
 			//checks whether schema.object was entered in the object column
-			if (!object_to_match.exist() && object_to_match.getName().startsWith(object_to_match.getSchema()+".")) {
+			if (!object_to_match.exist() && object_to_match.getName().indexOf(".") > -1) {
 				object_to_match.setComment("Maybe... you've included the schema name in the object column?");
 			}
 
 			//validates whether the object has extra chars in the request (such as quotes)
 			if (!object_to_match.exist()) {
-				if (tableList.contains(object_to_match.toString().replaceAll("\"", "")) && object_to_match.isTable()) {
-					object_to_match.setComment("Please remove quotes from the request");
+				if (tableList.contains(object_to_match.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && object_to_match.isTable()) {
+					object_to_match.setComment("Please remove quotes or other odd characters from the request.");
 				}
-				if (viewList.contains(object_to_match.toString().replaceAll("\"", "")) && object_to_match.isView()) {
-					object_to_match.setComment("Please remove quotes from the request");
+				if (viewList.contains(object_to_match.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && object_to_match.isView()) {
+					object_to_match.setComment("Please remove quotes or other odd characters from the request.");
 				}
-				if (synonList.contains(object_to_match.toString().replaceAll("\"", "")) && object_to_match.isSynonym()) {
-					object_to_match.setComment("Please remove quotes from the request");
+				if (synonList.contains(object_to_match.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && object_to_match.isSynonym()) {
+					object_to_match.setComment("Please remove quotes or other odd characters from the request.");
 				}
-				if (seqList.contains(object_to_match.toString().replaceAll("\"", "")) && object_to_match.isSequence()) {
-					object_to_match.setComment("Please remove quotes from the request");
+				if (seqList.contains(object_to_match.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && object_to_match.isSequence()) {
+					object_to_match.setComment("Please remove quotes or other odd characters from the request.");
 				}
-				if (procList.contains(object_to_match.toString().replaceAll("\"", "")) && object_to_match.isProcedure()) {
-					object_to_match.setComment("Please remove quotes from the request");
+				if (procList.contains(object_to_match.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && object_to_match.isProcedure()) {
+					object_to_match.setComment("Please remove quotes or other odd characters from the request.");
 				}
 			}
 
@@ -145,23 +173,23 @@ public class ValidatorEngine {
 			if (!object_to_match.exist()) {
 				if (!object_to_match.getType().equals("TABLE")) {
 					if (tableList.contains(object_to_match.toString()))
-						object_to_match.setComment("This is a table, not a " + object_to_match.getType().toLowerCase());
+						object_to_match.setComment("This is a table, not a " + object_to_match.getType().toLowerCase() + ".");
 				}
 				if (!object_to_match.getType().equals("SYNONYM")) {
 					if (synonList.contains(object_to_match.toString()))
-						object_to_match.setComment("This is a synonym, not a " + object_to_match.getType().toLowerCase());
+						object_to_match.setComment("This is a synonym, not a " + object_to_match.getType().toLowerCase() + ".");
 				}
 				if (!object_to_match.getType().equals("SEQUENCE")) {
 					if (seqList.contains(object_to_match.toString()))
-						object_to_match.setComment("This is a sequence, not a " + object_to_match.getType().toLowerCase());
+						object_to_match.setComment("This is a sequence, not a " + object_to_match.getType().toLowerCase() + ".");
 				}
 				if (!object_to_match.getType().equals("VIEW")) {
 					if (viewList.contains(object_to_match.toString()))
-						object_to_match.setComment("This is a view, not a " + object_to_match.getType().toLowerCase());
+						object_to_match.setComment("This is a view, not a " + object_to_match.getType().toLowerCase() + ".");
 				}
 				if (!object_to_match.getType().equals("PROCEDURE")) {
 					if (procList.contains(object_to_match.toString()))
-						object_to_match.setComment("This is a stored procedure, not a " + object_to_match.getType().toLowerCase());
+						object_to_match.setComment("This is a stored procedure, not a " + object_to_match.getType().toLowerCase() + ".");
 				}
 			}
 			objectsList.set(index, object_to_match);
@@ -184,10 +212,10 @@ public class ValidatorEngine {
 
 			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-			//Marshal the employees list in console
+			//Marshal the list in console
 			//jaxbMarshaller.marshal(nzRequest, System.out);
 
-			//Marshal the employees list in file
+			//Marshal the list in file
 			jaxbMarshaller.marshal(nzRequest, new File(resultCatalog + "index.xml"));
 		} catch (Exception e) {
 			e.printStackTrace();

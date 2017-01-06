@@ -134,7 +134,11 @@ public class DBObject {
 	 * @param comment the comment to set
 	 */
 	public void setComment(String comment) {
-		this.comment = comment;
+		if (this.comment.equals("")) {
+			this.comment = comment;
+		} else {
+			this.comment += " " + comment;
+		}
 	}
 
 	public boolean isTable() {
