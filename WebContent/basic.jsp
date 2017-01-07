@@ -49,10 +49,7 @@
 		<form class="form1" method="post" action="ValidatorService"
 			enctype="multipart/form-data">
 			<div class="formtitle">Start the validation process</div>
-			<div class="input nobottomborder">
-				<div class="upload-drop-zone" id="dropbox">Drag and drop your
-					template here</div>
-			</div>
+				<div class="upload-drop-zone" id="dropbox">Drag and drop your request here</div>
 			<input type="hidden" name="from"
 				value="dragonly" />
 			<div class="buttons">
@@ -61,6 +58,7 @@
 			</div>
 		</form>
 	</div>
-	<!--div id="ajaxResponse"></div-->
+
+	<div id="ajaxResponse"></div>
 </body>
 </html>

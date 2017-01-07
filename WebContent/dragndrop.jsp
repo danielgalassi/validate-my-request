@@ -54,10 +54,7 @@
 		<form class="form1" method="post" action="ValidatorService"
 			enctype="multipart/form-data">
 			<div class="formtitle">Start the validation process</div>
-			<!--div class="input nobottomborder"-->
-				<div class="upload-drop-zone" id="dropbox">Drag and drop
-					your request here</div>
-			<!--/div-->
+				<div class="upload-drop-zone" id="dropbox">Drag and drop your request here</div>
 			<input type="hidden" name="from"
 				value="dragndrop" />
 			<!--div class="buttons">
