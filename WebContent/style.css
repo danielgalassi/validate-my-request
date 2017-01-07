@@ -1,9 +1,14 @@
+html {
+	height: 100%;
+}
+
 * {
 	padding: 0;
 	margin: 0;
 }
 
 body {
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	background: #f4f4f4;
@@ -23,14 +28,17 @@ body {
 .wrapper {
 	width: 33%;
 	margin: 2% auto;
+	height: 60%;
 }
 
 .wrapper-error {
 	width: 25%;
 	margin: 2% auto;
+	height: 60%;
 }
 
 .form1 {
+	height: 100%;
 	float: center;
 	background: #fff;
 	color: #777;
@@ -53,8 +61,8 @@ body {
 }
 
 .formtitle {
-	padding: 2%;
-	align: center;
+	padding: 8px;
+	text-align: center;
 	line-height: 175%;
 	font-size: 110%;
 	text-shadow: -1px -1px #e87c19;
@@ -104,7 +112,6 @@ body {
 
 .inputcontent input {
 	padding: 5px;
-	line-he1ght: 18px;
 	border: 1px solid #c7c7c7;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -122,12 +129,26 @@ body {
 .nobottomborder {
 	border-bottom: 0px;
 	padding: 1%;
+	height: 100%;
 }
 
 .nobottomborder2 {
 	border-bottom: 0px;
 	padding: 2%;
 	height: 150px;
+}
+
+.upload-drop-zone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #969696;
+	border-style: dashed;
+	border-color: #aaaaaa;
+	height: calc(100% - 55px - 10px);
+	text-align: center;
+	font-size: 200%;
+	margin: 5px;
 }
 
 .buttons {
@@ -213,250 +234,4 @@ body {
 		endColorstr='#ffc339', GradientType=0); /* IE6-9 */
 	background: linear-gradient(top, #ff9b19 0%, #ffc339 100%); /* W3C */
 }
-
-.upload-drop-zone {
-	color: #969696;
-	border-style: dashed;
-	border-color: #aaaaaa;
-	line-height: 800%;
-	text-align: center;
-	font-size: 200%;
-}
-
-@media ( max-width : 1800px) {
-	.upload-drop-zone {
-		color: #969696;
-		border-style: dashed;
-		border-color: #aaaaaa;
-		line-height: 800%;
-		text-align: center;
-		font-size: 200%;
-	}
-	.wrapper {
-		width: 45%;
-		margin: 2% auto;
-	}
-}
-
-@media ( max-width : 1570px) {
-	.upload-drop-zone {
-		color: #969696;
-		border-style: dashed;
-		border-color: #aaaaaa;
-		line-height: 600%;
-		text-align: center;
-		font-size: 180%;
-	}
-}
-
-@media ( max-width : 900px) {
-	.wrapper {
-		width: 60%;
-		margin: 2% auto;
-	}
-	.upload-drop-zone {
-		color: #969696;
-		border-style: dashed;
-		border-color: #aaaaaa;
-		line-height: 600%;
-		text-align: center;
-		font-size: 180%;
-	}
-	.wrapper-error {
-		width: 50%;
-		margin: 2% auto;
-	}
-	.form1 {
-		float: center;
-		background: #fff;
-		color: #777;
-		-webkit-box-shadow: 0px 0px 6px 4px #999;
-		-moz-box-shadow: 0px 0px 6px 4px #999;
-		box-shadow: 0px 0px 6px 4px #999;
-		-webkit-border-top-left-radius: 0px;
-		-webkit-border-top-right-radius: 0px;
-		-webkit-border-bottom-right-radius: 6px;
-		-webkit-border-bottom-left-radius: 6px;
-		-moz-border-radius-topleft: 0px;
-		-moz-border-radius-topright: 0px;
-		-moz-border-radius-bottomright: 6px;
-		-moz-border-radius-bottomleft: 6px;
-		border-top-left-radius: 0px;
-		border-top-right-radius: 0px;
-		border-bottom-right-radius: 6px;
-		border-bottom-left-radius: 6px;
-		overflow: hidden;
-	}
-	.formtitle {
-		padding: 2%;
-		padding-left: 6%;
-		line-height: 150%;
-		font-size: 90%;
-		text-shadow: -1px -1px #e87c19;
-		color: #fff;
-		font-weight: 600;
-		border-bottom: 1px solid #eb8d19;
-		background: #ffbd27; /* Old browsers */
-		background: -moz-linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%, #ff9d19
-			100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffbd27),
-			color-stop(50%, #ffb119), color-stop(51%, #ff9d19),
-			color-stop(100%, #ff9d19)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%,
-			#ff9d19 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%, #ff9d19
-			100%); /* Opera11.10+ */
-		background: -ms-linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%, #ff9d19
-			100%); /* IE10+ */
-		filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#ffbd27',
-			endColorstr='#ff9d19', GradientType=0); /* IE6-9 */
-		background: linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%, #ff9d19 100%);
-		/* W3C */
-	}
-	.buttons {
-		background: #f1f1f1;
-		border-top: 1px solid #ddd;
-		padding: 6%;
-		line-height: 65%;
-	}
-	.orangebutton {
-		background: #ffc339; /* Old browsers */
-		background: -moz-linear-gradient(top, #ffc339 0%, #ff9b19 100%);
-		/* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffc339),
-			color-stop(100%, #ff9b19)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #ffc339 0%, #ff9b19 100%);
-		/* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #ffc339 0%, #ff9b19 100%);
-		/* Opera11.10+ */
-		background: -ms-linear-gradient(top, #ffc339 0%, #ff9b19 100%);
-		/* IE10+ */
-		filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#ffc339',
-			endColorstr='#ff9b19', GradientType=0); /* IE6-9 */
-		background: linear-gradient(top, #ffc339 0%, #ff9b19 100%); /* W3C */
-		border: 1px solid #ff9b19;
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;
-		line-height: 80%;
-		font-size: 100%;
-		font-weight: 600;
-		padding: 5%;
-		color: #fff;
-		text-shadow: -1px -1px #ff9b19;
-		float: center;
-		width: 100%;
-		cursor: pointer;
-	}
-	.nobottomborder2 {
-		border-bottom: 0px;
-		padding: 2%;
-		height: 200px;
-	}
-}
-
-@media ( max-width : 500px) {
-	.upload-drop-zone {
-		color: #969696;
-		border-style: dashed;
-		border-color: #aaaaaa;
-		line-height: 500%;
-		text-align: center;
-		font-size: 160%;
-	}
-	.wrapper-error {
-		width: 80%;
-		margin: 2% auto;
-	}
-	.wrapper {
-		width: 90%;
-		margin: 2% auto;
-	}
-	.form1 {
-		float: center;
-		background: #fff;
-		color: #777;
-		-webkit-box-shadow: 0px 0px 6px 4px #999;
-		-moz-box-shadow: 0px 0px 6px 4px #999;
-		box-shadow: 0px 0px 6px 4px #999;
-		-webkit-border-top-left-radius: 0px;
-		-webkit-border-top-right-radius: 0px;
-		-webkit-border-bottom-right-radius: 6px;
-		-webkit-border-bottom-left-radius: 6px;
-		-moz-border-radius-topleft: 0px;
-		-moz-border-radius-topright: 0px;
-		-moz-border-radius-bottomright: 6px;
-		-moz-border-radius-bottomleft: 6px;
-		border-top-left-radius: 0px;
-		border-top-right-radius: 0px;
-		border-bottom-right-radius: 6px;
-		border-bottom-left-radius: 6px;
-		overflow: hidden;
-	}
-	.formtitle {
-		padding: 2%;
-		padding-left: 6%;
-		line-height: 150%;
-		font-size: 90%;
-		text-shadow: -1px -1px #e87c19;
-		color: #fff;
-		font-weight: 600;
-		border-bottom: 1px solid #eb8d19;
-		background: #ffbd27; /* Old browsers */
-		background: -moz-linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%, #ff9d19
-			100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffbd27),
-			color-stop(50%, #ffb119), color-stop(51%, #ff9d19),
-			color-stop(100%, #ff9d19)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%,
-			#ff9d19 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%, #ff9d19
-			100%); /* Opera11.10+ */
-		background: -ms-linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%, #ff9d19
-			100%); /* IE10+ */
-		filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#ffbd27',
-			endColorstr='#ff9d19', GradientType=0); /* IE6-9 */
-		background: linear-gradient(top, #ffbd27 0%, #ffb119 50%, #ff9d19 51%, #ff9d19 100%);
-		/* W3C */
-	}
-	.buttons {
-		background: #f1f1f1;
-		border-top: 1px solid #ddd;
-		padding: 6%;
-		line-height: 65%;
-	}
-	.orangebutton {
-		background: #ffc339; /* Old browsers */
-		background: -moz-linear-gradient(top, #ffc339 0%, #ff9b19 100%);
-		/* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffc339),
-			color-stop(100%, #ff9b19)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #ffc339 0%, #ff9b19 100%);
-		/* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #ffc339 0%, #ff9b19 100%);
-		/* Opera11.10+ */
-		background: -ms-linear-gradient(top, #ffc339 0%, #ff9b19 100%);
-		/* IE10+ */
-		filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#ffc339',
-			endColorstr='#ff9b19', GradientType=0); /* IE6-9 */
-		background: linear-gradient(top, #ffc339 0%, #ff9b19 100%); /* W3C */
-		border: 1px solid #ff9b19;
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;
-		line-height: 80%;
-		font-size: 100%;
-		font-weight: 600;
-		padding: 5%;
-		color: #fff;
-		text-shadow: -1px -1px #ff9b19;
-		float: center;
-		width: 100%;
-		cursor: pointer;
-	}
-	.nobottomborder2 {
-		border-bottom: 0px;
-		padding: 2%;
-		height: 200px;
-	}
 }
