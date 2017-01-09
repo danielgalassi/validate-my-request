@@ -55,8 +55,8 @@
 			enctype="multipart/form-data">
 			<div class="formtitle">Start the validation process</div>
 				<div class="upload-drop-zone" id="dropbox">Drag and drop your request here</div>
-			<input type="hidden" name="from"
-				value="dragndrop" />
+			<!--input type="hidden" name="from"
+				value="dragndrop" /-->
 			<!--div class="buttons">
 				<input id="submit" class="orangebutton" type="submit" style="opacity: 0.25;"
 					value="Validate" disabled="disabled" />

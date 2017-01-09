@@ -42,7 +42,7 @@
 	}
 </script>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/style.css" type="text/css" />
+	href="${pageContext.request.contextPath}/style2.css" type="text/css" />
 </head>
 <body>
 	<div class="wrapper">
@@ -50,8 +50,8 @@
 			enctype="multipart/form-data">
 			<div class="formtitle">Start the validation process</div>
 				<div class="upload-drop-zone" id="dropbox">Drag and drop your request here</div>
-			<input type="hidden" name="from"
-				value="dragonly" />
+			<!--input type="hidden" name="from"
+				value="dragonly" /-->
 			<div class="buttons">
 				<input id="submit" class="orangebutton" type="submit"
 					style="opacity: 0.25;" value="Validate" disabled="disabled" />
@@ -59,6 +59,6 @@
 		</form>
 	</div>
 
-	<div id="ajaxResponse"></div>
+	<!--div id="ajaxResponse"></div-->
 </body>
 </html>

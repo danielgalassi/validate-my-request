@@ -96,6 +96,7 @@ public class RefreshRequest {
 			Row row = rowIterator.next();
 
 			//skips blank rows
+			try {
 			if (row.getCell(0).toString().length() > 0) {
 				objectSchema	= row.getCell(0).toString().toUpperCase();
 				objectName		= row.getCell(1).toString().toUpperCase();
@@ -111,6 +112,9 @@ public class RefreshRequest {
 						objectType.equals("PROCEDURE")) {
 					objectsList.add(new DBObject(objectSchema, objectName, objectType));
 				}
+			}
+			} catch (Exception e) {
+				logger.error("Exception thrown while reading refresh request: {}", e.getMessage());
 			}
 		}
 		size = objectsList.size();
