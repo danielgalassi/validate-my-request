@@ -29,8 +29,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class RefreshRequest {
 
 	/** Log4j2 main interface */
-	private static final Logger logger = LogManager.getLogger(RefreshRequest.class.getName()); 
-	/** The refresh request file in XLSX format stored in the filesystem under the session directory. */
+	private static final Logger logger = 
+			LogManager.getLogger(RefreshRequest.class.getName());
+	/** The refresh request file in XLSX format stored in
+	 * the filesystem under the session directory. */
 	private File nzRequest = null;
 	@XmlElement(name = "object")
 	/** Collection of database objects. */
@@ -53,7 +55,7 @@ public class RefreshRequest {
 	}
 
 	/**
-	 * Loads all database objects from the Excel (XLSX) file using the Apache POI package
+	 * Loads all db objects from the Excel file using the Apache POI package
 	 * @param directory path to the refresh request file
 	 * @param xslx Excel (template) file
 	 */
@@ -61,9 +63,9 @@ public class RefreshRequest {
 		this.nzRequest = new File(directory + xslx);
 		logger.info("Reading refresh request");
 
-		String objectType = "";
-		String objectSchema = "";
-		String objectName = "";
+		String objType = "";
+		String objSchema = "";
+		String objName = "";
 		FileInputStream fis = null;
 		try {
 			fis = new FileInputStream(nzRequest);
@@ -98,23 +100,24 @@ public class RefreshRequest {
 			//skips blank rows
 			try {
 			if (row.getCell(0).toString().length() > 0) {
-				objectSchema	= row.getCell(0).toString().toUpperCase();
-				objectName		= row.getCell(1).toString().toUpperCase();
-				objectType		= row.getCell(2).toString().toUpperCase();
-				if (objectType.contains("STOR") || objectType.contains("PROC")) {
-					objectType = "PROCEDURE";
+				objSchema	= row.getCell(0).toString().toUpperCase();
+				objName		= row.getCell(1).toString().toUpperCase();
+				objType		= row.getCell(2).toString().toUpperCase();
+				if (objType.contains("STOR") || objType.contains("PROC")) {
+					objType = "PROCEDURE";
 				}
 
-				if (objectType.equals("TABLE") || 
-						objectType.equals("VIEW") || 
-						objectType.equals("SYNONYM") ||
-						objectType.equals("SEQUENCE") ||
-						objectType.equals("PROCEDURE")) {
-					objectsList.add(new DBObject(objectSchema, objectName, objectType));
+				if (objType.equals("TABLE") || 
+						objType.equals("VIEW") || 
+						objType.equals("SYNONYM") ||
+						objType.equals("SEQUENCE") ||
+						objType.equals("PROCEDURE")) {
+					objectsList.add(new DBObject(objSchema, objName, objType));
 				}
 			}
 			} catch (Exception e) {
-				logger.error("Exception thrown while reading refresh request: {}", e.getMessage());
+				logger.error("Exception thrown while reading request: {}", 
+						e.getMessage());
 			}
 		}
 		size = objectsList.size();
@@ -144,5 +147,23 @@ public class RefreshRequest {
 	 */
 	public void override(ArrayList<DBObject> objectsList) {
 		this.objectsList = objectsList;
+	}
+
+	/**
+	 * Position of the database object in this request
+	 * @return true if the object name is found
+	 */
+	public boolean contains(String objectName, String objectType) {
+		boolean found = false;
+		Iterator<DBObject> it = objectsList.iterator();
+		while (it.hasNext()) {
+			DBObject object = it.next();
+			if (object.getFullObject().equals(objectName) && 
+					object.getType().equals(objectType)) {
+				found = true;
+				break;
+			}
+		}
+		return found;
 	}
 }

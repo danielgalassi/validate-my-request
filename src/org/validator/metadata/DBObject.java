@@ -160,4 +160,8 @@ public class DBObject {
 	public boolean isSequence() {
 		return (type.equals("SEQUENCE"));
 	}
+
+	public boolean equals(String anObjectName) {
+		return (this.full_object.equals(anObjectName));
+	}
 }

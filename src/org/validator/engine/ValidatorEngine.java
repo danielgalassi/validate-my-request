@@ -16,14 +16,16 @@ import org.validator.utils.FileUtils;
 
 /**
  * The <code>ValidatorEngine</code> orchestrates the test process.
- * Each <code>DBObject</code> in the <code>RefreshRequest</code> is validated using by this orchestration.
+ * Each <code>DBObject</code> in the <code>RefreshRequest</code> is validated 
+ * using by this orchestration.
  * The results are serialised using <a href="https://docs.oracle.com/javase/8/docs/api/javax/xml/bind/JAXB.html">Java Architecture for XML Binding</a>.
  * @author danielgalassi@gmail.com
  */
 public class ValidatorEngine {
 
 	/** Log4j2 central interface*/
-	private static final Logger logger = LogManager.getLogger(ValidatorEngine.class.getName());
+	private static final Logger logger = LogManager.getLogger(
+			ValidatorEngine.class.getName());
 	/** The target directory where validation results will be saved. */
 	private String resultCatalog = "";
 	/** An refresh request repository object. */
@@ -51,11 +53,11 @@ public class ValidatorEngine {
 	 * Loads all reference data used in the validation process
 	 */
 	public void loadMasterLists() {
-		tableList	= FileUtils.file2array("/tmp/master_objects_list/tables");
 		viewList	= FileUtils.file2array("/tmp/master_objects_list/views");
-		procList	= FileUtils.file2array("/tmp/master_objects_list/procedures");
+		tableList	= FileUtils.file2array("/tmp/master_objects_list/tables");
 		synonList	= FileUtils.file2array("/tmp/master_objects_list/synonyms");
 		seqList		= FileUtils.file2array("/tmp/master_objects_list/sequences");
+		procList	= FileUtils.file2array("/tmp/master_objects_list/procedures");
 	}
 
 	/**
@@ -79,12 +81,14 @@ public class ValidatorEngine {
 	 * Executes the validation of the refresh request.
 	 * The validation process consists of the following steps:
 	 * 1. matching of each <code>DBObject</code> against the master list of reference data
-	 * 2. identifies whether the schema was included in the object column (common mistake)
-	 * 3. identifies whether the object name was entered with quotation marks (common mistake)
+	 * 2. identifies whether the schema was included in the object column
+	 * 3. identifies whether the object name was entered with quotation marks
 	 * 4. identifies incorrect object types (table instead of a view, etc.)
 	 * 5. identifies incorrect schemas (table found in a different schema than that in the request)
+	 * 6. warns of objects with the same name (i.e. table and synonym)
 	 * Upon completion, an index document (catalog) is created.
 	 * Each entry in this catalog points to a result file.
+	 * TODO: simplify some of these validations
 	 */
 	public void run() {
 		if (!ready()) {
@@ -99,30 +103,30 @@ public class ValidatorEngine {
 
 		ArrayList<DBObject> objectsList = nzRequest.getObjectList();
 		Iterator<DBObject> it = objectsList.iterator();
-		DBObject object_to_match = null;
+		DBObject req_item = null;
 		int index = 0;
 		while (it.hasNext()) {
-			object_to_match = (it.next());
-			if (tableList.contains(object_to_match.toString()) && object_to_match.isTable()) {
-				object_to_match.tag();
+			req_item = (it.next());
+			if (tableList.contains(req_item.toString()) && req_item.isTable()) {
+				req_item.tag();
 			}
-			if (viewList.contains(object_to_match.toString()) && object_to_match.isView()) {
-				object_to_match.tag();
+			if (viewList.contains(req_item.toString()) &&  req_item.isView()) {
+				req_item.tag();
 			}
-			if (synonList.contains(object_to_match.toString()) && object_to_match.isSynonym()) {
-				object_to_match.tag();
+			if (synonList.contains(req_item.toString()) && req_item.isSynonym()) {
+				req_item.tag();
 			}
-			if (seqList.contains(object_to_match.toString()) && object_to_match.isSequence()) {
-				object_to_match.tag();
+			if (seqList.contains(req_item.toString()) && req_item.isSequence()) {
+				req_item.tag();
 			}
-			if (procList.contains(object_to_match.toString()) && object_to_match.isProcedure()) {
-				object_to_match.tag();
+			if (procList.contains(req_item.toString()) && req_item.isProcedure()) {
+				req_item.tag();
 			}
 
 			//validates whether the schema in the request is incorrect
-			if (!object_to_match.exist()) {
+			if (!req_item.exist()) {
 				Iterator <String> dbList = null;
-				String type = object_to_match.getType();
+				String type = req_item.getType();
 				switch (type) {
 				case "VIEW" : dbList = viewList.iterator();
 				break;
@@ -138,61 +142,105 @@ public class ValidatorEngine {
 				String[] object;
 				while (dbList.hasNext()) {
 					object = dbList.next().split("\\.");
-					if (object[1].equals(object_to_match.getName())) {
-						object_to_match.setComment("You may find this object in " + object[0] + " instead...");
+					if (object[1].equals(req_item.getName())) {
+						req_item.setComment("You may find this object in " + 
+								object[0] + " instead...");
 						break;
 					}
 				}
 			}
 
-			//checks whether schema.object was entered in the object column
-			if (!object_to_match.exist() && object_to_match.getName().indexOf(".") > -1) {
-				object_to_match.setComment("Maybe... you've included the schema name in the object column?");
+			//checks whether schema.object was entered in 	the object column
+			if (!req_item.exist() && req_item.getName().indexOf(".") > -1) {
+				req_item.setComment("Maybe... you've included the schema "
+						+ "name in the object column?");
 			}
 
-			//validates whether the object has extra chars in the request (such as quotes)
-			if (!object_to_match.exist()) {
-				if (tableList.contains(object_to_match.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && object_to_match.isTable()) {
-					object_to_match.setComment("Please remove quotes or other odd characters from the request.");
+			/* Validates whether the object has extra chars in the request 
+			 * (such as quotes).
+			 */
+			String comment = "Please remove quotes or other odd characters.";
+			if (!req_item.exist()) {
+				if (tableList.contains(req_item.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && 
+						req_item.isTable()) {
+					req_item.setComment(comment);
 				}
-				if (viewList.contains(object_to_match.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && object_to_match.isView()) {
-					object_to_match.setComment("Please remove quotes or other odd characters from the request.");
+				if (viewList.contains(req_item.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && 
+						req_item.isView()) {
+					req_item.setComment(comment);
 				}
-				if (synonList.contains(object_to_match.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && object_to_match.isSynonym()) {
-					object_to_match.setComment("Please remove quotes or other odd characters from the request.");
+				if (synonList.contains(req_item.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && 
+						req_item.isSynonym()) {
+					req_item.setComment(comment);
 				}
-				if (seqList.contains(object_to_match.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && object_to_match.isSequence()) {
-					object_to_match.setComment("Please remove quotes or other odd characters from the request.");
+				if (seqList.contains(req_item.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && 
+						req_item.isSequence()) {
+					req_item.setComment(comment);
 				}
-				if (procList.contains(object_to_match.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && object_to_match.isProcedure()) {
-					object_to_match.setComment("Please remove quotes or other odd characters from the request.");
+				if (procList.contains(req_item.toString().replaceAll("\"", "").replaceAll("[^\\x00-\\x7F]", "")) && 
+						req_item.isProcedure()) {
+					req_item.setComment(comment);
 				}
 			}
 
-			//validates whether a table is actually a view... etc
-			if (!object_to_match.exist()) {
-				if (!object_to_match.getType().equals("TABLE")) {
-					if (tableList.contains(object_to_match.toString()))
-						object_to_match.setComment("This is a table, not a " + object_to_match.getType().toLowerCase() + ".");
-				}
-				if (!object_to_match.getType().equals("SYNONYM")) {
-					if (synonList.contains(object_to_match.toString()))
-						object_to_match.setComment("This is a synonym, not a " + object_to_match.getType().toLowerCase() + ".");
-				}
-				if (!object_to_match.getType().equals("SEQUENCE")) {
-					if (seqList.contains(object_to_match.toString()))
-						object_to_match.setComment("This is a sequence, not a " + object_to_match.getType().toLowerCase() + ".");
-				}
-				if (!object_to_match.getType().equals("VIEW")) {
-					if (viewList.contains(object_to_match.toString()))
-						object_to_match.setComment("This is a view, not a " + object_to_match.getType().toLowerCase() + ".");
-				}
-				if (!object_to_match.getType().equals("PROCEDURE")) {
-					if (procList.contains(object_to_match.toString()))
-						object_to_match.setComment("This is a stored procedure, not a " + object_to_match.getType().toLowerCase() + ".");
+			//validates whether a table is actually / also a view... etc
+			if (!req_item.getType().equals("TABLE")) {
+				if (tableList.contains(req_item.toString())) {
+					if (!req_item.exist()) {
+						req_item.setComment("This is a table, not a " + req_item.getType().toLowerCase() + ".");
+					} else {
+						//i.e. if a synonym has the same name as a table... it gives the requestor a hint
+						if (!nzRequest.contains(req_item.getFullObject(), "TABLE")) {
+							req_item.setComment("There is a table with the same name, should it be included in this request?");
+						}
+					}
 				}
 			}
-			objectsList.set(index, object_to_match);
+			if (!req_item.getType().equals("SYNONYM")) {
+				if (synonList.contains(req_item.toString())) {
+					if (!req_item.exist()) {
+						req_item.setComment("This is a synonym, not a " + req_item.getType().toLowerCase() + ".");
+					} else {
+						if (!nzRequest.contains(req_item.getFullObject(), "SYNONYM")) {
+							req_item.setComment("There is a synonym with the same name, should it be included in this request?");
+						}
+					}
+				}
+			}
+			if (!req_item.getType().equals("SEQUENCE")) {
+				if (seqList.contains(req_item.toString())) {
+					if (!req_item.exist()) {
+						req_item.setComment("This is a sequence, not a " + req_item.getType().toLowerCase() + ".");
+					} else {
+						if (!nzRequest.contains(req_item.getFullObject(), "SEQUENCE")) {
+							req_item.setComment("There is a sequence with the same name, should it be included in this request?");
+						}
+					}
+				}
+			}
+			if (!req_item.getType().equals("VIEW")) {
+				if (viewList.contains(req_item.toString())) {
+					if (!req_item.exist()) {
+						req_item.setComment("This is a view, not a " + req_item.getType().toLowerCase() + ".");
+					} else {
+						if (!nzRequest.contains(req_item.getFullObject(), "VIEW")) {
+							req_item.setComment("There is a view with the same name, should it be included in this request?");
+						}
+					}
+				}
+			}
+			if (!req_item.getType().equals("PROCEDURE")) {
+				if (procList.contains(req_item.toString())) {
+					if (!req_item.exist()) {
+						req_item.setComment("This is a stored procedure, not a " + req_item.getType().toLowerCase() + ".");
+					} else {
+						if (!nzRequest.contains(req_item.getFullObject(), "PROCEDURE")) {
+							req_item.setComment("There is a procedure with the same name, should it be included in this request?");
+						}
+					}
+				}
+			}
+			objectsList.set(index, req_item);
 			nzRequest.override(objectsList);
 			index++;
 		}
@@ -223,7 +271,8 @@ public class ValidatorEngine {
 	}
 
 	/**
-	 * Validates the engine has been fully setup to avoid triggering a process without a loaded request or without a target directory for the results
+	 * Validates the engine has been fully setup to avoid triggering a process 
+	 * without a loaded request or without a target directory for the results
 	 * @return true if all dependencies are met
 	 */
 	private boolean ready() {

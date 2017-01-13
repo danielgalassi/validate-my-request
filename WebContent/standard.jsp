@@ -5,29 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Validate Netezza Request</title>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/style.css" type="text/css" />
 </head>
 <body>
-	<div class="wrapper">
-		<form class="form1" action="upload" method="post"
-			enctype="multipart/form-data">
-			<div class="formtitle">Start the validation process</div>
-
-			<div class="input nobottomborder2">
-				<div style="line-height: 150%;" class="inputtext" align="center">Select refresh template
-				<div class="input nobottomborder">
-				<input id="metadataFile" type="file" name="metadata" style="padding: 5%; border: 1px solid #ddd;"/>
-				</div>
-				</div>
-			</div>
-			<input type="hidden" name="from"
-				value="internetexplorer" />
-			<div class="buttons">
-				<input id="submit" class="orangebutton" type="submit"
-					value="Validate" />
-			</div>
-		</form>
-	</div>
+	<form class="form1" action="upload" method="post" enctype="multipart/form-data">
+		<p>Start the validation process</p>
+		<br/>
+		<p>Select refresh template</p>
+		<br/>
+		<input id="metadataFile" type="file" name="metadata" />
+		<input type="hidden" name="from" value="internetexplorer" />
+		<input id="submit" class="orangebutton" type="submit" value="Validate" />
+	</form>
 </body>
 </html>
