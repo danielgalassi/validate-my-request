@@ -114,8 +114,8 @@
 							<th width="35%" height="28px">Comment</th>
 						</tr>
 
-						<xsl:for-each select="//object">
-							<!-- Results (table) Section -->
+						<xsl:for-each select="//object[@valid = 'false']">
+							<!-- FAILED Results (table) Section -->
 							<tr>
 								<td height="28px">
 									<xsl:value-of select="normalize-space(@fullObject)" />
@@ -124,23 +124,28 @@
 									<xsl:value-of select="@type" />
 								</td>
 
-								<!-- Test Results Section -->
-								<xsl:if test="(@valid='true')">
-									<!-- Green cells = Pass -->
-									<td style="background: #CCFF99; color: green; text-align:center;">OK</td>
-									<td style="background: #CCFF99; color: green;">
-										<xsl:value-of select="@comment" />
-									</td>
-								</xsl:if>
-								<xsl:if test="(@valid='false')">
-									<!-- Red cells = Fail -->
-									<td style="background: #FFF1BF; color: red; text-align:center;">Object Not Found</td>
-									<td style="background: #FFF1BF; color: red;">
-										<xsl:value-of select="@comment" />
-									</td>
-								</xsl:if>
+								<!-- Red cells = Fail -->
+								<td style="background: #FFF1BF; color: red; text-align:center;">Object Not Found</td>
+								<td style="background: #FFF1BF; color: red;"><xsl:value-of select="@comment" /></td>
 							</tr>
 						</xsl:for-each>
+
+						<xsl:for-each select="//object[@valid = 'true']">
+							<!-- OK Results (table) Section -->
+							<tr>
+								<td height="28px">
+									<xsl:value-of select="normalize-space(@fullObject)" />
+								</td>
+								<td height="28px">
+									<xsl:value-of select="@type" />
+								</td>
+
+								<!-- Green cells = Pass -->
+								<td style="background: #CCFF99; color: green; text-align:center;">OK</td>
+								<td style="background: #CCFF99; color: green;"><xsl:value-of select="@comment" /></td>
+							</tr>
+						</xsl:for-each>
+
 					</tbody>
 				</table>
 				<br />
