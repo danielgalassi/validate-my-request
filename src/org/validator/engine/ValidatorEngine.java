@@ -1,8 +1,11 @@
 package org.validator.engine;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Vector;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -123,6 +126,65 @@ public class ValidatorEngine {
 				req_item.tag();
 			}
 
+			//validates whether underlying objects are included in the request
+			if (req_item.exist() && req_item.isView()) {
+				File x = new File("/tmp/master_objects_list/dependencies");
+				BufferedReader in = null;
+				String line = "";
+				Vector <String>underlyingObjects = new Vector<String>();
+				try {
+					in = new BufferedReader(new FileReader(x));
+					while ((line = in.readLine()) != null) {
+						if (line.toUpperCase().equals("(VIEW)    " + req_item.getFullObject())) {
+							boolean dependenciesToRead = true;
+							while (dependenciesToRead) {
+								line = in.readLine();
+								if (line != null) {
+									if (line.contains("--------")) {
+										dependenciesToRead = false;
+									} else if (line.equals("")){
+										//do nothing
+									} else {
+										String dependency = line.trim().replaceAll("PROD_CLONE.", "");
+										if (!underlyingObjects.contains(dependency)) {
+											underlyingObjects.add(dependency);
+										}
+									}
+								} else {//eof
+									dependenciesToRead = false;
+								}
+							}
+						}
+					}
+					in.close();
+				} catch (Exception e) {
+					logger.error("Oops, error found while reading file: " + e.getMessage());
+				}
+				//check whether those underlying objects are included in the refresh request
+				//TODO implement this final "dependencies" validation step
+				//nzRequest.contains(underlyingObjects, String objectType)
+				Iterator<String> depIt = underlyingObjects.iterator();
+				while (depIt.hasNext()) {
+					String signature = depIt.next();
+					String depObject = "";
+					String depType = "";
+					if (signature.contains("VIEW) ")) {
+						depObject = signature.substring(signature.indexOf("VIEW)  ")+7);
+						depType = "VIEW";
+					}
+					if (signature.contains("TABLE) ")) {
+						depObject = signature.substring(signature.indexOf("TABLE)  ")+8);
+						depType = "TABLE";
+					}
+					if (!nzRequest.contains(depObject, depType)) {
+						req_item.addMissingDependencies(signature);
+						if (!req_item.getComment().contains("missing")) {
+							req_item.setComment("One or more objects required to properly create this view may be missing from this request. See details at the bottom of the page.");
+						}
+					}
+				}
+			}
+
 			//validates whether the schema in the request is incorrect
 			if (!req_item.exist()) {
 				Iterator <String> dbList = null;
@@ -240,6 +302,7 @@ public class ValidatorEngine {
 					}
 				}
 			}
+
 			objectsList.set(index, req_item);
 			nzRequest.override(objectsList);
 			index++;

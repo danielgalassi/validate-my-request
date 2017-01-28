@@ -3,7 +3,10 @@
  */
 package org.validator.metadata;
 
+import java.util.Vector;
+
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -25,6 +28,8 @@ public class DBObject {
 	private String full_object;
 	/** found / not found flag */
 	private boolean isValid = false;
+	/** underlying objects that may be missing from the refresh request */
+	private Vector<String> missingReferences = new Vector<String>();
 
 	/**
 	 * Default constructor (for JAXB API)
@@ -163,5 +168,14 @@ public class DBObject {
 
 	public boolean equals(String anObjectName) {
 		return (this.full_object.equals(anObjectName));
+	}
+
+	@XmlElementWrapper
+	public Vector<String> getMissingDependencies() {
+		return missingReferences;
+	}
+
+	public void addMissingDependencies(String signature) {
+		missingReferences.add(signature);
 	}
 }

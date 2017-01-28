@@ -150,6 +150,21 @@
 				</table>
 				<br />
 				<br />
+
+				<xsl:if test="count(//object/missingDependencies/missingDependencies) &gt; 0">
+					<h3>Dependencies missing from the request</h3>
+					<xsl:for-each select="//object">
+						<xsl:if test="count(./missingDependencies/missingDependencies) &gt; 0">
+							<p style="padding-left: 5px; padding-top: 30px; color: #777777;"><xsl:value-of select="normalize-space(@fullObject)" /></p>
+							<xsl:for-each select="./missingDependencies/missingDependencies">
+								 <p style="color: #777777; padding-left: 20px;"><xsl:value-of select="normalize-space(.)" /></p>
+							</xsl:for-each>
+						</xsl:if>
+					</xsl:for-each>
+					<br/>
+				</xsl:if>
+
+				<br />
 				<hr style="height: 1px; border: 0; background-color: #AAAAAA; width: 100%;" />
 
 				<div style="padding-top: 20px;">
