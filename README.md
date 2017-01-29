@@ -1,11 +1,22 @@
 # validate-my-request
-Just a personal project to validate data refresh requests at work
+
+Efficient data migrations are critical to a data-driven project. Identifying minor inconsistencies is a time consuming task... but it can be largely automated. Developers and even non-technical folks can use this self-serve web application to validate those requests.
+
 It includes:
 - XML serialisation through native JAXB
 - Drag n Drop feature to upload files in Chrome and Firefox
 - Standard file upload UI for Internet Explorer
 - Responsive CSS
 - Ajax calls
+
+
+###What objects can be validated?
+- tables
+- views
+- synonyms
+- sequences
+- stored procedures
+
 
 ###What sort of mistakes or inconsistencies are picked up by this app?
 - missing objects (incorrect names, incorrect schema): if possible, the app will suggest the right schema
