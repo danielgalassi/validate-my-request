@@ -1,4 +1,4 @@
-# validate-my-request
+# Validate my (Netezza data migration) request
 
 Efficient data migrations are critical to a data-driven project. Identifying minor inconsistencies is a time consuming task... but it can be largely automated. Developers and even non-technical folks can use this self-serve web application to validate those requests.
 
